@@ -18,10 +18,13 @@ The colorscheme is centered around a vibrant set of blues, combined with an indu
 The resulting palette is a set of colors that portrays a singular IBM. Of the world and digital. Useful and judicious. Having multiple gray families gives each design the opportunity for nuance and meaningful moments of color. Each experience should be dominated by the grays and the core colors of black, white, and the blue family, allowing the other color families to have vibrancy and provide purpose.
 >>>>>>> 120e08e ((breaking) switch to fennel)
 
+<<<<<<< HEAD
 The colorscheme is centered around a vibrant set of blues, combined with an industrial set of grays. The full palette extends from the blue family to the edges of the blue spectrum—even the reds contain a hint of blue.
 
 The resulting palette is a set of colors that portrays a singular IBM. Of the world and digital. Useful and judicious. Having multiple gray families gives each design the opportunity for nuance and meaningful moments of color. Each experience should be dominated by the grays and the core colors of black, white, and the blue family, allowing the other color families to have vibrancy and provide purpose.
 
+=======
+>>>>>>> d759572 (Update Screenshot)
 ![merged](https://user-images.githubusercontent.com/71196912/206819503-736cbede-fdf2-4be3-baaa-d640c8498abf.png)
 
 <img width="1311" alt="image" src="https://user-images.githubusercontent.com/71196912/181996667-f1bf7ab0-eba2-4f80-b914-b5f48f51a03e.png">
