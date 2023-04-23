@@ -225,9 +225,9 @@
 
 ;; gutter
 
-(custom-set-face! :Folded [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
-(custom-set-face! :FoldColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
-(custom-set-face! :SignColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+(custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
+(custom-set-face! :FoldColumn [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+(custom-set-face! :SignColumn [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
 
 ;; navigation
 
