@@ -550,7 +550,7 @@
 (custom-set-face! :TelescopePromptTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base11})
 (custom-set-face! :TelescopeResultsTitle [] {:fg oxocarbon.blend :bg oxocarbon.blend})
 (custom-set-face! :TelescopeSelection [] {:fg oxocarbon.none :bg oxocarbon.base02})
-(custom-set-face! :TelescopePreviewLine [] {:fg oxocarbon.none :bg oxocarbon.base01})
+(custom-set-face! :TelescopePreviewLine [] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :TelescopeMatching [:bold :italic] {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ;; notify
