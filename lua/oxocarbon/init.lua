@@ -62,21 +62,9 @@ vim.api.nvim_set_hl(0, "LspReferenceText", {fg = oxocarbon.none, bg = oxocarbon.
 vim.api.nvim_set_hl(0, "LspReferenceread", {fg = oxocarbon.none, bg = oxocarbon.base03})
 vim.api.nvim_set_hl(0, "LspReferenceWrite", {fg = oxocarbon.none, bg = oxocarbon.base03})
 vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", {fg = oxocarbon.base08, bg = oxocarbon.none})
-<<<<<<< HEAD
-<<<<<<< HEAD
-vim.api.nvim_set_hl(0, "Folded", {fg = oxocarbon.base02, bg = oxocarbon.base01})
-vim.api.nvim_set_hl(0, "FoldColumn", {fg = oxocarbon.base08, bg = oxocarbon.base00})
-vim.api.nvim_set_hl(0, "SignColumn", {fg = oxocarbon.base09, bg = oxocarbon.base00})
-=======
-vim.api.nvim_set_hl(0, "Folded", {fg = oxocarbon.base03, bg = oxocarbon.base01})
+vim.api.nvim_set_hl(0, "Folded", {fg = oxocarbon.base08, bg = oxocarbon.base01})
 vim.api.nvim_set_hl(0, "FoldColumn", {fg = oxocarbon.base02, bg = oxocarbon.base00})
 vim.api.nvim_set_hl(0, "SignColumn", {fg = oxocarbon.base02, bg = oxocarbon.base00})
->>>>>>> 867f74c (brighent up fold column)
-=======
-vim.api.nvim_set_hl(0, "Folded", {fg = oxocarbon.base02, bg = oxocarbon.base01})
-vim.api.nvim_set_hl(0, "FoldColumn", {fg = oxocarbon.base08, bg = oxocarbon.base00})
-vim.api.nvim_set_hl(0, "SignColumn", {fg = oxocarbon.base09, bg = oxocarbon.base00})
->>>>>>> d041316 (wip)
 vim.api.nvim_set_hl(0, "Directory", {fg = oxocarbon.base08, bg = oxocarbon.none})
 vim.api.nvim_set_hl(0, "EndOfBuffer", {fg = oxocarbon.base01, bg = oxocarbon.none})
 vim.api.nvim_set_hl(0, "ErrorMsg", {fg = oxocarbon.base10, bg = oxocarbon.none})
@@ -240,6 +228,7 @@ vim.api.nvim_set_hl(0, "TelescopeResultsTitle", {fg = oxocarbon.blend, bg = oxoc
 vim.api.nvim_set_hl(0, "TelescopeSelection", {fg = oxocarbon.none, bg = oxocarbon.base02})
 vim.api.nvim_set_hl(0, "TelescopePreviewLine", {fg = oxocarbon.none, bg = oxocarbon.base02})
 vim.api.nvim_set_hl(0, "TelescopeMatching", {fg = oxocarbon.base08, bg = oxocarbon.none, bold = true, italic = true})
+vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", {fg = oxocarbon.base09, bg = oxocarbon.none})
 vim.api.nvim_set_hl(0, "NotifyERRORBorder", {fg = oxocarbon.base08, bg = oxocarbon.none})
 vim.api.nvim_set_hl(0, "NotifyWARNBorder", {fg = oxocarbon.base15, bg = oxocarbon.none})
 vim.api.nvim_set_hl(0, "NotifyINFOBorder", {fg = oxocarbon.base05, bg = oxocarbon.none})
