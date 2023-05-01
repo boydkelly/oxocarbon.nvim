@@ -68,6 +68,8 @@ vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", {fg = oxocarbon.base08, bg
 vim.api.nvim_set_hl(0, "Folded", {fg = oxocarbon.base08, bg = oxocarbon.base01})
 vim.api.nvim_set_hl(0, "FoldColumn", {fg = oxocarbon.base02, bg = oxocarbon.base00})
 vim.api.nvim_set_hl(0, "SignColumn", {fg = oxocarbon.base02, bg = oxocarbon.base00})
+vim.api.nvim_set_hl(0, "LazyProgressDone", {fg = oxocarbon.base10, bg = oxocarbon.base00, bold = true})
+vim.api.nvim_set_hl(0, "LazyProgressTodo", {fg = oxocarbon.base01, bg = oxocarbon.base00, bold = true})
 vim.api.nvim_set_hl(0, "Directory", {fg = oxocarbon.base08, bg = oxocarbon.none})
 vim.api.nvim_set_hl(0, "EndOfBuffer", {fg = oxocarbon.base01, bg = oxocarbon.none})
 vim.api.nvim_set_hl(0, "ErrorMsg", {fg = oxocarbon.base10, bg = oxocarbon.none})
