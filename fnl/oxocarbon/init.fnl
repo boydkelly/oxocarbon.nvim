@@ -245,6 +245,10 @@
 (custom-set-face! :FoldColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
 (custom-set-face! :SignColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
 
+;; lazy
+(custom-set-face! :LazyProgressDone [:bold] {:fg oxocarbon.base10 :bg oxocarbon.base00})
+(custom-set-face! :LazyProgressTodo [:bold] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+
 ;; navigation
 
 (custom-set-face! :Directory [] {:fg oxocarbon.base08 :bg oxocarbon.none})
