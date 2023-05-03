@@ -378,8 +378,8 @@
 
 (custom-set-face! :TSAnnotation [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 (custom-set-face! :TSAttribute [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; (unstable) TODO: docs
-(custom-set-face! :TSBoolean [] { :fg #FFAB91 :bg oxocarbon.base00})    ;; For booleans.
-(custom-set-face! :TSCharacter [] { :fg #FFAB91 :bg oxocarbon.base00})    ;; For characters.
+(custom-set-face! :TSBoolean [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For booleans.
+(custom-set-face! :TSCharacter [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For characters.
 (custom-set-face! :TSConstructor [] { :fg oxocarbon.base14 :bg oxocarbon.base00}) ;; For constructor calls and definitions: `= { }` in Lua, and Java constructors.
 (custom-set-face! :TSConstant [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For constants
 (custom-set-face! :TSConstBuiltin [] { :fg oxocarbon.base11 :bg oxocarbon.base00})    ;; For constant that are built in the language: `nil` in Lua.
@@ -403,20 +403,20 @@
 (custom-set-face! :TSPunctSpecial [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For special punctutation that does not fall in the catagories before.
 (custom-set-face! :TSString [] { :fg oxocarbon.base07 :bg oxocarbon.base00})    ;; For strings.
 (custom-set-face! :TSStringRegex [] { :fg oxocarbon.base11 :bg oxocarbon.base00}) ;; For regexes.
-(custom-set-face! :TSStringEscape [] { :fg disabled :bg oxocarbon.base00}) ;; For escape characters within a string.
+(custom-set-face! :TSStringEscape [] { :fg oxocarbon.none :bg oxocarbon.base00}) ;; For escape characters within a string.
 (custom-set-face! :TSSymbol [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For identifiers referring to symbols or atoms.
 (custom-set-face! :TSType [] { :fg oxocarbon.base14 :bg oxocarbon.base00})    ;; For types.
 (custom-set-face! :TSTypeBuiltin [] { :fg oxocarbon.base14 :bg oxocarbon.base00})    ;; For builtin types.
 (custom-set-face! :TSTag [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; Tags like html tag names.
 (custom-set-face! :TSTagDelimiter [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Tag delimiter like < > /
-(custom-set-face! :TSText [] { :fg text :bg oxocarbon.base00})    ;; For strings consideoxocarbon.base10 text in a markup language.
+(custom-set-face! :TSText [] { :fg oxocarbon.base00 :bg oxocarbon.base00})    ;; For strings consideoxocarbon.base10 text in a markup language.
 (custom-set-face! :TSTextReference [] { :fg oxocarbon.base05 :bg oxocarbon.base00}) ;; FIXME
 (custom-set-face! :TSEmphasis [:bold] { :fg oxocarbon.base09 :bg oxocarbon.base00})    ;; For text to be represented with emphasis.
 (custom-set-face! :TSUnderline [:underline] { :fg oxocarbon.base00 :bg oxocarbon.base00})    ;; For text to be represented with an underline.
 ; (custom-set-face! :TSStrike [:strikethrough] { :bg oxocarbon.base00})   ;; For strikethrough text.
-(custom-set-face! :TSTitle [:bold] { :fg  oxocarbon.base09 :bg oxocarbon.base00})    ;; Text that is part of a title.
+(custom-set-face! :TSTitle [:bold] { :fg oxocarbon.base09 :bg oxocarbon.base00})    ;; Text that is part of a title.
 (custom-set-face! :TSLiteral [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Literal text.
-(custom-set-face! :TSURI [] { :fg link :bg oxocarbon.base00})    ;; Any URI like a link or email.
+(custom-set-face! :TSURI [] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; Any URI like a link or email.
 
 ;;; misc
 
