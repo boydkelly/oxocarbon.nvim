@@ -382,7 +382,7 @@
 (custom-set-face! :TSLabel [] { :fg oxocarbon.base10 :bg oxocarbon.base00}) ;; For labels: `label:` in C and `:label:` in Lua.
 (custom-set-face! :TSNamespace [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For identifiers referring to modules and namespaces.
 ; (custom-set-face! :;;TSNone [] {    :bg oxocarbon.base00})   -- TODO: docs
-(custom-set-face! :TSNumber [] { :fg #FFAB91 :bg oxocarbon.base00})    ;; For all numbers
+(custom-set-face! :TSNumber [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For all numbers
 (custom-set-face! :TSOperator [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For any operator: `+`, but also `->` and `*` in C.
 (custom-set-face! :TSParameter [] { :fg oxocarbon.base09 :bg oxocarbon.base00}) ;; For parameters of a function.
 (custom-set-face! :TSParameterReference [] { :fg oxocarbon.base09 :bg oxocarbon.base00})    ;; For references to parameters of a function.
@@ -406,6 +406,15 @@
 (custom-set-face! :TSTitle [:bold] { :fg oxocarbon.base09 :bg oxocarbon.base00})    ;; Text that is part of a title.
 (custom-set-face! :TSLiteral [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Literal text.
 (custom-set-face! :TSURI [] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; Any URI like a link or email.
+
+(custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKey [] {:link Pmenu })
+(custom-set-face! :WhichKeySeperator [] {:link Comment })
+(custom-set-face! :WhichKeyGroup [] {:fg oxocarbon.base11 :bg oxocarbon.base01})
+(custom-set-face! :WhichKeyDesc [] {:fg oxocarbon.base14 :bg oxocarbon.base01})
+(custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
+(custom-set-face! :WhichKeyValue [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
+(custom-set-face! :WhichKeyBorder [] {:link FloatBorder})
 
 ;;; misc
 
