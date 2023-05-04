@@ -781,4 +781,17 @@
 (custom-set-face! :VimwikiLink [] {:link "markdownUrl"})
 (custom-set-face! :VimwikiCode [] {:link "markdownCode"})
 
+;; whichkey
+(custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
+
+; (custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+
+; ; (custom-set-face! :WhichKey [] {:link Pmenu })
+; (custom-set-face! :WhichKeySeperator [] {:link Comment })
+; (custom-set-face! :WhichKeyGroup [] {:fg oxocarbon.base11 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyDesc [] {:fg oxocarbon.base14 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyValue [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyBorder [] {:link FloatBorder})
+
+
 { : oxocarbon }
