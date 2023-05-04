@@ -676,6 +676,10 @@
 (custom-set-face! :CmpItemKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :CmpItemKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
+;; ledger
+(custom-set-face! :LedgerNegativeNumber [] {:link "ErrorMsg"})
+(custom-set-face! :LedgerTransactionDate [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+
 ;; nvimtree
 
 (custom-set-face! :NvimTreeImageFile [] {:fg oxocarbon.base12 :bg oxocarbon.none})
