@@ -172,6 +172,9 @@
 (custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
 (custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
 (custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+;; check this
+(custom-set-face! :LedgerNegativeNumber [] {:link "ErrorMsg"})
+(custom-set-face! :LedgerTransactionDate [] {:fg oxocarbon.base12 :bg oxocarbon.none})
 
 ;; lsp
 
@@ -680,6 +683,7 @@
 (custom-set-face! :CmpItemKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :CmpItemKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
+<<<<<<< HEAD
 ;; blink
 
 (custom-set-face! :BlinkCmpMenu [] {:link "Pmenu"})
