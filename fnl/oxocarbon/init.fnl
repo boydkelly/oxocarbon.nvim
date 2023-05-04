@@ -287,7 +287,7 @@
 (custom-set-face! :markdownUrl [] {:link "String"})
 (custom-set-face! :markdownListMarker []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :markdownOrderedListMarker []
+(custom-set-face! :markdownOrdebase10ListMarker []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ;; asciidoc
@@ -302,47 +302,97 @@
 
 ;; treesitter
 
-(custom-set-face! :TSAnnotation []            { fg = base10 })    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :TSAttribute []             { fg = base05 })    -- (unstable) TODO: docs
-(custom-set-face! :TSBoolean []               { fg = #FFAB91 })    -- For booleans.
-(custom-set-face! :TSCharacter []             { fg = #FFAB91 })    -- For characters.
-(custom-set-face! :TSConstructor []           { fg = base14 }) -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-(custom-set-face! :TSConstant []              { fg = base05 })    -- For constants
-(custom-set-face! :TSConstBuiltin []          { fg = base11 })    -- For constant that are built in the language: `nil` in Lua.
-(custom-set-face! :TSConstMacro []            { fg = base11 })    -- For constants that are defined by macros: `NULL` in C.
-(custom-set-face! :TSError []                 { fg = base10 })    -- For syntax/parser errors.
-(custom-set-face! :TSException []             { fg = base05 })    -- For exception related keywords.
-(custom-set-face! :TSField []                 { fg = gray }) -- For fields.
-(custom-set-face! :TSFloat []                 { fg = base10 })    -- For floats.
-(custom-set-face! :TSFuncMacro []             { fg = base11 })    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-(custom-set-face! :TSInclude []               { fg = base08 })    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-(custom-set-face! :TSLabel []                 { fg = base10 }) -- For labels: `label:` in C and `:label:` in Lua.
-(custom-set-face! :TSNamespace []             { fg = base05 })    -- For identifiers referring to modules and namespaces.
-(custom-set-face! :--TSNone []                { })    -- TODO: docs
-(custom-set-face! :TSNumber []                { fg = #FFAB91 })    -- For all numbers
-(custom-set-face! :TSOperator []              { fg = base08 }) -- For any operator: `+`, but also `->` and `*` in C.
-(custom-set-face! :TSParameter []             { fg = base09 }) -- For parameters of a function.
-(custom-set-face! :TSParameterReference []    { fg = base09 })    -- For references to parameters of a function.
-(custom-set-face! :TSProperty []              { fg = base09 }) -- Same as `TSField`.
-(custom-set-face! :TSPunctDelimiter []        { fg = base08 }) -- For delimiters ie: .
-(custom-set-face! :TSPunctBracket []          { fg = base08 }) -- For brackets and parens.
-(custom-set-face! :TSPunctSpecial []          { fg = base08 }) -- For special punctutation that does not fall in the catagories before.
-(custom-set-face! :TSString []                { fg = base07 })    -- For strings.
-(custom-set-face! :TSStringRegex []           { fg = base11 }) -- For regexes.
-(custom-set-face! :TSStringEscape []          { fg = disabled }) -- For escape characters within a string.
-(custom-set-face! :TSSymbol []                { fg = base05 })    -- For identifiers referring to symbols or atoms.
-(custom-set-face! :TSType []                  { fg = base14 })    -- For types.
-(custom-set-face! :TSTypeBuiltin []           { fg = base14 })    -- For builtin types.
-(custom-set-face! :TSTag []                   { fg = base10 })    -- Tags like html tag names.
-(custom-set-face! :TSTagDelimiter []          { fg = base05 })    -- Tag delimiter like < > /
-(custom-set-face! :TSText []                  { fg = text })    -- For strings considebase10 text in a markup language.
-(custom-set-face! :TSTextReference []         { fg = base05 }) -- FIXME
-(custom-set-face! :TSEmphasis [:bold]         { fg = base09 })    -- For text to be represented with emphasis.
-(custom-set-face! :TSUnderline [:underline]   { fg = fg, bg = none, style = 'underline' })    -- For text to be represented with an underline.
-(custom-set-face! :TSStrike [:strikethrough]  { })    -- For strikethrough text.
-(custom-set-face! :TSTitle []                 { fg = base09, bg = none, style = 'bold' })    -- Text that is part of a title.
-(custom-set-face! :TSLiteral []               { fg = fg })    -- Literal text.
-(custom-set-face! :TSURI []                   { fg = link })    -- Any URI like a link or email.
+; (custom-set-face! :TSAnnotation []            { fg = base10 })    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+; (custom-set-face! :TSAttribute []             { fg = base05 })    -- (unstable) TODO: docs
+; (custom-set-face! :TSBoolean []               { fg = #FFAB91 })    -- For booleans.
+; (custom-set-face! :TSCharacter []             { fg = #FFAB91 })    -- For characters.
+; (custom-set-face! :TSConstructor []           { fg = base14 }) -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+; (custom-set-face! :TSConstant []              { fg = base05 })    -- For constants
+; (custom-set-face! :TSConstBuiltin []          { fg = base11 })    -- For constant that are built in the language: `nil` in Lua.
+; (custom-set-face! :TSConstMacro []            { fg = base11 })    -- For constants that are defined by macros: `NULL` in oxocarbon.
+; (custom-set-face! :TSError []                 { fg = base10 })    -- For syntax/parser errors.
+; (custom-set-face! :TSException []             { fg = base05 })    -- For exception related keywords.
+; (custom-set-face! :TSField []                 { fg = gray }) -- For fields.
+; (custom-set-face! :TSFloat []                 { fg = base10 })    -- For floats.
+; (custom-set-face! :TSFuncMacro []             { fg = base11 })    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+; (custom-set-face! :TSInclude []               { fg = base08 })    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+; (custom-set-face! :TSLabel []                 { fg = base10 }) -- For labels: `label:` in C and `:label:` in Lua.
+; (custom-set-face! :TSNamespace []             { fg = base05 })    -- For identifiers referring to modules and namespaces.
+; (custom-set-face! :--TSNone []                { })    -- TODO: docs
+; (custom-set-face! :TSNumber []                { fg = #FFAB91 })    -- For all numbers
+; (custom-set-face! :TSOperator []              { fg = base08 }) -- For any operator: `+`, but also `->` and `*` in oxocarbon.
+; (custom-set-face! :TSParameter []             { fg = base09 }) -- For parameters of a function.
+; (custom-set-face! :TSParameterReference []    { fg = base09 })    -- For references to parameters of a function.
+; (custom-set-face! :TSProperty []              { fg = base09 }) -- Same as `TSField`.
+; (custom-set-face! :TSPunctDelimiter []        { fg = base08 }) -- For delimiters ie: .
+; (custom-set-face! :TSPunctBracket []          { fg = base08 }) -- For brackets and parens.
+; (custom-set-face! :TSPunctSpecial []          { fg = base08 }) -- For special punctutation that does not fall in the catagories before.
+; (custom-set-face! :TSString []                { fg = base07 })    -- For strings.
+; (custom-set-face! :TSStringRegex []           { fg = base11 }) -- For regexes.
+; (custom-set-face! :TSStringEscape []          { fg = disabled }) -- For escape characters within a string.
+; (custom-set-face! :TSSymbol []                { fg = base05 })    -- For identifiers referring to symbols or atoms.
+; (custom-set-face! :TSType []                  { fg = base14 })    -- For types.
+; (custom-set-face! :TSTypeBuiltin []           { fg = base14 })    -- For builtin types.
+; (custom-set-face! :TSTag []                   { fg = base10 })    -- Tags like html tag names.
+; (custom-set-face! :TSTagDelimiter []          { fg = base05 })    -- Tag delimiter like < > /
+; (custom-set-face! :TSText []                  { fg = text })    -- For strings considebase10 text in a markup language.
+; (custom-set-face! :TSTextReference []         { fg = base05 }) -- FIXME
+; (custom-set-face! :TSEmphasis [:bold]         { fg = base09 })    -- For text to be represented with emphasis.
+; (custom-set-face! :TSUnderline [:underline]   { fg = fg, bg = none, style = 'underline' })    -- For text to be represented with an underline.
+; (custom-set-face! :TSStrike [:strikethrough]  { })    -- For strikethrough text.
+; (custom-set-face! :TSTitle []                 { fg = base09, bg = none, style = 'bold' })    -- Text that is part of a title.
+; (custom-set-face! :TSLiteral []               { fg = fg })    -- Literal text.
+; (custom-set-face! :TSURI []                   { fg = link })    -- Any URI like a link or email.
+
+(custom-set-face! "@comment" [] {:link "Comment"})
+(custom-set-face! "@constructor" [] {:fg oxocarbon.base12})
+(custom-set-face! "@constructor.tsx" [] {:fg oxocarbon.base09})
+(custom-set-face! "@field" [] {:fg oxocarbon.base07})
+(custom-set-face! "@keyword" [:bold] {:fg oxocarbon.base14})
+(custom-set-face! "@keyword.function" [:italic] {:fg oxocarbon.base12})
+(custom-set-face! "@label" [] {:fg oxocarbon.base09})
+(custom-set-face! "@lsp.type.comment" [] {:link "@comment"})
+(custom-set-face! "@lsp.type.enum" [] {:link "@type"})
+(custom-set-face! "@lsp.type.enumMember" [] {:link "@constant"})
+(custom-set-face! "@lsp.type.interface" [] {:fg oxocarbon.base09})
+(custom-set-face! "@lsp.type.keyword" [] {:link "@keyword"})
+(custom-set-face! "@lsp.type.namespace" [] {:link "@namespace"})
+(custom-set-face! "@lsp.type.parameter" [] {:link "@parameter"})
+(custom-set-face! "@lsp.type.property" [] {:link "@property"})
+(custom-set-face! "@lsp.type.variable" [] {:fg oxocarbon.none :bg oxocarbon.none})
+(custom-set-face! "@lsp.typemod.function.defaultLibrary" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.macro.defaultLibrary" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.method.defaultLibrary" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.operator.injected" [] {:link "@operator"})
+(custom-set-face! "@lsp.typemod.string.injected" [] {:link "@string"})
+(custom-set-face! "@lsp.typemod.type.defaultLibrary" [] {:fg oxocarbon.base09})
+(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link "@variable.builtin"})
+(custom-set-face! "@lsp.typemod.variable.injected" [] {:link "@variable"})
+(custom-set-face! "@namespace" [] {:link :Include})
+(custom-set-face! "@operator" [] {:fg oxocarbon.base11})
+(custom-set-face! "@parameter" [] {:fg oxocarbon.#ffab91})
+(custom-set-face! "@property" [] {:fg oxocarbon.base07})
+(custom-set-face! "@punctuation.bracket" [] {:fg oxocarbon.base02})
+(custom-set-face! "@punctuation.delimiter" [] {:fg oxocarbon.base11})
+(custom-set-face! "@punctuation.special" [] {:fg oxocarbon.base11})
+(custom-set-face! "@punctuation.special.markdown" [] {:bold true :fg oxocarbon.#ff6f00})
+(custom-set-face! "@string.documentation" [] {:fg oxocarbon.#ffab91})
+(custom-set-face! "@string.escape" [] {:fg oxocarbon.base12})
+(custom-set-face! "@string.regex" [] {:fg oxocarbon.base15})
+(custom-set-face! "@tag.delimiter.tsx" [] {:fg oxocarbon.base09})
+(custom-set-face! "@tag.tsx" [] {:fg oxocarbon.base10})
+(custom-set-face! "@text.danger" [] {:bg oxocarbon.base10 :fg oxocarbon.none})
+(custom-set-face! "@text.diff.add" [] {:link :DiffAdd})
+(custom-set-face! "@text.diff.delete" [] {:link :DiffDelete})
+(custom-set-face! "@text.literal.markdown_inline" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@text.reference" [] {:fg oxocarbon.base07})
+(custom-set-face! "@text.todo.checked" [] {:fg oxocarbon.base07})
+(custom-set-face! "@text.todo.unchecked" [] {:fg oxocarbon.base09})
+(custom-set-face! "@text.warning" [] {:fg oxocarbon.#ff6f00 :bg oxocarbon.none})
+(custom-set-face! "@type.builtin" [] {:fg oxocarbon.base09})
+(custom-set-face! "@variable" [:bold] {:fg oxocarbon.base02})
+(custom-set-face! "@variable.builtin" [] {:fg oxocarbon.base10})
+
 
 ;;; misc
 
@@ -603,10 +653,10 @@
 
 ;; hydra
 
-(custom-set-face! :HydraRed [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! :Hydrabase10 [] {:fg oxocarbon.base12 :bg oxocarbon.none})
 (custom-set-face! :Hydrabase11 [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :HydraAmaranth [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! :HydraTeal [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :Hydrabase07 [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :HydraHint [] {:fg oxocarbon.none :bg oxocarbon.blend})
 
 ;; alpha
