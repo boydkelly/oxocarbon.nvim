@@ -134,12 +134,10 @@
 (custom-set-face! :TooLong [] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :Debug [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :Macro [] {:fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! :MatchParen [:underline]
-                  {:fg oxocarbon.none :bg oxocarbon.base02})
+(custom-set-face! :MatchParen [:underline] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :Bold [:bold] {:fg oxocarbon.none :bg oxocarbon.none})
 (custom-set-face! :Italic [:italic] {:fg oxocarbon.none :bg oxocarbon.none})
-(custom-set-face! :Underlined [:underline]
-                  {:fg oxocarbon.none :bg oxocarbon.none})
+(custom-set-face! :Underlined [:underline] {:fg oxocarbon.none :bg oxocarbon.none})
 
 ;; diagnostics
 
@@ -394,7 +392,7 @@
 (custom-set-face! :TSInclude [] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
 (custom-set-face! :TSLabel [] { :fg oxocarbon.base10 :bg oxocarbon.base00}) ;; For labels: `label:` in C and `:label:` in Lua.
 (custom-set-face! :TSNamespace [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For identifiers referring to modules and namespaces.
-; (custom-set-face! :;;TSNone [] {    :bg oxocarbon.base00})   -- TODO: docs
+(custom-set-face! :TSNone [] { :fg oxocarbon.none :bg oxocarbon.none})  
 (custom-set-face! :TSNumber [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For all numbers
 (custom-set-face! :TSOperator [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For any operator: `+`, but also `->` and `*` in C.
 (custom-set-face! :TSParameter [] { :fg oxocarbon.base09 :bg oxocarbon.base00}) ;; For parameters of a function.
@@ -411,14 +409,14 @@
 (custom-set-face! :TSTypeBuiltin [] { :fg oxocarbon.base14 :bg oxocarbon.base00})    ;; For builtin types.
 (custom-set-face! :TSTag [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; Tags like html tag names.
 (custom-set-face! :TSTagDelimiter [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Tag delimiter like < > /
-(custom-set-face! :TSText [] { :fg oxocarbon.base00 :bg oxocarbon.base00})    ;; For strings consideoxocarbon.base10 text in a markup language.
+(custom-set-face! :TSText [] { :fg oxocarbon.base04 :bg oxocarbon.base01})    ;; For strings consideoxocarbon.base10 text in a markup language.
 (custom-set-face! :TSTextReference [] { :fg oxocarbon.base05 :bg oxocarbon.base00}) ;; FIXME
-(custom-set-face! :TSEmphasis [:bold] { :fg oxocarbon.base09 :bg oxocarbon.base00})    ;; For text to be represented with emphasis.
-(custom-set-face! :TSUnderline [:underline] { :fg oxocarbon.base00 :bg oxocarbon.base00})    ;; For text to be represented with an underline.
-; (custom-set-face! :TSStrike [:strikethrough] { :bg oxocarbon.base00})   ;; For strikethrough text.
-(custom-set-face! :TSTitle [:bold] { :fg oxocarbon.base09 :bg oxocarbon.base00})    ;; Text that is part of a title.
+(custom-set-face! :TSEmphasis [:bold] { :fg oxocarbon.none :bg oxocarbon.none})    ;; For text to be represented with emphasis.
+(custom-set-face! :TSUnderline [:underline] { :fg oxocarbon.none :bg oxocarbon.none})    ;; For text to be represented with an underline.
+(custom-set-face! :TSStrike [:strikethrough] { :bg oxocarbon.none})   ;; For strikethrough text.
+(custom-set-face! :TSTitle [:bold] { :fg oxocarbon.base09 :bg oxocarbon.none})    ;; Text that is part of a title.
 (custom-set-face! :TSLiteral [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Literal text.
-(custom-set-face! :TSURI [] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; Any URI like a link or email.
+(custom-set-face! :TSURI [:underline] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; Any URI like a link or email.
 
 (custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 ; (custom-set-face! :WhichKey [] {:link Pmenu })
