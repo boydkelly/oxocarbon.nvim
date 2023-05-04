@@ -683,7 +683,6 @@
 (custom-set-face! :CmpItemKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :CmpItemKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
-<<<<<<< HEAD
 ;; blink
 
 (custom-set-face! :BlinkCmpMenu [] {:link "Pmenu"})
