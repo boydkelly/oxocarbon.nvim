@@ -393,7 +393,7 @@
 (custom-set-face! :TSInclude [] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
 (custom-set-face! :TSLabel [] { :fg oxocarbon.base10 :bg oxocarbon.base00}) ;; For labels: `label:` in C and `:label:` in Lua.
 (custom-set-face! :TSNamespace [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For identifiers referring to modules and namespaces.
-(custom-set-face! :TSNone [] { :fg oxocarbon.none :bg oxocarbon.none})  
+(custom-set-face! :TSNone [] { :fg oxocarbon.none :bg oxocarbon.none})
 (custom-set-face! :TSNumber [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For all numbers
 (custom-set-face! :TSOperator [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For any operator: `+`, but also `->` and `*` in C.
 (custom-set-face! :TSParameter [] { :fg oxocarbon.base09 :bg oxocarbon.base00}) ;; For parameters of a function.
@@ -799,35 +799,13 @@
 ; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
 ; (custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
 
-;; lazy
+; (custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 
-(custom-set-face! :LazyProgressDone [:bold] {:fg oxocarbon.base10 :bg oxocarbon.base00})
-(custom-set-face! :LazyProgressTodo [:bold] {:fg oxocarbon.base01 :bg oxocarbon.base00})
-
-;; org
-
-(custom-set-face! "@OrgTSHeadlinelevel1" [] {:link "markdownH1"})
-(custom-set-face! "@OrgTSHeadlinelevel2" [] {:link "markdownH1"})
-(custom-set-face! "@OrgTSHeadlinelevel3" [] {:link "markdownH1"})
-(custom-set-face! "@OrgTSHeadlinelevel4" [] {:link "markdownH1"})
-(custom-set-face! "@OrgTSHeadlinelevel5" [] {:link "markdownH1"})
-(custom-set-face! "@OrgTSHeadlinelevel6" [] {:link "markdownH1"})
-(custom-set-face! :OrgTODO [] {:link "@string"})
-(custom-set-face! :OrgDONE [] {:link "@namespace"})
-
-;; rainbow csv
-
-(custom-set-face! :Column0 [] { :fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! :Column1 [] { :fg oxocarbon.base06 :bg oxocarbon.none})
-(custom-set-face! :Column2 [] { :fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :Column3 [] { :fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :Column4 [] { :fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! :Column5 [] { :fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! :Column6 [] { :fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! :Column7 [] { :fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :Column8 [] { :fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :Column9 [] { :fg oxocarbon.base15 :bg oxocarbon.none})
-
-;; norg
+; ; (custom-set-face! :WhichKey [] {:link Pmenu })
+; (custom-set-face! :WhichKeySeperator [] {:link Comment })
+; (custom-set-face! :WhichKeyGroup [] {:fg oxocarbon.base11 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyDesc [] {:fg oxocarbon.base14 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyValue [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyBorder [] {:link FloatBorder})
 
 { : oxocarbon }
