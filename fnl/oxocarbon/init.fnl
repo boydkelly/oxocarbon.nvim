@@ -141,12 +141,12 @@
 
 ;; diagnostics
 
-(custom-set-face! :DiagnosticWarn [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :DiagnosticWarn [] {:fg oxocarbon.base12 :bg oxocarbon.base03})
 (custom-set-face! :DiagnosticError [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticInfo [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticHint [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticUnderlineWarn [:undercurl]
-                  {:fg oxocarbon.base08 :bg oxocarbon.none})
+                  {:fg oxocarbon.base12 :bg oxocarbon.base03})
 (custom-set-face! :DiagnosticUnderlineError [:undercurl]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticUnderlineInfo [:undercurl]
@@ -187,7 +187,7 @@
 (custom-set-face! :MoreMsg [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :Question [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :Substitute [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :WarningMsg [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :WarningMsg [] {:fg oxocarbon.base12 :bg oxocarbon.base03})
 (custom-set-face! :WildMenu [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 
 ;; vimhelp
@@ -571,7 +571,7 @@
 (custom-set-face! :StatusNormal [] {:fg oxocarbon.base00 :bg oxocarbon.base15})
 (custom-set-face! :StatusCommand [] {:fg oxocarbon.base00 :bg oxocarbon.base13})
 (custom-set-face! :StatusLineDiagnosticWarn [:bold]
-                  {:fg oxocarbon.base14 :bg oxocarbon.base00})
+                  {:fg oxocarbon.base12 :bg oxocarbon.base03})
 (custom-set-face! :StatusLineDiagnosticError [:bold]
                   {:fg oxocarbon.base08 :bg oxocarbon.base00})
 
