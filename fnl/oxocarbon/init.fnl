@@ -141,12 +141,12 @@
 
 ;; diagnostics
 
-(custom-set-face! :DiagnosticWarn [] {:fg oxocarbon.base12 :bg oxocarbon.base03})
+(custom-set-face! :DiagnosticWarn [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticError [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticInfo [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticHint [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticUnderlineWarn [:undercurl]
-                  {:fg oxocarbon.base12 :bg oxocarbon.base03})
+                  {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticUnderlineError [:undercurl]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticUnderlineInfo [:undercurl]
@@ -187,7 +187,7 @@
 (custom-set-face! :MoreMsg [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :Question [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :Substitute [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :WarningMsg [] {:fg oxocarbon.base12 :bg oxocarbon.base03})
+(custom-set-face! :WarningMsg [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :WildMenu [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 
 ;; vimhelp
@@ -593,17 +593,17 @@
 ;; notify
 
 (custom-set-face! :NotifyERRORBorder [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :NotifyWARNBorder [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! :NotifyWARNBorder [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOBorder [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGBorder [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyTRACEBorder [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyERRORIcon [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOIcon [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyTRACEIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyERRORTitle [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :NotifyWARNTitle [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! :NotifyWARNTitle [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOTitle [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGTitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyTRACETitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
