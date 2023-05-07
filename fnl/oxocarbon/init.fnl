@@ -738,7 +738,7 @@
 
 ;; hydra
 
-(custom-set-face! :Hydrabase10 [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! :Hydrared [] {:fg oxocarbon.base12 :bg oxocarbon.none})
 (custom-set-face! :Hydrabase11 [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :HydraAmaranth [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! :Hydrabase07 [] {:fg oxocarbon.base08 :bg oxocarbon.none})
