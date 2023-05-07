@@ -433,14 +433,7 @@
 (custom-set-face! :TSLiteral [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Literal text.
 (custom-set-face! :TSURI [:underline] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; Any URI like a link or email.
 
-(custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
-; (custom-set-face! :WhichKey [] {:link Pmenu })
-(custom-set-face! :WhichKeySeperator [] {:link Comment })
-(custom-set-face! :WhichKeyGroup [] {:fg oxocarbon.base11 :bg oxocarbon.base01})
-(custom-set-face! :WhichKeyDesc [] {:fg oxocarbon.base14 :bg oxocarbon.base01})
 (custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
-(custom-set-face! :WhichKeyValue [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
-(custom-set-face! :WhichKeyBorder [] {:link FloatBorder})
 
 ;;; misc
 
@@ -784,14 +777,6 @@
 ;; whichkey
 (custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
 
-; (custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
-
-; ; (custom-set-face! :WhichKey [] {:link Pmenu })
-; (custom-set-face! :WhichKeySeperator [] {:link Comment })
-; (custom-set-face! :WhichKeyGroup [] {:fg oxocarbon.base11 :bg oxocarbon.base01})
-; (custom-set-face! :WhichKeyDesc [] {:fg oxocarbon.base14 :bg oxocarbon.base01})
-; (custom-set-face! :WhichKeyValue [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
-; (custom-set-face! :WhichKeyBorder [] {:link FloatBorder})
 
 
 { : oxocarbon }
