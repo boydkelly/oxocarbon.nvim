@@ -348,7 +348,7 @@
 (custom-set-face! :markdownUrl [] {:link "String"})
 (custom-set-face! :markdownListMarker []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :markdownOrderedListMarker []
+(custom-set-face! :markdownOrdebase10ListMarker []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ;; asciidoc
@@ -376,6 +376,7 @@
 
 ;; treesitter
 
+<<<<<<< HEAD
 (custom-set-face! :TSAnnotation [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 (custom-set-face! :TSAttribute [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; (unstable) TODO: docs
 (custom-set-face! :TSBoolean [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For booleans.
@@ -746,10 +747,10 @@
 
 ;; hydra
 
-(custom-set-face! :HydraRed [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! :Hydrabase10 [] {:fg oxocarbon.base12 :bg oxocarbon.none})
 (custom-set-face! :Hydrabase11 [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :HydraAmaranth [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! :HydraTeal [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :Hydrabase07 [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :HydraHint [] {:fg oxocarbon.none :bg oxocarbon.blend})
 
 ;; alpha
