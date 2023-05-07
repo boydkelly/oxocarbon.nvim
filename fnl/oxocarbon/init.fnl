@@ -376,7 +376,6 @@
 
 ;; treesitter
 
-<<<<<<< HEAD
 (custom-set-face! :TSAnnotation [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 (custom-set-face! :TSAttribute [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; (unstable) TODO: docs
 (custom-set-face! :TSBoolean [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For booleans.
@@ -418,8 +417,6 @@
 (custom-set-face! :TSTitle [:bold] { :fg oxocarbon.base09 :bg oxocarbon.none})    ;; Text that is part of a title.
 (custom-set-face! :TSLiteral [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Literal text.
 (custom-set-face! :TSURI [:underline] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; Any URI like a link or email.
-
-(custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
 
 ;;; misc
 
@@ -589,7 +586,11 @@
 (custom-set-face! :StatusNormal [] {:fg oxocarbon.base00 :bg oxocarbon.base15})
 (custom-set-face! :StatusCommand [] {:fg oxocarbon.base00 :bg oxocarbon.base13})
 (custom-set-face! :StatusLineDiagnosticWarn [:bold]
+<<<<<<< HEAD
                   {:fg oxocarbon.base12 :bg oxocarbon.base00})
+=======
+                  {:fg oxocarbon.base12 :bg oxocarbon.base03})
+>>>>>>> dccfd78 (merge)
 (custom-set-face! :StatusLineDiagnosticError [:bold]
                   {:fg oxocarbon.base10 :bg oxocarbon.base00})
 
