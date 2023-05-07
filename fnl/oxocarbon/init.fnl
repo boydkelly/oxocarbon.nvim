@@ -355,25 +355,7 @@
 (custom-set-face! :asciidocQuotedMonospaced [] {:link "markdownBlockquote"})
 (custom-set-face! :asciidocURL [] {:link "markdownUrl"})
 
-<<<<<<< HEAD
-;; rainbow csv
-
-(custom-set-face! :Column0 [] { :fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! :Column1 [] { :fg oxocarbon.base06 :bg oxocarbon.none})
-(custom-set-face! :Column2 [] { :fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :Column3 [] { :fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :Column4 [] { :fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! :Column5 [] { :fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! :Column6 [] { :fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! :Column7 [] { :fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :Column8 [] { :fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :Column9 [] { :fg oxocarbon.base15 :bg oxocarbon.none})
-
-(custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
-
-=======
 ;; treesitter
->>>>>>> 83cb4cf (update init.fnl from main and move my dev stuff to bottom)
 ;;; misc
 
 (custom-set-face! "@comment" [] {:link "Comment"})
@@ -614,7 +596,6 @@
 (custom-set-face! :CmpItemKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :CmpItemKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
-<<<<<<< HEAD
 ;; blink
 
 (custom-set-face! :BlinkCmpMenu [] {:link "Pmenu"})
@@ -679,8 +660,6 @@
 (custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
 (custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
-=======
->>>>>>> 83cb4cf (update init.fnl from main and move my dev stuff to bottom)
 ;; nvimtree
 
 (custom-set-face! :NvimTreeImageFile [] {:fg oxocarbon.base12 :bg oxocarbon.none})
