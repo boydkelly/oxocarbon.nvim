@@ -363,16 +363,16 @@
 
 ;; rainbow csv
 
-(custom-set-face! :Column0 [] { :fg oxocarbon.base07 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column1 [] { :fg oxocarbon.base06 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column2 [] { :fg oxocarbon.base08 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column3 [] { :fg oxocarbon.base09 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column4 [] { :fg oxocarbon.base10 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column5 [] { :fg oxocarbon.base11 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column6 [] { :fg oxocarbon.base12 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column7 [] { :fg oxocarbon.base13 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column8 [] { :fg oxocarbon.base14 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :Column9 [] { :fg oxocarbon.base15 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+(custom-set-face! :Column0 [] { :fg oxocarbon.base07 :bg oxocarbon.none})
+(custom-set-face! :Column1 [] { :fg oxocarbon.base06 :bg oxocarbon.none})
+(custom-set-face! :Column2 [] { :fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :Column3 [] { :fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! :Column4 [] { :fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :Column5 [] { :fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! :Column6 [] { :fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! :Column7 [] { :fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :Column8 [] { :fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :Column9 [] { :fg oxocarbon.base15 :bg oxocarbon.none})
 
 ;; treesitter
 
