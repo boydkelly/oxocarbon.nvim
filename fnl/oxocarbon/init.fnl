@@ -389,7 +389,7 @@
 ;;; misc
 
 (custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@error" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@error" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 
 ;; @none
 ;; @preproc
@@ -463,7 +463,7 @@
 ;; @storageclass.lifetime
 
 (custom-set-face! "@attribute" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@field" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! "@field" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! "@property" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;;; identifiers
@@ -488,7 +488,7 @@
 (custom-set-face! "@text.strike" [:strikethrough]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! "@text.title" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! "@text.literal" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! "@text.literal" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! "@text.uri" [:underline]
                   {:fg oxocarbon.base14 :bg oxocarbon.none})
 
@@ -553,7 +553,7 @@
 (custom-set-face! :StatusNormal [] {:fg oxocarbon.base00 :bg oxocarbon.base15})
 (custom-set-face! :StatusCommand [] {:fg oxocarbon.base00 :bg oxocarbon.base13})
 (custom-set-face! :StatusLineDiagnosticWarn [:bold]
-                  {:fg oxocarbon.base12 :bg oxocarbon.base03})
+                  {:fg oxocarbon.base12 :bg oxocarbon.base00})
 (custom-set-face! :StatusLineDiagnosticError [:bold]
                   {:fg oxocarbon.base10 :bg oxocarbon.base00})
 
@@ -699,6 +699,18 @@
 ;; whichkey
 (custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
 
+;; ledger
+(custom-set-face! "@comment" [] {:link "Comment"})
+(custom-set-face! "@error" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! "@string.special" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@field" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! "@text.literal" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@number" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number.interval" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 
 { : oxocarbon }
