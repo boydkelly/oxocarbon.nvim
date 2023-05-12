@@ -755,8 +755,8 @@
 (custom-set-face! "@OrgTSHeadlinelevel4" [] {:link "markdownH1"})
 (custom-set-face! "@OrgTSHeadlinelevel5" [] {:link "markdownH1"})
 (custom-set-face! "@OrgTSHeadlinelevel6" [] {:link "markdownH1"})
-(custom-set-face! :OrgTSTODO [] {:link "@string"})
-(custom-set-face! :OrgTSDONE [] {:link "@namespace"})
+(custom-set-face! :OrgTODO [] {:link "@string"})
+(custom-set-face! :OrgDONE [] {:link "@namespace"})
 
 ;; norg
 
