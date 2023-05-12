@@ -788,6 +788,19 @@
 
 (custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
 
+;; org
+
+(custom-set-face! "@OrgTSHeadlinelevel1" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel2" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel3" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel4" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel5" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel6" [] {:link "markdownH1"})
+(custom-set-face! :OrgTSTODO [] {:link "@string"})
+(custom-set-face! :OrgTSDONE [] {:link "@namespace"})
+
+;; norg
+
 ; (custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
 ; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
 ; (custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
