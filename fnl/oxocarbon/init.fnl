@@ -747,7 +747,17 @@
 (custom-set-face! :VimwikiLink [] {:link "markdownUrl"})
 (custom-set-face! :VimwikiCode [] {:link "markdownCode"})
 
-;; whichkey
-(custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
+;; org
+
+(custom-set-face! "@OrgTSHeadlinelevel1" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel2" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel3" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel4" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel5" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel6" [] {:link "markdownH1"})
+(custom-set-face! :OrgTSTODO [] {:link "@string"})
+(custom-set-face! :OrgTSDONE [] {:link "@namespace"})
+
+;; norg
 
 { : oxocarbon }
