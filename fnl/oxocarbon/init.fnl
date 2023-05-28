@@ -453,7 +453,7 @@
 ;; @storageclass.lifetime
 
 (custom-set-face! "@attribute" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@field" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@field" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
 (custom-set-face! "@property" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;;; identifiers
