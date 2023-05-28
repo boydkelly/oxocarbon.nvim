@@ -453,7 +453,7 @@
 ;; @storageclass.lifetime
 
 (custom-set-face! "@attribute" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@field" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@field" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
 (custom-set-face! "@property" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;;; identifiers
@@ -523,6 +523,11 @@
 ;; @scope
 
 (custom-set-face! "@reference" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+
+;; yaml
+(custom-set-face! "@field.yaml" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@string.yaml" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! "@puncuation.delimiter.yaml" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; neovim
 
