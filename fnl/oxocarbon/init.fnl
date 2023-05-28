@@ -569,7 +569,7 @@
 ;; yaml
 (custom-set-face! "@field.yaml" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! "@string.yaml" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@punctuation.delimiter.yaml" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@punctuation.delimiter.yaml" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
 
 ;; neovim
 
