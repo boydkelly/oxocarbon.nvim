@@ -159,17 +159,6 @@
 (custom-set-face! :HealthWarning [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :HealthSuccess [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 
-;; ledger
-
-(custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; lsp
 
@@ -461,7 +450,7 @@
 ;; @storageclass.lifetime
 
 (custom-set-face! "@attribute" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@field" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! "@field" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! "@property" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;;; identifiers
