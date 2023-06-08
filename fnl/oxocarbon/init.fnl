@@ -159,17 +159,6 @@
 (custom-set-face! :HealthWarning [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :HealthSuccess [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 
-;; ledger
-
-(custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; lsp
 
@@ -284,6 +273,7 @@
 
 (custom-set-face! :IncSearch [] {:fg oxocarbon.base06 :bg oxocarbon.base10})
 (custom-set-face! :Search [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
+(custom-set-face! :CurSearch [] {:link "Search"})
 
 ;; tabs
 
@@ -371,6 +361,7 @@
 
 ;; rainbow csv
 
+<<<<<<< HEAD
 (custom-set-face! :Column0 [] { :fg oxocarbon.base07 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 (custom-set-face! :Column1 [] { :fg oxocarbon.base06 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 (custom-set-face! :Column2 [] { :fg oxocarbon.base08 :bg oxocarbon.none})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
@@ -474,6 +465,16 @@
 ; (custom-set-face! "@type.builtin" [] {:fg oxocarbon.base09})
 ; (custom-set-face! "@variable" [:bold] {:fg oxocarbon.base02})
 ; (custom-set-face! "@variable.builtin" [] {:fg oxocarbon.base10})
+(custom-set-face! :Column0 [] { :fg oxocarbon.base07 :bg oxocarbon.none})
+(custom-set-face! :Column1 [] { :fg oxocarbon.base06 :bg oxocarbon.none})
+(custom-set-face! :Column2 [] { :fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :Column3 [] { :fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! :Column4 [] { :fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :Column5 [] { :fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! :Column6 [] { :fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! :Column7 [] { :fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :Column8 [] { :fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :Column9 [] { :fg oxocarbon.base15 :bg oxocarbon.none})
 
 ;;; misc
 
@@ -552,7 +553,7 @@
 ;; @storageclass.lifetime
 
 (custom-set-face! "@attribute" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@field" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! "@field" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
 (custom-set-face! "@property" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;;; identifiers
@@ -577,7 +578,7 @@
 (custom-set-face! "@text.strike" [:strikethrough]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! "@text.title" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! "@text.literal" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! "@text.literal" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! "@text.uri" [:underline]
                   {:fg oxocarbon.base14 :bg oxocarbon.none})
 
@@ -622,6 +623,11 @@
 
 (custom-set-face! "@reference" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 
+;; yaml
+(custom-set-face! "@field.yaml" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@string.yaml" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! "@punctuation.delimiter.yaml" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+
 ;; neovim
 
 (custom-set-face! :NvimInternalError [] {:fg oxocarbon.base10 :bg oxocarbon.none})
@@ -643,6 +649,7 @@
 (custom-set-face! :StatusCommand [] {:fg oxocarbon.base00 :bg oxocarbon.base13})
 (custom-set-face! :StatusLineDiagnosticWarn [:bold]
                   {:fg oxocarbon.base14 :bg oxocarbon.none})
+;;                  {:fg oxocarbon.base12 :bg oxocarbon.base00})
 (custom-set-face! :StatusLineDiagnosticError [:bold]
                   {:fg oxocarbon.base10 :bg oxocarbon.base00})
 
@@ -722,12 +729,17 @@
 (custom-set-face! :CmpItemKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :CmpItemKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
-;; ledger
-(custom-set-face! :LedgerNegativeNumber [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :LedgerTransactionDate [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! :LedgerTransactionExpression [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :LedgerPosting [] {:fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :LedgerComment [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+
+;; treesitter syntax
+(custom-set-face! "@comment" [] {:link "Comment"})
+(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; nvimtree
 
@@ -805,5 +817,17 @@
 ; (custom-set-face! :WhichKeyValue [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
 ; (custom-set-face! :WhichKeyBorder [] {:link FloatBorder})
 
+;; org
+
+(custom-set-face! "@OrgTSHeadlinelevel1" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel2" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel3" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel4" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel5" [] {:link "markdownH1"})
+(custom-set-face! "@OrgTSHeadlinelevel6" [] {:link "markdownH1"})
+(custom-set-face! :OrgTODO [] {:link "@string"})
+(custom-set-face! :OrgDONE [] {:link "@namespace"})
+
+;; norg
 
 { : oxocarbon }
