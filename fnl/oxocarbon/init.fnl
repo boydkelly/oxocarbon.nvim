@@ -120,7 +120,7 @@
 (custom-set-face! :CursorColumn [] {:fg oxocarbon.none :bg oxocarbon.base01})
 (custom-set-face! :CursorLineNr [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :QuickFixLine [] {:fg oxocarbon.none :bg oxocarbon.base01})
-(custom-set-face! :Error [] {:fg oxocarbon.base04 :bg oxocarbon.base11})
+(custom-set-face! :Error [] {:fg oxocarbon.base10 :bg oxocarbon.base01})
 (custom-set-face! :LineNr [] {:fg oxocarbon.base03 :bg oxocarbon.base00})
 (custom-set-face! :NonText [] {:fg oxocarbon.base02 :bg oxocarbon.none})
 (custom-set-face! :Normal [] {:fg oxocarbon.base04 :bg oxocarbon.base00})
@@ -154,12 +154,83 @@
 (custom-set-face! :DiagnosticUnderlineHint [:undercurl]
                   {:fg oxocarbon.base04 :bg oxocarbon.none})
 
+;; health
+(custom-set-face! :HealthError [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :HealthWarning [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :HealthSuccess [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+;; ledger
+
+(custom-set-face! "@comment" [] {:link "Comment"})
+(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+
 ;; lsp
 
 (custom-set-face! :LspReferenceText [] {:fg oxocarbon.none :bg oxocarbon.base03})
 (custom-set-face! :LspReferenceread [] {:fg oxocarbon.none :bg oxocarbon.base03})
 (custom-set-face! :LspReferenceWrite [] {:fg oxocarbon.none :bg oxocarbon.base03})
 (custom-set-face! :LspSignatureActiveParameter [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+;; lps-semantic-tokens
+(custom-set-face! "@lsp.type.class" [] {:link "Structure"})
+(custom-set-face! "@lsp.type.decorator" [] {:link "Decorator"})
+(custom-set-face! "@lsp.type.function" [] {:link "@function"})
+(custom-set-face! "@lsp.type.macro" [] {:link "Macro"})
+(custom-set-face! "@lsp.type.method" [] {:link "@function"})
+(custom-set-face! "@lsp.type.struct" [] {:link "Structure"})
+(custom-set-face! "@lsp.type.type" [] {:link "Type"})
+(custom-set-face! "@lsp.type.typeParameter" [] {:link "Typedef"})
+(custom-set-face! "@lsp.type.selfParameter" [] {:link "@variable.builtin"})
+(custom-set-face! "@lsp.type.builtinConstant" [] {:link "@constant.builtin"})
+(custom-set-face! "@lsp.type.magicFunction" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.type.boolean" [] {:link "@boolean"})
+(custom-set-face! "@lsp.type.builtinType" [] {:link "@type.builtin"})
+(custom-set-face! "@lsp.type.comment" [] {:link "@comment"})
+(custom-set-face! "@lsp.type.enum" [] {:link "@type"})
+(custom-set-face! "@lsp.type.enumMember" [] {:link "@constant"})
+(custom-set-face! "@lsp.type.escapeSequence" [] {:link "@string.escape"})
+(custom-set-face! "@lsp.type.formatSpecifier" [] {:link "@punctuation.special"})
+;;(custom-set-face! "@lsp.type.interface" [] {})
+(custom-set-face! "@lsp.type.keyword" [] {:link "@keyword"})
+(custom-set-face! "@lsp.type.namespace" [] {:link "@namespace"})
+(custom-set-face! "@lsp.type.number" [] {:link "@number"})
+(custom-set-face! "@lsp.type.operator" [] {:link "@operator"})
+(custom-set-face! "@lsp.type.parameter" [] {:link "@parameter"})
+(custom-set-face! "@lsp.type.property" [] {:link "@property"})
+(custom-set-face! "@lsp.type.selfKeyword" [] {:link "@variable.builtin"})
+(custom-set-face! "@lsp.type.string.rust" [] {:link "@string"})
+(custom-set-face! "@lsp.type.typeAlias" [] {:link "@type.definition"})
+(custom-set-face! "@lsp.type.unresolvedReference" [] {:link "Error"})
+(custom-set-face! "@lsp.type.variable" [] {:link "@variable"} )
+(custom-set-face! "@lsp.mod.readonly" [] {:link "@constant"})
+(custom-set-face! "@lsp.mod.typeHint" [] {:link "Type"})
+(custom-set-face! "@lsp.mod.builtin" [] {:link "Special"})
+(custom-set-face! "@lsp.typemod.class.defaultLibrary" [] {:link "@type.builtin"})
+(custom-set-face! "@lsp.typemod.enum.defaultLibrary" [] {:link "@type.builtin"})
+(custom-set-face! "@lsp.typemod.enumMember.defaultLibrary" [] {:link "@constant.builtin"})
+(custom-set-face! "@lsp.typemod.function.defaultLibrary" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.keyword.async" [] {:link "@keyword.coroutine"})
+(custom-set-face! "@lsp.typemod.macro.defaultLibrary" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.method.defaultLibrary" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.operator.injected" [] {:link "@operator"})
+(custom-set-face! "@lsp.typemod.string.injected" [] {:link "@string"})
+(custom-set-face! "@lsp.typemod.operator.controlFlow" [] {:link "@exception"})
+(custom-set-face! "@lsp.typemod.keyword.documentation" [] {:link "Special"})
+(custom-set-face! "@lsp.typemod.variable.global" [] {:link "@constant"})
+(custom-set-face! "@lsp.typemod.variable.static" [] {:link "@constant"})
+(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link "Special"})
+(custom-set-face! "@lsp.typemod.function.builtin" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.function.readonly" [] {:link "@method"})
+;;(custom-set-face! "@lsp.typemod.type.defaultLibrary" [] {})
+(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link "@variable.builtin"})
+(custom-set-face! "@lsp.typemod.variable.injected" [] {:link "@variable"})
 
 ;; gutter
 
@@ -417,7 +488,7 @@
 
 ;;; punctuation
 
-(custom-set-face! "@puncuation.delimiter" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@punctuation.delimiter" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! "@punctuation.bracket" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! "@punctuation.special" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 
@@ -592,17 +663,25 @@
 
 ;; notify
 
-(custom-set-face! :NotifyERRORBorder [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :NotifyERRORBorder [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :NotifyWARNBorder [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOBorder [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGBorder [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyTRACEBorder [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :NotifyERRORIcon [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+; <<<<<<< HEAD
+; (custom-set-face! :NotifyERRORIcon [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+; (custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+; (custom-set-face! :NotifyINFOIcon [] {:fg oxocarbon.base05 :bg oxocarbon.none})
+; (custom-set-face! :NotifyDEBUGIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+; (custom-set-face! :NotifyTRACEIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+; (custom-set-face! :NotifyERRORTitle [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+; =======
+(custom-set-face! :NotifyERRORIcon [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOIcon [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyTRACEIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :NotifyERRORTitle [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :NotifyERRORTitle [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :NotifyWARNTitle [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOTitle [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGTitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
