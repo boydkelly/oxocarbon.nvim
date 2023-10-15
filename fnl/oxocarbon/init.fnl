@@ -134,10 +134,12 @@
 (custom-set-face! :TooLong [] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :Debug [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :Macro [] {:fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! :MatchParen [:underline] {:fg oxocarbon.none :bg oxocarbon.base02})
+(custom-set-face! :MatchParen [:underline]
+                  {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :Bold [:bold] {:fg oxocarbon.none :bg oxocarbon.none})
 (custom-set-face! :Italic [:italic] {:fg oxocarbon.none :bg oxocarbon.none})
-(custom-set-face! :Underlined [:underline] {:fg oxocarbon.none :bg oxocarbon.none})
+(custom-set-face! :Underlined [:underline]
+                  {:fg oxocarbon.none :bg oxocarbon.none})
 
 ;; diagnostics
 
@@ -159,6 +161,19 @@
 (custom-set-face! :HealthWarning [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :HealthSuccess [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 
+;; ledger
+
+(custom-set-face! "@comment" [] {:link "Comment"})
+(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+>>>>>>> 966afc8 (update init.fnl from main and move my dev stuff to bottom)
 ;; lsp
 
 (custom-set-face! :LspCodeLens [] {:fg oxocarbon.none :bg oxocarbon.base03})
@@ -223,17 +238,9 @@
 
 ;; gutter
 
-; (custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
-; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
-; (custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
-
 (custom-set-face! :Folded [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 (custom-set-face! :FoldColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
 (custom-set-face! :SignColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
-
-;; lazy
-(custom-set-face! :LazyProgressDone [:bold] {:fg oxocarbon.base10 :bg oxocarbon.base00})
-(custom-set-face! :LazyProgressTodo [:bold] {:fg oxocarbon.base01 :bg oxocarbon.base00})
 
 ;; navigation
 
@@ -360,19 +367,6 @@
 (custom-set-face! :asciidocOneLineTitle [] {:link "markdownH1"})
 (custom-set-face! :asciidocQuotedMonospaced [] {:link "markdownBlockquote"})
 (custom-set-face! :asciidocURL [] {:link "markdownUrl"})
-
-;; rainbow csv
-
-(custom-set-face! :Column0 [] { :fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! :Column1 [] { :fg oxocarbon.base06 :bg oxocarbon.none})
-(custom-set-face! :Column2 [] { :fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :Column3 [] { :fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :Column4 [] { :fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! :Column5 [] { :fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! :Column6 [] { :fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! :Column7 [] { :fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :Column8 [] { :fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :Column9 [] { :fg oxocarbon.base15 :bg oxocarbon.none})
 
 ;; treesitter
 
@@ -565,11 +559,6 @@
 ;; @scope
 
 (custom-set-face! "@reference" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
-
-;; yaml
-(custom-set-face! "@field.yaml" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@string.yaml" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@punctuation.delimiter.yaml" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
 
 ;; neovim
 
@@ -793,6 +782,18 @@
 
 (custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
 
+<<<<<<< HEAD
+=======
+; (custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
+; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
+; (custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
+
+;; lazy
+
+(custom-set-face! :LazyProgressDone [:bold] {:fg oxocarbon.base10 :bg oxocarbon.base00})
+(custom-set-face! :LazyProgressTodo [:bold] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+
+>>>>>>> 966afc8 (update init.fnl from main and move my dev stuff to bottom)
 ;; org
 
 (custom-set-face! "@OrgTSHeadlinelevel1" [] {:link "markdownH1"})
@@ -803,6 +804,19 @@
 (custom-set-face! "@OrgTSHeadlinelevel6" [] {:link "markdownH1"})
 (custom-set-face! :OrgTODO [] {:link "@string"})
 (custom-set-face! :OrgDONE [] {:link "@namespace"})
+
+;; rainbow csv
+
+(custom-set-face! :Column0 [] { :fg oxocarbon.base07 :bg oxocarbon.none})
+(custom-set-face! :Column1 [] { :fg oxocarbon.base06 :bg oxocarbon.none})
+(custom-set-face! :Column2 [] { :fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :Column3 [] { :fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! :Column4 [] { :fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :Column5 [] { :fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! :Column6 [] { :fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! :Column7 [] { :fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :Column8 [] { :fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :Column9 [] { :fg oxocarbon.base15 :bg oxocarbon.none})
 
 ;; norg
 
