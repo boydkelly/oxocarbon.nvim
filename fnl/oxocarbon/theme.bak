@@ -1,0 +1,582 @@
+(local util (require :tokyonight.util))
+
+(local colors (require :tokyonight.colors))
+
+(local M {})
+
+(fn M.setup []
+  (let [config (require :tokyonight.config)
+        options config.options
+        theme {:colors (colors.setup) :config options}
+        c theme.colors]
+    (set theme.highlights
+         {:@constructor {:fg c.magenta}
+          :@constructor.tsx {:fg c.blue1}
+          :@field {:fg c.green1}
+          :@keyword {:fg c.purple :style options.styles.keywords}
+          :@keyword.function {:fg c.magenta :style options.styles.functions}
+          :@label {:fg c.blue}
+          :@lsp.type.comment {:link "@comment"}
+          :@lsp.type.enum {:link "@type"}
+          :@lsp.type.enumMember {:link "@constant"}
+          :@lsp.type.interface {:fg (util.lighten c.blue1 0.7)}
+          :@lsp.type.keyword {:link "@keyword"}
+          :@lsp.type.namespace {:link "@namespace"}
+          :@lsp.type.parameter {:link "@parameter"}
+          :@lsp.type.property {:link "@property"}
+          :@lsp.type.variable {}
+          :@lsp.typemod.function.defaultLibrary {:link "@function.builtin"}
+          :@lsp.typemod.macro.defaultLibrary {:link "@function.builtin"}
+          :@lsp.typemod.method.defaultLibrary {:link "@function.builtin"}
+          :@lsp.typemod.operator.injected {:link "@operator"}
+          :@lsp.typemod.string.injected {:link "@string"}
+          :@lsp.typemod.type.defaultLibrary {:fg (util.darken c.blue1 0.8)}
+          :@lsp.typemod.variable.defaultLibrary {:link "@variable.builtin"}
+          :@lsp.typemod.variable.injected {:link "@variable"}
+          :@namespace {:link :Include}
+          :@operator {:fg c.blue5}
+          :@parameter {:fg c.yellow}
+          :@property {:fg c.green1}
+          :@punctuation.bracket {:fg c.fg_dark}
+          :@punctuation.delimiter {:fg c.blue5}
+          :@punctuation.special {:fg c.blue5}
+          :@punctuation.special.markdown {:bold true :fg c.orange}
+          :@string.documentation {:fg c.yellow}
+          :@string.escape {:fg c.magenta}
+          :@string.regex {:fg c.blue6}
+          :@tag.delimiter.tsx {:fg (util.darken c.blue 0.7)}
+          :@tag.tsx {:fg c.red}
+          :@text.danger {:bg c.error :fg c.bg}
+          :@text.diff.add {:link :DiffAdd}
+          :@text.diff.delete {:link :DiffDelete}
+          :@text.literal.markdown_inline {:bg c.terminal_black :fg c.blue}
+          :@text.reference {:fg c.teal}
+          :@text.todo.checked {:fg c.green1}
+          :@text.todo.unchecked {:fg c.blue}
+          :@text.warning {:bg c.warning :fg c.bg}
+          :@type.builtin {:fg (util.darken c.blue1 0.8)}
+          :@variable {:fg c.fg :style options.styles.variables}
+          :@variable.builtin {:fg c.red}
+          :ALEErrorSign {:fg c.error}
+          :ALEWarningSign {:fg c.warning}
+          :AlphaButtons {:fg c.cyan}
+          :AlphaFooter {:fg c.blue1}
+          :AlphaHeader {:fg c.blue}
+          :AlphaHeaderLabel {:fg c.orange}
+          :AlphaShortcut {:fg c.orange}
+          :Bold {:bold true}
+          :BufferAlternate {:bg c.fg_gutter :fg c.fg}
+          :BufferAlternateERROR {:bg c.fg_gutter :fg c.error}
+          :BufferAlternateHINT {:bg c.fg_gutter :fg c.hint}
+          :BufferAlternateINFO {:bg c.fg_gutter :fg c.info}
+          :BufferAlternateIndex {:bg c.fg_gutter :fg c.info}
+          :BufferAlternateMod {:bg c.fg_gutter :fg c.warning}
+          :BufferAlternateSign {:bg c.fg_gutter :fg c.info}
+          :BufferAlternateTarget {:bg c.fg_gutter :fg c.red}
+          :BufferAlternateWARN {:bg c.fg_gutter :fg c.warning}
+          :BufferCurrent {:bg c.bg :fg c.fg}
+          :BufferCurrentERROR {:bg c.bg :fg c.error}
+          :BufferCurrentHINT {:bg c.bg :fg c.hint}
+          :BufferCurrentINFO {:bg c.bg :fg c.info}
+          :BufferCurrentIndex {:bg c.bg :fg c.info}
+          :BufferCurrentMod {:bg c.bg :fg c.warning}
+          :BufferCurrentSign {:bg c.bg :fg c.bg}
+          :BufferCurrentTarget {:bg c.bg :fg c.red}
+          :BufferCurrentWARN {:bg c.bg :fg c.warning}
+          :BufferInactive {:bg (util.darken c.bg_highlight 0.4)
+                           :fg (util.darken c.dark5 0.8)}
+          :BufferInactiveERROR {:bg c.bg_highlight
+                                :fg (util.darken c.error 0.8)}
+          :BufferInactiveHINT {:bg c.bg_highlight :fg (util.darken c.hint 0.8)}
+          :BufferInactiveINFO {:bg c.bg_highlight :fg (util.darken c.info 0.8)}
+          :BufferInactiveIndex {:bg c.bg_highlight :fg c.dark5}
+          :BufferInactiveMod {:bg c.bg_highlight
+                              :fg (util.darken c.warning 0.8)}
+          :BufferInactiveSign {:bg (util.darken c.bg_highlight 0.4) :fg c.bg}
+          :BufferInactiveTarget {:bg c.bg_highlight :fg c.red}
+          :BufferInactiveWARN {:bg c.bg_highlight
+                               :fg (util.darken c.warning 0.8)}
+          :BufferLineIndicatorSelected {:fg c.git.change}
+          :BufferOffset {:bg c.bg_statusline :fg c.dark5}
+          :BufferTabpageFill {:bg (util.darken c.bg_highlight 0.8) :fg c.dark5}
+          :BufferTabpages {:bg c.bg_statusline :fg c.none}
+          :BufferVisible {:bg c.bg_statusline :fg c.fg}
+          :BufferVisibleERROR {:bg c.bg_statusline :fg c.error}
+          :BufferVisibleHINT {:bg c.bg_statusline :fg c.hint}
+          :BufferVisibleINFO {:bg c.bg_statusline :fg c.info}
+          :BufferVisibleIndex {:bg c.bg_statusline :fg c.info}
+          :BufferVisibleMod {:bg c.bg_statusline :fg c.warning}
+          :BufferVisibleSign {:bg c.bg_statusline :fg c.info}
+          :BufferVisibleTarget {:bg c.bg_statusline :fg c.red}
+          :BufferVisibleWARN {:bg c.bg_statusline :fg c.warning}
+          :Character {:fg c.green}
+          :CmpDocumentation {:bg c.bg_float :fg c.fg}
+          :CmpDocumentationBorder {:bg c.bg_float :fg c.border_highlight}
+          :CmpItemAbbr {:bg c.none :fg c.fg}
+          :CmpItemAbbrDeprecated {:bg c.none
+                                  :fg c.fg_gutter
+                                  :strikethrough true}
+          :CmpItemAbbrMatch {:bg c.none :fg c.blue1}
+          :CmpItemAbbrMatchFuzzy {:bg c.none :fg c.blue1}
+          :CmpItemKindClass {:bg c.none :fg c.orange}
+          :CmpItemKindConstant {:bg c.none :fg c.magenta}
+          :CmpItemKindConstructor {:bg c.none :fg c.blue}
+          :CmpItemKindCopilot {:bg c.none :fg c.teal}
+          :CmpItemKindDefault {:bg c.none :fg c.fg_dark}
+          :CmpItemKindEnum {:bg c.none :fg c.orange}
+          :CmpItemKindEnumMember {:bg c.none :fg c.green1}
+          :CmpItemKindEvent {:bg c.none :fg c.orange}
+          :CmpItemKindField {:bg c.none :fg c.green1}
+          :CmpItemKindFunction {:bg c.none :fg c.blue}
+          :CmpItemKindInterface {:bg c.none :fg c.orange}
+          :CmpItemKindKeyword {:bg c.none :fg c.cyan}
+          :CmpItemKindMethod {:bg c.none :fg c.blue}
+          :CmpItemKindModule {:bg c.none :fg c.yellow}
+          :CmpItemKindOperator {:bg c.none :fg c.green1}
+          :CmpItemKindProperty {:bg c.none :fg c.green1}
+          :CmpItemKindReference {:bg c.none :fg c.magenta}
+          :CmpItemKindSnippet {:bg c.none :fg c.dark5}
+          :CmpItemKindStruct {:bg c.none :fg c.orange}
+          :CmpItemKindTypeParameter {:bg c.none :fg c.green1}
+          :CmpItemKindUnit {:bg c.none :fg c.orange}
+          :CmpItemKindValue {:bg c.none :fg c.magenta}
+          :CmpItemKindVariable {:bg c.none :fg c.magenta}
+          :CmpItemMenu {:bg c.none :fg c.comment}
+          :ColorColumn {:bg c.black}
+          :Comment {:fg c.comment :style options.styles.comments}
+          :Conceal {:fg c.dark5}
+          :Constant {:fg c.orange}
+          :CurSearch {:link :IncSearch}
+          :Cursor {:bg c.fg :fg c.bg}
+          :CursorColumn {:bg c.bg_highlight}
+          :CursorIM {:bg c.fg :fg c.bg}
+          :CursorLine {:bg c.bg_highlight}
+          :CursorLineNr {:fg c.dark5}
+          :DapStoppedLine {:bg (util.darken c.warning 0.1)}
+          :DashboardCenter {:fg c.magenta}
+          :DashboardFooter {:fg c.yellow :italic true}
+          :DashboardHeader {:fg c.blue}
+          :DashboardShortCut {:fg c.cyan}
+          :Debug {:fg c.orange}
+          :DefinitionCount {:fg c.purple}
+          :DefinitionIcon {:fg c.blue}
+          :DiagnosticError {:fg c.error}
+          :DiagnosticHint {:fg c.hint}
+          :DiagnosticInfo {:fg c.info}
+          :DiagnosticInformation {:link :DiagnosticInfo}
+          :DiagnosticUnderlineError {:sp c.error :undercurl true}
+          :DiagnosticUnderlineHint {:sp c.hint :undercurl true}
+          :DiagnosticUnderlineInfo {:sp c.info :undercurl true}
+          :DiagnosticUnderlineWarn {:sp c.warning :undercurl true}
+          :DiagnosticUnnecessary {:fg c.terminal_black}
+          :DiagnosticVirtualTextError {:bg (util.darken c.error 0.1)
+                                       :fg c.error}
+          :DiagnosticVirtualTextHint {:bg (util.darken c.hint 0.1) :fg c.hint}
+          :DiagnosticVirtualTextInfo {:bg (util.darken c.info 0.1) :fg c.info}
+          :DiagnosticVirtualTextWarn {:bg (util.darken c.warning 0.1)
+                                      :fg c.warning}
+          :DiagnosticWarn {:fg c.warning}
+          :DiagnosticWarning {:link :DiagnosticWarn}
+          :DiffAdd {:bg c.diff.add}
+          :DiffChange {:bg c.diff.change}
+          :DiffDelete {:bg c.diff.delete}
+          :DiffText {:bg c.diff.text}
+          :Directory {:fg c.blue}
+          :EndOfBuffer {:fg c.bg}
+          :Error {:fg c.error}
+          :ErrorMsg {:fg c.error}
+          :FernBranchText {:fg c.blue}
+          :FloatBorder {:bg c.bg_float :fg c.border_highlight}
+          :FoldColumn {:bg (or (and options.transparent c.none) c.bg)
+                       :fg c.comment}
+          :Folded {:bg c.fg_gutter :fg c.blue}
+          :Foo {:bg c.magenta2 :fg c.magenta2}
+          :Function {:fg c.blue :style options.styles.functions}
+          :GitGutterAdd {:fg c.gitSigns.add}
+          :GitGutterAddLineNr {:fg c.gitSigns.add}
+          :GitGutterChange {:fg c.gitSigns.change}
+          :GitGutterChangeLineNr {:fg c.gitSigns.change}
+          :GitGutterDelete {:fg c.gitSigns.delete}
+          :GitGutterDeleteLineNr {:fg c.gitSigns.delete}
+          :GitSignsAdd {:fg c.gitSigns.add}
+          :GitSignsChange {:fg c.gitSigns.change}
+          :GitSignsDelete {:fg c.gitSigns.delete}
+          :GlyphPalette1 {:fg c.red1}
+          :GlyphPalette2 {:fg c.green}
+          :GlyphPalette3 {:fg c.yellow}
+          :GlyphPalette4 {:fg c.blue}
+          :GlyphPalette6 {:fg c.green1}
+          :GlyphPalette7 {:fg c.fg}
+          :GlyphPalette9 {:fg c.red}
+          :Hlargs {:fg c.yellow}
+          :HopNextKey {:bold true :fg c.magenta2}
+          :HopNextKey1 {:bold true :fg c.blue2}
+          :HopNextKey2 {:fg (util.darken c.blue2 0.6)}
+          :HopUnmatched {:fg c.dark3}
+          :Identifier {:fg c.magenta :style options.styles.variables}
+          :IlluminatedWordRead {:bg c.fg_gutter}
+          :IlluminatedWordText {:bg c.fg_gutter}
+          :IlluminatedWordWrite {:bg c.fg_gutter}
+          :IncSearch {:bg c.orange :fg c.black}
+          :IndentBlanklineChar {:fg c.fg_gutter :nocombine true}
+          :IndentBlanklineContextChar {:fg c.purple :nocombine true}
+          :Italic {:italic true}
+          :Keyword {:fg c.cyan :style options.styles.keywords}
+          :LazyProgressDone {:bold true :fg c.magenta2}
+          :LazyProgressTodo {:bold true :fg c.fg_gutter}
+          :LeapBackdrop {:fg c.dark3}
+          :LeapLabelPrimary {:bold true :fg c.magenta2}
+          :LeapLabelSecondary {:bold true :fg c.green1}
+          :LeapMatch {:bg c.magenta2 :bold true :fg c.fg}
+          :LightspeedGreyWash {:fg c.dark3}
+          :LightspeedLabel {:bold true :fg c.magenta2 :underline true}
+          :LightspeedLabelDistant {:bold true :fg c.green1 :underline true}
+          :LightspeedLabelDistantOverlapped {:fg c.green2 :underline true}
+          :LightspeedLabelOverlapped {:fg c.magenta2 :underline true}
+          :LightspeedMaskedChar {:fg c.orange}
+          :LightspeedOneCharMatch {:bg c.magenta2 :bold true :fg c.fg}
+          :LightspeedPendingOpArea {:bg c.magenta2 :fg c.fg}
+          :LightspeedShortcut {:bg c.magenta2
+                               :bold true
+                               :fg c.fg
+                               :underline true}
+          :LightspeedUnlabeledMatch {:bold true :fg c.blue2}
+          :LineNr {:fg c.fg_gutter}
+          :LspCodeLens {:fg c.comment}
+          :LspFloatWinBorder {:fg c.border_highlight}
+          :LspFloatWinNormal {:bg c.bg_float}
+          :LspInfoBorder {:bg c.bg_float :fg c.border_highlight}
+          :LspReferenceRead {:bg c.fg_gutter}
+          :LspReferenceText {:bg c.fg_gutter}
+          :LspReferenceWrite {:bg c.fg_gutter}
+          :LspSagaBorderTitle {:fg c.cyan}
+          :LspSagaCodeActionBorder {:fg c.blue}
+          :LspSagaCodeActionContent {:fg c.purple}
+          :LspSagaCodeActionTitle {:fg c.blue1}
+          :LspSagaDefPreviewBorder {:fg c.green}
+          :LspSagaFinderSelection {:fg c.bg_visual}
+          :LspSagaHoverBorder {:fg c.blue}
+          :LspSagaRenameBorder {:fg c.green}
+          :LspSagaSignatureHelpBorder {:fg c.red}
+          :LspSignatureActiveParameter {:bg (util.darken c.bg_visual 0.4)
+                                        :bold true}
+          :MatchParen {:bold true :fg c.orange}
+          :MiniCompletionActiveParameter {:underline true}
+          :MiniCursorword {:bg c.fg_gutter}
+          :MiniCursorwordCurrent {:bg c.fg_gutter}
+          :MiniIndentscopePrefix {:nocombine true}
+          :MiniIndentscopeSymbol {:fg c.blue1}
+          :MiniJump {:bg c.magenta2 :fg "#ffffff"}
+          :MiniJump2dSpot {:bold true :fg c.magenta2 :nocombine true}
+          :MiniStarterCurrent {:nocombine true}
+          :MiniStarterFooter {:fg c.yellow :italic true}
+          :MiniStarterHeader {:fg c.blue}
+          :MiniStarterInactive {:fg c.comment :style options.styles.comments}
+          :MiniStarterItem {:bg (or (and options.transparent c.none) c.bg)
+                            :fg c.fg}
+          :MiniStarterItemBullet {:fg c.border_highlight}
+          :MiniStarterItemPrefix {:fg c.warning}
+          :MiniStarterQuery {:fg c.info}
+          :MiniStarterSection {:fg c.blue1}
+          :MiniStatuslineDevinfo {:bg c.bg_highlight :fg c.fg_dark}
+          :MiniStatuslineFileinfo {:bg c.bg_highlight :fg c.fg_dark}
+          :MiniStatuslineFilename {:bg c.fg_gutter :fg c.fg_dark}
+          :MiniStatuslineInactive {:bg c.bg_statusline :fg c.blue}
+          :MiniStatuslineModeCommand {:bg c.yellow :bold true :fg c.black}
+          :MiniStatuslineModeInsert {:bg c.green :bold true :fg c.black}
+          :MiniStatuslineModeNormal {:bg c.blue :bold true :fg c.black}
+          :MiniStatuslineModeOther {:bg c.teal :bold true :fg c.black}
+          :MiniStatuslineModeReplace {:bg c.red :bold true :fg c.black}
+          :MiniStatuslineModeVisual {:bg c.magenta :bold true :fg c.black}
+          :MiniSurround {:bg c.orange :fg c.black}
+          :MiniTablineCurrent {:bg c.fg_gutter :fg c.fg}
+          :MiniTablineFill {:bg c.black}
+          :MiniTablineHidden {:bg c.bg_statusline :fg c.dark5}
+          :MiniTablineModifiedCurrent {:bg c.fg_gutter :fg c.warning}
+          :MiniTablineModifiedHidden {:bg c.bg_statusline
+                                      :fg (util.darken c.warning 0.7)}
+          :MiniTablineModifiedVisible {:bg c.bg_statusline :fg c.warning}
+          :MiniTablineTabpagesection {:bg c.bg_statusline :fg c.none}
+          :MiniTablineVisible {:bg c.bg_statusline :fg c.fg}
+          :MiniTestEmphasis {:bold true}
+          :MiniTestFail {:bold true :fg c.red}
+          :MiniTestPass {:bold true :fg c.green}
+          :MiniTrailspace {:bg c.red}
+          :ModeMsg {:bold true :fg c.fg_dark}
+          :MoreMsg {:fg c.blue}
+          :MsgArea {:fg c.fg_dark}
+          :NavicIconsArray {:bg c.none :fg c.orange}
+          :NavicIconsBoolean {:bg c.none :fg c.orange}
+          :NavicIconsClass {:bg c.none :fg c.orange}
+          :NavicIconsConstant {:bg c.none :fg c.magenta}
+          :NavicIconsConstructor {:bg c.none :fg c.orange}
+          :NavicIconsEnum {:bg c.none :fg c.orange}
+          :NavicIconsEnumMember {:bg c.none :fg c.green1}
+          :NavicIconsEvent {:bg c.none :fg c.orange}
+          :NavicIconsField {:bg c.none :fg c.green1}
+          :NavicIconsFile {:bg c.none :fg c.fg}
+          :NavicIconsFunction {:bg c.none :fg c.blue}
+          :NavicIconsInterface {:bg c.none :fg c.orange}
+          :NavicIconsKey {:bg c.none :fg c.purple}
+          :NavicIconsKeyword {:bg c.none :fg c.purple}
+          :NavicIconsMethod {:bg c.none :fg c.blue}
+          :NavicIconsModule {:bg c.none :fg c.yellow}
+          :NavicIconsNamespace {:bg c.none :fg c.fg}
+          :NavicIconsNull {:bg c.none :fg c.orange}
+          :NavicIconsNumber {:bg c.none :fg c.orange}
+          :NavicIconsObject {:bg c.none :fg c.orange}
+          :NavicIconsOperator {:bg c.none :fg c.fg}
+          :NavicIconsPackage {:bg c.none :fg c.fg}
+          :NavicIconsProperty {:bg c.none :fg c.green1}
+          :NavicIconsString {:bg c.none :fg c.green}
+          :NavicIconsStruct {:bg c.none :fg c.orange}
+          :NavicIconsTypeParameter {:bg c.none :fg c.green1}
+          :NavicIconsVariable {:bg c.none :fg c.magenta}
+          :NavicSeparator {:bg c.none :fg c.fg}
+          :NavicText {:bg c.none :fg c.fg}
+          :NeoTreeDimText {:fg c.fg_gutter}
+          :NeoTreeNormal {:bg c.bg_sidebar :fg c.fg_sidebar}
+          :NeoTreeNormalNC {:bg c.bg_sidebar :fg c.fg_sidebar}
+          :NeogitBranch {:fg c.magenta}
+          :NeogitDiffAddHighlight {:bg c.diff.add :fg c.git.add}
+          :NeogitDiffContextHighlight {:bg (util.darken c.fg_gutter 0.5)
+                                       :fg c.fg_dark}
+          :NeogitDiffDeleteHighlight {:bg c.diff.delete :fg c.git.delete}
+          :NeogitHunkHeader {:bg c.bg_highlight :fg c.fg}
+          :NeogitHunkHeaderHighlight {:bg c.fg_gutter :fg c.blue}
+          :NeogitRemote {:fg c.purple}
+          :NeotestAdapterName {:bold true :fg c.purple}
+          :NeotestBorder {:fg c.blue}
+          :NeotestDir {:fg c.blue}
+          :NeotestExpandMarker {:fg c.fg_sidebar}
+          :NeotestFailed {:fg c.red}
+          :NeotestFile {:fg c.teal}
+          :NeotestFocused {:fg c.yellow}
+          :NeotestIndent {:fg c.fg_sidebar}
+          :NeotestMarked {:fg c.blue}
+          :NeotestNamespace {:fg c.green2}
+          :NeotestPassed {:fg c.green}
+          :NeotestRunning {:fg c.yellow}
+          :NeotestSkipped {:fg c.blue}
+          :NeotestTarget {:fg c.blue}
+          :NeotestTest {:fg c.fg_sidebar}
+          :NeotestWinSelect {:fg c.blue}
+          :NoiceCompletionItemKindClass {:bg c.none :fg c.orange}
+          :NoiceCompletionItemKindConstant {:bg c.none :fg c.magenta}
+          :NoiceCompletionItemKindConstructor {:bg c.none :fg c.blue}
+          :NoiceCompletionItemKindDefault {:bg c.none :fg c.fg_dark}
+          :NoiceCompletionItemKindEnum {:bg c.none :fg c.orange}
+          :NoiceCompletionItemKindEnumMember {:bg c.none :fg c.green1}
+          :NoiceCompletionItemKindEvent {:bg c.none :fg c.orange}
+          :NoiceCompletionItemKindField {:bg c.none :fg c.green1}
+          :NoiceCompletionItemKindFunction {:bg c.none :fg c.blue}
+          :NoiceCompletionItemKindInterface {:bg c.none :fg c.orange}
+          :NoiceCompletionItemKindKeyword {:bg c.none :fg c.cyan}
+          :NoiceCompletionItemKindMethod {:bg c.none :fg c.blue}
+          :NoiceCompletionItemKindModule {:bg c.none :fg c.yellow}
+          :NoiceCompletionItemKindOperator {:bg c.none :fg c.green1}
+          :NoiceCompletionItemKindProperty {:bg c.none :fg c.green1}
+          :NoiceCompletionItemKindReference {:bg c.none :fg c.magenta}
+          :NoiceCompletionItemKindSnippet {:bg c.none :fg c.dark5}
+          :NoiceCompletionItemKindStruct {:bg c.none :fg c.orange}
+          :NoiceCompletionItemKindTypeParameter {:bg c.none :fg c.green1}
+          :NoiceCompletionItemKindUnit {:bg c.none :fg c.orange}
+          :NoiceCompletionItemKindValue {:bg c.none :fg c.magenta}
+          :NoiceCompletionItemKindVariable {:bg c.none :fg c.magenta}
+          :NonText {:fg c.dark3}
+          :Normal {:bg (or (and options.transparent c.none) c.bg) :fg c.fg}
+          :NormalFloat {:bg c.bg_float :fg c.fg_float}
+          :NormalNC {:bg (or (or (and options.transparent c.none)
+                                 (and options.dim_inactive c.bg_dark))
+                             c.bg)
+                     :fg c.fg}
+          :NormalSB {:bg c.bg_sidebar :fg c.fg_sidebar}
+          :NotifyDEBUGBody {:bg (or (and options.transparent c.none) c.bg)
+                            :fg c.fg}
+          :NotifyDEBUGBorder {:bg (or (and options.transparent c.none) c.bg)
+                              :fg (util.darken c.comment 0.3)}
+          :NotifyDEBUGIcon {:fg c.comment}
+          :NotifyDEBUGTitle {:fg c.comment}
+          :NotifyERRORBody {:bg (or (and options.transparent c.none) c.bg)
+                            :fg c.fg}
+          :NotifyERRORBorder {:bg (or (and options.transparent c.none) c.bg)
+                              :fg (util.darken c.error 0.3)}
+          :NotifyERRORIcon {:fg c.error}
+          :NotifyERRORTitle {:fg c.error}
+          :NotifyINFOBody {:bg (or (and options.transparent c.none) c.bg)
+                           :fg c.fg}
+          :NotifyINFOBorder {:bg (or (and options.transparent c.none) c.bg)
+                             :fg (util.darken c.info 0.3)}
+          :NotifyINFOIcon {:fg c.info}
+          :NotifyINFOTitle {:fg c.info}
+          :NotifyTRACEBody {:bg (or (and options.transparent c.none) c.bg)
+                            :fg c.fg}
+          :NotifyTRACEBorder {:bg (or (and options.transparent c.none) c.bg)
+                              :fg (util.darken c.purple 0.3)}
+          :NotifyTRACEIcon {:fg c.purple}
+          :NotifyTRACETitle {:fg c.purple}
+          :NotifyWARNBody {:bg (or (and options.transparent c.none) c.bg)
+                           :fg c.fg}
+          :NotifyWARNBorder {:bg (or (and options.transparent c.none) c.bg)
+                             :fg (util.darken c.warning 0.3)}
+          :NotifyWARNIcon {:fg c.warning}
+          :NotifyWARNTitle {:fg c.warning}
+          :NvimTreeFolderIcon {:bg c.none :fg c.blue}
+          :NvimTreeGitDeleted {:fg c.git.delete}
+          :NvimTreeGitDirty {:fg c.git.change}
+          :NvimTreeGitNew {:fg c.git.add}
+          :NvimTreeImageFile {:fg c.fg_sidebar}
+          :NvimTreeIndentMarker {:fg c.fg_gutter}
+          :NvimTreeNormal {:bg c.bg_sidebar :fg c.fg_sidebar}
+          :NvimTreeNormalNC {:bg c.bg_sidebar :fg c.fg_sidebar}
+          :NvimTreeOpenedFile {:bg c.bg_highlight}
+          :NvimTreeRootFolder {:bold true :fg c.blue}
+          :NvimTreeSpecialFile {:fg c.purple :underline true}
+          :NvimTreeSymlink {:fg c.blue}
+          :NvimTreeWinSeparator {:bg c.bg_sidebar
+                                 :fg (or (and (= options.styles.sidebars
+                                                 :transparent)
+                                              c.border)
+                                         c.bg_sidebar)}
+          :Operator {:fg c.blue5}
+          :Pmenu {:bg c.bg_popup :fg c.fg}
+          :PmenuSbar {:bg (util.lighten c.bg_popup 0.95)}
+          :PmenuSel {:bg (util.darken c.fg_gutter 0.8)}
+          :PmenuThumb {:bg c.fg_gutter}
+          :PreProc {:fg c.cyan}
+          :Question {:fg c.blue}
+          :QuickFixLine {:bg c.bg_visual :bold true}
+          :ReferencesCount {:fg c.purple}
+          :ReferencesIcon {:fg c.blue}
+          :ScrollbarError {:bg c.none :fg c.error}
+          :ScrollbarErrorHandle {:bg c.bg_highlight :fg c.error}
+          :ScrollbarHandle {:bg c.bg_highlight :fg c.none}
+          :ScrollbarHint {:bg c.none :fg c.hint}
+          :ScrollbarHintHandle {:bg c.bg_highlight :fg c.hint}
+          :ScrollbarInfo {:bg c.none :fg c.info}
+          :ScrollbarInfoHandle {:bg c.bg_highlight :fg c.info}
+          :ScrollbarMisc {:bg c.none :fg c.purple}
+          :ScrollbarMiscHandle {:bg c.bg_highlight :fg c.purple}
+          :ScrollbarSearch {:bg c.none :fg c.orange}
+          :ScrollbarSearchHandle {:bg c.bg_highlight :fg c.orange}
+          :ScrollbarWarn {:bg c.none :fg c.warning}
+          :ScrollbarWarnHandle {:bg c.bg_highlight :fg c.warning}
+          :Search {:bg c.bg_search :fg c.fg}
+          :SignColumn {:bg (or (and options.transparent c.none) c.bg)
+                       :fg c.fg_gutter}
+          :SignColumnSB {:bg c.bg_sidebar :fg c.fg_gutter}
+          :Sneak {:bg c.magenta :fg c.bg_highlight}
+          :SneakScope {:bg c.bg_visual}
+          :Special {:fg c.blue1}
+          :SpecialKey {:fg c.dark3}
+          :SpellBad {:sp c.error :undercurl true}
+          :SpellCap {:sp c.warning :undercurl true}
+          :SpellLocal {:sp c.info :undercurl true}
+          :SpellRare {:sp c.hint :undercurl true}
+          :Statement {:fg c.magenta}
+          :StatusLine {:bg c.bg_statusline :fg c.fg_sidebar}
+          :StatusLineNC {:bg c.bg_statusline :fg c.fg_gutter}
+          :String {:fg c.green}
+          :Substitute {:bg c.red :fg c.black}
+          :TSNodeKey {:bold true :fg c.magenta2}
+          :TSNodeUnmatched {:fg c.dark3}
+          :TSRainbowBlue {:fg c.blue}
+          :TSRainbowCyan {:fg c.cyan}
+          :TSRainbowGreen {:fg c.green}
+          :TSRainbowOrange {:fg c.orange}
+          :TSRainbowRed {:fg c.red}
+          :TSRainbowViolet {:fg c.purple}
+          :TSRainbowYellow {:fg c.yellow}
+          :TabLine {:bg c.bg_statusline :fg c.fg_gutter}
+          :TabLineFill {:bg c.black}
+          :TabLineSel {:bg c.blue :fg c.black}
+          :TargetWord {:fg c.cyan}
+          :TelescopeBorder {:bg c.bg_float :fg c.border_highlight}
+          :TelescopeNormal {:bg c.bg_float :fg c.fg}
+          :Title {:bold true :fg c.blue}
+          :Todo {:bg c.yellow :fg c.bg}
+          :TreesitterContext {:bg (util.darken c.fg_gutter 0.8)}
+          :TroubleCount {:bg c.fg_gutter :fg c.magenta}
+          :TroubleNormal {:bg c.bg_sidebar :fg c.fg_sidebar}
+          :TroubleText {:fg c.fg_dark}
+          :Type {:fg c.blue1}
+          :Underlined {:underline true}
+          :VertSplit {:fg c.border}
+          :Visual {:bg c.bg_visual}
+          :VisualNOS {:bg c.bg_visual}
+          :WarningMsg {:fg c.warning}
+          :WhichKey {:fg c.cyan}
+          :WhichKeyDesc {:fg c.magenta}
+          :WhichKeyFloat {:bg c.bg_sidebar}
+          :WhichKeyGroup {:fg c.blue}
+          :WhichKeySeparator {:fg c.comment}
+          :WhichKeySeperator {:fg c.comment}
+          :WhichKeyValue {:fg c.dark5}
+          :Whitespace {:fg c.fg_gutter}
+          :WildMenu {:bg c.bg_visual}
+          :WinSeparator {:bold true :fg c.border}
+          :YankyPut {:link :IncSearch}
+          :YankyYanked {:link :IncSearch}
+          :debugBreakpoint {:bg (util.darken c.info 0.1) :fg c.info}
+          :debugPC {:bg c.bg_sidebar}
+          :diffAdded {:fg c.git.add}
+          :diffChanged {:fg c.git.change}
+          :diffFile {:fg c.blue}
+          :diffIndexLine {:fg c.magenta}
+          :diffLine {:fg c.comment}
+          :diffNewFile {:fg c.orange}
+          :diffOldFile {:fg c.yellow}
+          :diffRemoved {:fg c.git.delete}
+          :healthError {:fg c.error}
+          :healthSuccess {:fg c.green1}
+          :healthWarning {:fg c.warning}
+          :helpCommand {:bg c.terminal_black :fg c.blue}
+          :htmlH1 {:bold true :fg c.magenta}
+          :htmlH2 {:bold true :fg c.blue}
+          :illuminatedCurWord {:bg c.fg_gutter}
+          :illuminatedWord {:bg c.fg_gutter}
+          :lCursor {:bg c.fg :fg c.bg}
+          :markdownCode {:fg c.teal}
+          :markdownCodeBlock {:fg c.teal}
+          :markdownH1 {:bold true :fg c.magenta}
+          :markdownH2 {:bold true :fg c.blue}
+          :markdownHeadingDelimiter {:bold true :fg c.orange}
+          :markdownLinkText {:fg c.blue :underline true}
+          :mkdCodeDelimiter {:bg c.terminal_black :fg c.fg}
+          :mkdCodeEnd {:bold true :fg c.teal}
+          :mkdCodeStart {:bold true :fg c.teal}
+          :qfFileName {:fg c.blue}
+          :qfLineNr {:fg c.dark5}
+          :rainbowcol1 {:fg c.red}
+          :rainbowcol2 {:fg c.yellow}
+          :rainbowcol3 {:fg c.green}
+          :rainbowcol4 {:fg c.teal}
+          :rainbowcol5 {:fg c.blue}
+          :rainbowcol6 {:fg c.magenta}
+          :rainbowcol7 {:fg c.purple}})
+    (when (not vim.diagnostic)
+      (local severity-map {:Error :Error
+                           :Hint :Hint
+                           :Info :Information
+                           :Warn :Warning})
+      (local types [:Default :VirtualText :Underline])
+      (each [_ type (ipairs types)]
+        (each [snew sold (pairs severity-map)]
+          (tset theme.highlights (.. :LspDiagnostics type sold)
+                {:link (.. :Diagnostic (or (and (= type :Default) "") type)
+                           snew)}))))
+    (set theme.defer {})
+    (when options.hide_inactive_statusline
+      (local inactive {:bg c.none :fg c.bg :sp c.border :underline true})
+      (set theme.highlights.StatusLineNC inactive)
+      (each [_ section (ipairs [:a :b :c])]
+        (tset theme.defer (.. :lualine_ section :_inactive) inactive))
+      (set theme.highlights.MiniStatuslineInactive inactive))
+    (options.on_highlights theme.highlights theme.colors)
+    (when (config.is_day)
+      (util.invert_colors theme.colors)
+      (util.invert_highlights theme.highlights))
+    theme))
+
+M
+
