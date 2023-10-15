@@ -355,7 +355,7 @@
 (custom-set-face! :markdownUrl [] {:link "String"})
 (custom-set-face! :markdownListMarker []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :markdownOrdebase10ListMarker []
+(custom-set-face! :markdownOrderedListMarker []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ;; asciidoc
