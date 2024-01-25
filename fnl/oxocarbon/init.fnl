@@ -584,27 +584,12 @@
 
 ;; notify
 
-(custom-set-face! :NotifyERRORBorder [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :NotifyWARNBorder [] {:fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :NotifyINFOBorder [] {:fg oxocarbon.base05 :bg oxocarbon.none})
-(custom-set-face! :NotifyDEBUGBorder [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :NotifyTRACEBorder [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-
-; (custom-set-face! :NotifyERRORIcon [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-; (custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-; (custom-set-face! :NotifyINFOIcon [] {:fg oxocarbon.base05 :bg oxocarbon.none})
-; (custom-set-face! :NotifyDEBUGIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-; (custom-set-face! :NotifyTRACEIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-; (custom-set-face! :NotifyERRORTitle [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-
-(custom-set-face! :NotifyERRORIcon [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :NotifyERRORIcon [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base15 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOIcon [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyTRACEIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :NotifyERRORTitle [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-
-
+(custom-set-face! :NotifyERRORTitle [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! :NotifyWARNTitle [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOTitle [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGTitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
