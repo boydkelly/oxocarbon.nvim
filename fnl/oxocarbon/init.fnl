@@ -176,6 +176,10 @@
 (custom-set-face! :Folded [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 (custom-set-face! :FoldColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
 (custom-set-face! :SignColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+(custom-set-face! :GitSignsAdd [] {:fg oxocarbon.base7 :bg oxocarbon.base00}) 
+(custom-set-face! :GitSignsChange [] {:fg oxocarbon.base9 :bg oxocarbon.base00}) 
+(custom-set-face! :GitSignsDelete [] {:fg oxocarbon.base10 :bg oxocarbon.base00}) 
+
 
 ;; lazy
 (custom-set-face! :LazyProgressDone [:bold] {:fg oxocarbon.base10 :bg oxocarbon.base00})
