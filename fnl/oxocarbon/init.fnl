@@ -783,8 +783,6 @@
 
 (custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
 
-<<<<<<< HEAD
-=======
 ; (custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
 ; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
 ; (custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
@@ -794,7 +792,6 @@
 (custom-set-face! :LazyProgressDone [:bold] {:fg oxocarbon.base10 :bg oxocarbon.base00})
 (custom-set-face! :LazyProgressTodo [:bold] {:fg oxocarbon.base01 :bg oxocarbon.base00})
 
->>>>>>> 966afc8 (update init.fnl from main and move my dev stuff to bottom)
 ;; org
 
 (custom-set-face! "@OrgTSHeadlinelevel1" [] {:link "markdownH1"})
@@ -821,10 +818,6 @@
 
 ;; norg
 
-; (custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
-; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
-; (custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
-;;
 ;; ledger
 (custom-set-face! "@comment" [] {:link "Comment"})
 (custom-set-face! "@error" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
