@@ -288,7 +288,8 @@
 ;; window
 
 (custom-set-face! :Title [] {:fg oxocarbon.base04 :bg oxocarbon.none})
-(custom-set-face! :VertSplit [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+(custom-set-face! :WinSeparator [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+(custom-set-face! :VertSplit [] {:link WinSeparator})
 
 ;; regular syntax
 
