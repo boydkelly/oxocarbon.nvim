@@ -165,13 +165,12 @@
 
 (custom-set-face! "@comment" [] {:link "Comment"})
 (custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! "@number" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; lsp
 
@@ -289,10 +288,10 @@
 
 ;; window
 
-(custom-set-face! :Title [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 ;; VertSplit has been replaced by `WinSpeperator` in nvim 0.10
-(custom-set-face! :VertSplit [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+(custom-set-face! :Title [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :WinSeparator [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+(custom-set-face! :VertSplit [] {:link WinSeparator})
 
 ;; regular syntax
 
@@ -393,9 +392,11 @@
 
 ;; @string.special
 
-(custom-set-face! "@character" [] {:link "Character"})
+(custom-set-face! "@string.special" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ;; @character.special
+
+(custom-set-face! "@character" [] {:link "Character"})
 
 (custom-set-face! "@boolean" [] {:link "Boolean"})
 (custom-set-face! "@number" [] {:link "Number"})
