@@ -172,7 +172,6 @@
 (custom-set-face! "@number" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
 (custom-set-face! "@number.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
->>>>>>> 966afc8 (update init.fnl from main and move my dev stuff to bottom)
 ;; lsp
 
 (custom-set-face! :LspCodeLens [] {:fg oxocarbon.none :bg oxocarbon.base03})
@@ -619,7 +618,6 @@
 (custom-set-face! :NotifyTRACETitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 
 ;; cmp
-
 (custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocarbon.none})
 (custom-set-face! :CmpItemAbbrMatch [:bold]
                   {:fg oxocarbon.base05 :bg oxocarbon.none})
