@@ -615,15 +615,11 @@
 ;                  {:fg oxocarbon.base04 :bg oxocarbon.none})
 ;(custom-set-face! :CmpItemMenu [:italic]
 ;                  {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! :BlinkCmpMenu [] {:link "Pmenu"})
 (custom-set-face! :BlinkCmpLabel [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
-
-(custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocarbon.none})
+(custom-set-face! :BlinkCmpMenuSelection [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
 (custom-set-face! :BlinkCmpLabelMatch [:bold]
                   {:fg oxocarbon.base05 :bg oxocarbon.none})
-(custom-set-face! :CmpItemAbbrMatchFuzzy [:bold]
-                  {:fg oxocarbon.base04 :bg oxocarbon.none})
-(custom-set-face! :BlinkCmpLabel [:italic]
-                  {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :BlinkCmpKind [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
 (custom-set-face! :BlinkCmpKindText [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
 (custom-set-face! :BlinkCmpKindEnum [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
@@ -647,7 +643,7 @@
 (custom-set-face! :BlinkCmpKindMethod [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :BlinkCmpKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :BlinkCmpKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
-
+(custom-set-face! :BlinkCmpDoc [] {:link "Pmenu"})
 ;; nvimtree
 
 (custom-set-face! :NvimTreeImageFile [] {:fg oxocarbon.base12 :bg oxocarbon.none})
@@ -749,7 +745,7 @@
 (custom-set-face! :Column8 [] { :fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :Column9 [] { :fg oxocarbon.base15 :bg oxocarbon.none})
 
-
+DiagnosticInfo
 ;; norg
 
 { : oxocarbon }
