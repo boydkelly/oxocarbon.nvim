@@ -574,7 +574,6 @@
 (custom-set-face! :NotifyTRACETitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 
 ;; cmp
-
 (custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocarbon.none})
 (custom-set-face! :CmpItemAbbrMatch [:bold]
                   {:fg oxocarbon.base05 :bg oxocarbon.none})
@@ -607,6 +606,47 @@
 (custom-set-face! :CmpItemKindMethod [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :CmpItemKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :CmpItemKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
+
+;; blink
+;(custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocarbon.none})
+;(custom-set-face! :CmpItemAbbrMatch [:bold]
+;                  {:fg oxocarbon.base05 :bg oxocarbon.none})
+;(custom-set-face! :CmpItemAbbrMatchFuzzy [:bold]
+;                  {:fg oxocarbon.base04 :bg oxocarbon.none})
+;(custom-set-face! :CmpItemMenu [:italic]
+;                  {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! :BlinkCmpLabel [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
+
+(custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocarbon.none})
+(custom-set-face! :BlinkCmpLabelMatch [:bold]
+                  {:fg oxocarbon.base05 :bg oxocarbon.none})
+(custom-set-face! :CmpItemAbbrMatchFuzzy [:bold]
+                  {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! :BlinkCmpLabel [:italic]
+                  {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! :BlinkCmpKind [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
+(custom-set-face! :BlinkCmpKindText [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
+(custom-set-face! :BlinkCmpKindEnum [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
+(custom-set-face! :BlinkCmpKindKeyword [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
+(custom-set-face! :BlinkCmpKindConstant [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
+(custom-set-face! :BlinkCmpKindConstructor [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
+(custom-set-face! :BlinkCmpKindReference [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
+(custom-set-face! :BlinkCmpKindFunction [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
+(custom-set-face! :BlinkCmpKindStruct [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
+(custom-set-face! :BlinkCmpKindClass [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
+(custom-set-face! :BlinkCmpKindModule [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
+(custom-set-face! :BlinkCmpKindOperator [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
+(custom-set-face! :BlinkCmpKindField [] {:fg oxocarbon.base01 :bg oxocarbon.base12})
+(custom-set-face! :BlinkCmpKindProperty [] {:fg oxocarbon.base01 :bg oxocarbon.base14})
+(custom-set-face! :BlinkCmpKindEvent [] {:fg oxocarbon.base01 :bg oxocarbon.base12})
+(custom-set-face! :BlinkCmpKindUnit [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
+(custom-set-face! :BlinkCmpKindSnippet [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
+(custom-set-face! :BlinkCmpKindFolder [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
+(custom-set-face! :BlinkCmpKindVariable [] {:fg oxocarbon.base01 :bg oxocarbon.base14})
+(custom-set-face! :BlinkCmpKindFile [] {:fg oxocarbon.base01 :bg oxocarbon.base14})
+(custom-set-face! :BlinkCmpKindMethod [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
+(custom-set-face! :BlinkCmpKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
+(custom-set-face! :BlinkCmpKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
 ;; nvimtree
 
