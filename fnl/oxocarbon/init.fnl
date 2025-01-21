@@ -644,6 +644,7 @@
 (custom-set-face! :BlinkCmpKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :BlinkCmpKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :BlinkCmpDoc [] {:link "Pmenu"})
+
 ;; nvimtree
 
 (custom-set-face! :NvimTreeImageFile [] {:fg oxocarbon.base12 :bg oxocarbon.none})
