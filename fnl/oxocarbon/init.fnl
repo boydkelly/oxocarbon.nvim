@@ -608,13 +608,6 @@
 (custom-set-face! :CmpItemKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
 ;; blink
-;(custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocarbon.none})
-;(custom-set-face! :CmpItemAbbrMatch [:bold]
-;                  {:fg oxocarbon.base05 :bg oxocarbon.none})
-;(custom-set-face! :CmpItemAbbrMatchFuzzy [:bold]
-;                  {:fg oxocarbon.base04 :bg oxocarbon.none})
-;(custom-set-face! :CmpItemMenu [:italic]
-;                  {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :BlinkCmpMenu [] {:link "Pmenu"})
 (custom-set-face! :BlinkCmpLabel [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
 (custom-set-face! :BlinkCmpMenuSelection [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
