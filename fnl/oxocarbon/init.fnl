@@ -1,4 +1,4 @@
-;;                               O X O C A R B O N
+;; FzfLua                           O X O C A R B O N
 ;;        _..._         _..._         _..._         _..._         _..._
 ;;      .:::::::.     .::::. `.     .::::  `.     .::'   `.     .'     `.
 ;;     :::::::::::   :::::::.  :   ::::::    :   :::       :   :         :
@@ -585,6 +585,11 @@
                   {:fg oxocarbon.base10 :bg oxocarbon.base00})
 
 ;; telescope
+
+(custom-set-face! :FzfLuaHeaderText [] {:fg oxocarbon.base12 :bg oxocarbon.base02})
+(custom-set-face! :FzfLuaBufFlagCur [] {:fg oxocarbon.base10 :bg oxocarbon.base02})
+
+;; fzflua
 
 (custom-set-face! :TelescopeBorder [] {:fg oxocarbon.blend :bg oxocarbon.blend})
 (custom-set-face! :TelescopePromptBorder [] {:fg oxocarbon.base02 :bg oxocarbon.base02})
