@@ -282,6 +282,8 @@ vim.api.nvim_set_hl(0, "StatusNormal", {fg = oxocarbon.base00, bg = oxocarbon.ba
 vim.api.nvim_set_hl(0, "StatusCommand", {fg = oxocarbon.base00, bg = oxocarbon.base13})
 vim.api.nvim_set_hl(0, "StatusLineDiagnosticWarn", {fg = oxocarbon.base12, bg = oxocarbon.base00, bold = true})
 vim.api.nvim_set_hl(0, "StatusLineDiagnosticError", {fg = oxocarbon.base10, bg = oxocarbon.base00, bold = true})
+vim.api.nvim_set_hl(0, "FzfLuaHeaderText", {fg = oxocarbon.base12, bg = oxocarbon.base02})
+vim.api.nvim_set_hl(0, "FzfLuaBufFlagCur", {fg = oxocarbon.base10, bg = oxocarbon.base02})
 vim.api.nvim_set_hl(0, "TelescopeBorder", {fg = oxocarbon.blend, bg = oxocarbon.blend})
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", {fg = oxocarbon.base02, bg = oxocarbon.base02})
 vim.api.nvim_set_hl(0, "TelescopePromptNormal", {fg = oxocarbon.base05, bg = oxocarbon.base02})
