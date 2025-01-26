@@ -289,6 +289,7 @@
 ;; window
 
 (custom-set-face! :Title [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+
 ;; VertSplit has been replaced by `WinSpeperator` in nvim 0.10
 (custom-set-face! :VertSplit [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
 (custom-set-face! :WinSeparator [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
@@ -540,11 +541,6 @@
 
 ;; telescope
 
-(custom-set-face! :FzfLuaHeaderText [] {:fg oxocarbon.base12 :bg oxocarbon.base02})
-(custom-set-face! :FzfLuaBufFlagCur [] {:fg oxocarbon.base10 :bg oxocarbon.base02})
-
-;; fzflua
-
 (custom-set-face! :TelescopeBorder [] {:fg oxocarbon.blend :bg oxocarbon.blend})
 (custom-set-face! :TelescopePromptBorder [] {:fg oxocarbon.base02 :bg oxocarbon.base02})
 (custom-set-face! :TelescopePromptNormal [] {:fg oxocarbon.base05 :bg oxocarbon.base02})
@@ -556,6 +552,29 @@
 (custom-set-face! :TelescopeSelection [] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :TelescopePreviewLine [] {:fg oxocarbon.none :bg oxocarbon.base01})
 (custom-set-face! :TelescopeMatching [:bold :italic] {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+;; fzflua
+
+;; (custom-set-face! :FzfLuaHeaderText [] {:fg oxocarbon.base12 :bg oxocarbon.base02})
+(custom-set-face! :FzfLuaBufFlagCur [] {:fg oxocarbon.base10 :bg oxocarbon.base02})
+(custom-set-face! :FzfLuaBorder [] {:fg oxocarbon.blend :bg oxocarbon.blend })
+(custom-set-face! :FzfLuaCursor [] {:link "IncSearch"})
+(custom-set-face! :FzfLuaDirPart [] { :fg  oxocarbon.base05 })
+(custom-set-face! :FzfLuaFilePart [] {:link "FzfLuaFzfNormal"})
+(custom-set-face! :FzfLuaFzfCursorLine [] {:link "Visual"})
+(custom-set-face! :FzfLuaFzfNormal [] {:fg  oxocarbon.base04 })
+(custom-set-face! :FzfLuaFzfPointer [] {:fg oxocarbon.base10 })
+(custom-set-face! :FzfLuaFzfSeparator [] {:link "WinSeparator"})
+(custom-set-face! :FzfLuaHeaderBind [] {:link "@punctuation.special"})
+(custom-set-face! :FzfLuaHeaderText [] {:link "Title"})
+(custom-set-face! :FzfLuaNormal [] {:fg oxocarbon.base04 :bg oxocarbon.blend })
+(custom-set-face! :FzfLuaPath [] {:link "Directory"})
+(custom-set-face! :FzfLuaPreviewTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base12 })
+(custom-set-face! :FzfLuaTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base11 })
+
+(custom-set-face! :htmlH1 [] {:link "markdownH1"})
+(custom-set-face! :NormalFloat [] {:fg oxocarbon.base05 :bg oxocarbon.blend})
+(custom-set-face! :FloatBorder [] {:fg oxocarbon.blend :bg oxocarbon.blend})
 
 ;; notify
 
