@@ -553,6 +553,17 @@
 (custom-set-face! :TelescopePreviewLine [] {:fg oxocarbon.none :bg oxocarbon.base01})
 (custom-set-face! :TelescopeMatching [:bold :italic] {:fg oxocarbon.base08 :bg oxocarbon.none})
 
+;; fzflua
+
+(custom-set-face! :FzfluaNormal [] {:fg oxocarbon.none :bg oxocarbon.blend})
+(custom-set-face! :FzfLuaPreviewTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base12})
+(custom-set-face! :FzfLuaTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base11})
+(custom-set-face! :FzfLuaLivePrompt [] {:fg oxocarbon.base02 :bg oxocarbon.base12})
+; (custom-set-face! :FzfLuaHeaderText [] {:fg oxocarbon.base02 :bg oxocarbon.base11})
+(custom-set-face! :FzfLuaHeaderText [] {:fg oxocarbon.none :bg oxocarbon.blend})
+(custom-set-face! :FzfLuaBufFlagCur [] {:fg oxocarbon.none :bg oxocarbon.blend})
+(custom-set-face! :FzfLuaTabTitle [] {:fg oxocarbon.none :bg oxocarbon.blend})
+
 ;; notify
 
 (custom-set-face! :NotifyERRORBorder [] {:fg oxocarbon.base08 :bg oxocarbon.none})
