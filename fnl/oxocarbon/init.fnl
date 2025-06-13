@@ -1,4 +1,4 @@
-;;                               O X O C A R B O N
+;; FzfLua                           O X O C A R B O N
 ;;        _..._         _..._         _..._         _..._         _..._
 ;;      .:::::::.     .::::. `.     .::::  `.     .::'   `.     .'     `.
 ;;     :::::::::::   :::::::.  :   ::::::    :   :::       :   :         :
@@ -289,6 +289,7 @@
 ;; window
 
 (custom-set-face! :Title [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+
 ;; VertSplit has been replaced by `WinSpeperator` in nvim 0.10
 (custom-set-face! :VertSplit [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
 (custom-set-face! :WinSeparator [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
@@ -555,7 +556,7 @@
 
 ;; fzflua
 
-(custom-set-face! :FzfluaNormal [] {:fg oxocarbon.none :bg oxocarbon.blend})
+(custom-set-face! :FzfLuaNormal [] {:fg oxocarbon.none :bg oxocarbon.blend})
 (custom-set-face! :FzfLuaPreviewTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base12})
 (custom-set-face! :FzfLuaTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base11})
 (custom-set-face! :FzfLuaLivePrompt [] {:fg oxocarbon.base02 :bg oxocarbon.base12})
@@ -563,6 +564,17 @@
 (custom-set-face! :FzfLuaHeaderText [] {:fg oxocarbon.none :bg oxocarbon.blend})
 (custom-set-face! :FzfLuaBufFlagCur [] {:fg oxocarbon.none :bg oxocarbon.blend})
 (custom-set-face! :FzfLuaTabTitle [] {:fg oxocarbon.none :bg oxocarbon.blend})
+(custom-set-face! :FzfLuaBufFlagCur [] {:fg oxocarbon.base10 :bg oxocarbon.base02})
+
+(custom-set-face! :FzfLuaBorder [] {:fg oxocarbon.blend :bg oxocarbon.blend })
+(custom-set-face! :FzfLuaCursor [] {:link "IncSearch"})
+(custom-set-face! :FzfLuaDirPart [] { :link  "FzfLuaNormal"})
+(custom-set-face! :FzfLuaFilePart [] {:link "FzfLuaNormal"})
+(custom-set-face! :FzfLuaFzfCursorLine [] {:link "FzfLuaNormal"})
+(custom-set-face! :FzfLuaFzfPointer [] {:link "FzfLuaNormal"})
+(custom-set-face! :FzfLuaFzfSeparator [] {:link "WinSeparator"})
+(custom-set-face! :FzfLuaHeaderBind [] {:link "FzfLuaNormal"})
+(custom-set-face! :FzfLuaPath [] {:link "FzfLuaNormal"})
 
 ;; notify
 
