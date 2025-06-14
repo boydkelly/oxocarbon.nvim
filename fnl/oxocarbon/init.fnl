@@ -556,7 +556,7 @@
 
 ;; fzflua
 
-(custom-set-face! :FzfLuaNormal [] {:fg oxocarbon.none :bg oxocarbon.blend})
+(custom-set-face! :FzfLuaNormal [] {:link "Normal"})
 (custom-set-face! :FzfLuaPreviewTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base12})
 (custom-set-face! :FzfLuaTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base11})
 (custom-set-face! :FzfLuaLivePrompt [] {:fg oxocarbon.base02 :bg oxocarbon.base12})
@@ -575,6 +575,9 @@
 (custom-set-face! :FzfLuaFzfSeparator [] {:link "WinSeparator"})
 (custom-set-face! :FzfLuaHeaderBind [] {:link "FzfLuaNormal"})
 (custom-set-face! :FzfLuaPath [] {:link "FzfLuaNormal"})
+(custom-set-face! :FzfLuaPathColNr [] {:link "FzfLuaNormal"})
+(custom-set-face! :FzfLuaBufName [] {:link "FzfLuaNormal"})
+(custom-set-face! :FzfLuaBufNr [] {:link "FzfLuaNormal"})
 
 ;; notify
 
