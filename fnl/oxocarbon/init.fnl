@@ -1,4 +1,4 @@
-;; FzfLua                           O X O C A R B O N
+;;                               O X O C A R B O N
 ;;        _..._         _..._         _..._         _..._         _..._
 ;;      .:::::::.     .::::. `.     .::::  `.     .::'   `.     .'     `.
 ;;     :::::::::::   :::::::.  :   ::::::    :   :::       :   :         :
@@ -126,8 +126,8 @@
 (custom-set-face! :Normal [] {:fg oxocarbon.base04 :bg oxocarbon.base00})
 (custom-set-face! :Pmenu [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
 (custom-set-face! :PmenuSbar [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
-(custom-set-face! :PmenuSel [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
-(custom-set-face! :PmenuThumb [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+(custom-set-face! :PmenuSel [] {:fg oxocarbon.base08 :bg oxocarbon.base02})
+(custom-set-face! :PmenuThumb [] {:fg oxocarbon.base08 :bg oxocarbon.base02})
 (custom-set-face! :SpecialKey [] {:fg oxocarbon.base03 :bg oxocarbon.none})
 (custom-set-face! :Visual [] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :VisualNOS [] {:fg oxocarbon.none :bg oxocarbon.base02})
@@ -165,12 +165,13 @@
 
 (custom-set-face! "@comment" [] {:link "Comment"})
 (custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! "@number" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! "@number.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; lsp
 
@@ -236,9 +237,9 @@
 
 ;; gutter
 
-(custom-set-face! :Folded [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
-(custom-set-face! :FoldColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
-(custom-set-face! :SignColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+(custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
+(custom-set-face! :FoldColumn [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+(custom-set-face! :SignColumn [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
 
 ;; navigation
 
@@ -278,7 +279,6 @@
 
 (custom-set-face! :IncSearch [] {:fg oxocarbon.base06 :bg oxocarbon.base10})
 (custom-set-face! :Search [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :CurSearch [] {:link "Search"})
 
 ;; tabs
 
@@ -367,53 +367,10 @@
 (custom-set-face! :asciidocURL [] {:link "markdownUrl"})
 
 ;; treesitter
-
-(custom-set-face! :TSAnnotation [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-(custom-set-face! :TSAttribute [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; (unstable) TODO: docs
-(custom-set-face! :TSBoolean [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For booleans.
-(custom-set-face! :TSCharacter [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For characters.
-(custom-set-face! :TSConstructor [] { :fg oxocarbon.base14 :bg oxocarbon.base00}) ;; For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-(custom-set-face! :TSConstant [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For constants
-(custom-set-face! :TSConstBuiltin [] { :fg oxocarbon.base11 :bg oxocarbon.base00})    ;; For constant that are built in the language: `nil` in Lua.
-(custom-set-face! :TSConstMacro [] { :fg oxocarbon.base11 :bg oxocarbon.base00})    ;; For constants that are defined by macros: `NULL` in C.
-(custom-set-face! :TSError [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For syntax/parser errors.
-(custom-set-face! :TSException [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For exception related keywords.
-(custom-set-face! :TSField [] { :fg oxocarbon.base06 :bg oxocarbon.base00}) ;; For fields.
-(custom-set-face! :TSFloat [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For floats.
-(custom-set-face! :TSFuncMacro [] { :fg oxocarbon.base11 :bg oxocarbon.base00})    ;; For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-(custom-set-face! :TSInclude [] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-(custom-set-face! :TSLabel [] { :fg oxocarbon.base10 :bg oxocarbon.base00}) ;; For labels: `label:` in C and `:label:` in Lua.
-(custom-set-face! :TSNamespace [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For identifiers referring to modules and namespaces.
-(custom-set-face! :TSNone [] { :fg oxocarbon.none :bg oxocarbon.none})
-(custom-set-face! :TSNumber [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For all numbers
-(custom-set-face! :TSOperator [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For any operator: `+`, but also `->` and `*` in C.
-(custom-set-face! :TSParameter [] { :fg oxocarbon.base09 :bg oxocarbon.base00}) ;; For parameters of a function.
-(custom-set-face! :TSParameterReference [] { :fg oxocarbon.base09 :bg oxocarbon.base00})    ;; For references to parameters of a function.
-(custom-set-face! :TSProperty [] { :fg oxocarbon.base09 :bg oxocarbon.base00}) ;; Same as `TSField`.
-(custom-set-face! :TSPunctDelimiter [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For delimiters ie: .
-(custom-set-face! :TSPunctBracket [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For brackets and parens.
-(custom-set-face! :TSPunctSpecial [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For special punctutation that does not fall in the catagories before.
-(custom-set-face! :TSString [] { :fg oxocarbon.base07 :bg oxocarbon.base00})    ;; For strings.
-(custom-set-face! :TSStringRegex [] { :fg oxocarbon.base11 :bg oxocarbon.base00}) ;; For regexes.
-(custom-set-face! :TSStringEscape [] { :fg oxocarbon.none :bg oxocarbon.base00}) ;; For escape characters within a string.
-(custom-set-face! :TSSymbol [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For identifiers referring to symbols or atoms.
-(custom-set-face! :TSType [] { :fg oxocarbon.base14 :bg oxocarbon.base00})    ;; For types.
-(custom-set-face! :TSTypeBuiltin [] { :fg oxocarbon.base14 :bg oxocarbon.base00})    ;; For builtin types.
-(custom-set-face! :TSTag [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; Tags like html tag names.
-(custom-set-face! :TSTagDelimiter [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Tag delimiter like < > /
-(custom-set-face! :TSText [] { :fg oxocarbon.base04 :bg oxocarbon.base01})    ;; For strings consideoxocarbon.base10 text in a markup language.
-(custom-set-face! :TSTextReference [] { :fg oxocarbon.base05 :bg oxocarbon.base00}) ;; FIXME
-(custom-set-face! :TSEmphasis [:bold] { :fg oxocarbon.none :bg oxocarbon.none})    ;; For text to be represented with emphasis.
-(custom-set-face! :TSUnderline [:underline] { :fg oxocarbon.none :bg oxocarbon.none})    ;; For text to be represented with an underline.
-(custom-set-face! :TSStrike [:strikethrough] { :bg oxocarbon.none})   ;; For strikethrough text.
-(custom-set-face! :TSTitle [:bold] { :fg oxocarbon.base09 :bg oxocarbon.none})    ;; Text that is part of a title.
-(custom-set-face! :TSLiteral [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Literal text.
-(custom-set-face! :TSURI [:underline] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; Any URI like a link or email.
-
 ;;; misc
 
 (custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@error" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! "@error" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
 
 ;; @none
 ;; @preproc
@@ -435,11 +392,9 @@
 
 ;; @string.special
 
-(custom-set-face! "@string.special" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@character" [] {:link "Character"})
 
 ;; @character.special
-
-(custom-set-face! "@character" [] {:link "Character"})
 
 (custom-set-face! "@boolean" [] {:link "Boolean"})
 (custom-set-face! "@number" [] {:link "Number"})
@@ -489,7 +444,7 @@
 ;; @storageclass.lifetime
 
 (custom-set-face! "@attribute" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@field" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! "@field" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! "@property" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;;; identifiers
@@ -514,7 +469,7 @@
 (custom-set-face! "@text.strike" [:strikethrough]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! "@text.title" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! "@text.literal" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! "@text.literal" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! "@text.uri" [:underline]
                   {:fg oxocarbon.base14 :bg oxocarbon.none})
 
@@ -580,16 +535,11 @@
 (custom-set-face! :StatusNormal [] {:fg oxocarbon.base00 :bg oxocarbon.base15})
 (custom-set-face! :StatusCommand [] {:fg oxocarbon.base00 :bg oxocarbon.base13})
 (custom-set-face! :StatusLineDiagnosticWarn [:bold]
-                  {:fg oxocarbon.base12 :bg oxocarbon.base00})
+                  {:fg oxocarbon.base14 :bg oxocarbon.base00})
 (custom-set-face! :StatusLineDiagnosticError [:bold]
                   {:fg oxocarbon.base10 :bg oxocarbon.base00})
 
 ;; telescope
-
-(custom-set-face! :FzfLuaHeaderText [] {:fg oxocarbon.base12 :bg oxocarbon.base02})
-(custom-set-face! :FzfLuaBufFlagCur [] {:fg oxocarbon.base10 :bg oxocarbon.base02})
-
-;; fzflua
 
 (custom-set-face! :TelescopeBorder [] {:fg oxocarbon.blend :bg oxocarbon.blend})
 (custom-set-face! :TelescopePromptBorder [] {:fg oxocarbon.base02 :bg oxocarbon.base02})
@@ -600,9 +550,8 @@
 (custom-set-face! :TelescopePromptTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base11})
 (custom-set-face! :TelescopeResultsTitle [] {:fg oxocarbon.blend :bg oxocarbon.blend})
 (custom-set-face! :TelescopeSelection [] {:fg oxocarbon.none :bg oxocarbon.base02})
-(custom-set-face! :TelescopePreviewLine [] {:fg oxocarbon.none :bg oxocarbon.base02})
+(custom-set-face! :TelescopePreviewLine [] {:fg oxocarbon.none :bg oxocarbon.base01})
 (custom-set-face! :TelescopeMatching [:bold :italic] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :TelescopeSelectionCaret [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; notify
 
@@ -623,6 +572,7 @@
 (custom-set-face! :NotifyTRACETitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 
 ;; cmp
+
 (custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocarbon.none})
 (custom-set-face! :CmpItemAbbrMatch [:bold]
                   {:fg oxocarbon.base05 :bg oxocarbon.none})
@@ -687,33 +637,6 @@
 (custom-set-face! :BlinkCmpKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :BlinkCmpKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 (custom-set-face! :BlinkCmpDoc [] {:link "Pmenu"})
-
-;; ledger
-
-;; plugin syntax
-(custom-set-face! :LedgerComment [] {:link "Comment"})
-(custom-set-face! :LedgerComment [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! :LedgerNumber [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :LedgerNegativeNumber [] {:link "ErrorMsg"})
-(custom-set-face! :LedgerNegativeNumber [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :LedgerTransactionDate [] {:fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :LedgerTransactionDate [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! :LedgerTransactionExpression [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :LedgerTransactionExpression [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :LedgerPosting [] {:fg oxocarbon.base14 :bg oxocarbon.none})
-;; treesitter syntax
-(custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@number.date" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! "@number.interval" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; nvimtree
 
@@ -786,6 +709,12 @@
 
 (custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
 
+;; gutter
+
+(custom-set-face! :Folded [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+(custom-set-face! :FoldColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+(custom-set-face! :SignColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+
 ; (custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
 ; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
 ; (custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
@@ -843,4 +772,115 @@
 ; (custom-set-face! :WhichKeyValue [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
 ; (custom-set-face! :WhichKeyBorder [] {:link FloatBorder})
 
+(custom-set-face! :PmenuSel [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+(custom-set-face! :PmenuThumb [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+
+;; ledger2
+;; ledger
+
+(custom-set-face! "@comment" [] {:link "Comment"})
+(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! "@number" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+;; ledger 3
+;; ledger
+
+;; plugin syntax
+(custom-set-face! :LedgerComment [] {:link "Comment"})
+(custom-set-face! :LedgerComment [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! :LedgerNumber [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! :LedgerNegativeNumber [] {:link "ErrorMsg"})
+(custom-set-face! :LedgerNegativeNumber [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! :LedgerTransactionDate [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :LedgerTransactionDate [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! :LedgerTransactionExpression [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :LedgerTransactionExpression [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :LedgerPosting [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+;; treesitter syntax
+(custom-set-face! "@comment" [] {:link "Comment"})
+(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! "@number.interval" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+;; status winbar
+(custom-set-face! :StatusLineDiagnosticWarn [:bold]
+                  {:fg oxocarbon.base12 :bg oxocarbon.base00})
+
+;; telescope
+(custom-set-face! :TelescopePreviewLine [] {:fg oxocarbon.none :bg oxocarbon.base02})
+(custom-set-face! :TelescopeSelectionCaret [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+;; check why treesitter section is missing in main
+
+(custom-set-face! :TSAnnotation [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+(custom-set-face! :TSAttribute [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; (unstable) TODO: docs
+(custom-set-face! :TSBoolean [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For booleans.
+(custom-set-face! :TSCharacter [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For characters.
+(custom-set-face! :TSConstructor [] { :fg oxocarbon.base14 :bg oxocarbon.base00}) ;; For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+(custom-set-face! :TSConstant [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For constants
+(custom-set-face! :TSConstBuiltin [] { :fg oxocarbon.base11 :bg oxocarbon.base00})    ;; For constant that are built in the language: `nil` in Lua.
+(custom-set-face! :TSConstMacro [] { :fg oxocarbon.base11 :bg oxocarbon.base00})    ;; For constants that are defined by macros: `NULL` in C.
+(custom-set-face! :TSError [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For syntax/parser errors.
+(custom-set-face! :TSException [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For exception related keywords.
+(custom-set-face! :TSField [] { :fg oxocarbon.base06 :bg oxocarbon.base00}) ;; For fields.
+(custom-set-face! :TSFloat [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; For floats.
+(custom-set-face! :TSFuncMacro [] { :fg oxocarbon.base11 :bg oxocarbon.base00})    ;; For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+(custom-set-face! :TSInclude [] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+(custom-set-face! :TSLabel [] { :fg oxocarbon.base10 :bg oxocarbon.base00}) ;; For labels: `label:` in C and `:label:` in Lua.
+(custom-set-face! :TSNamespace [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For identifiers referring to modules and namespaces.
+(custom-set-face! :TSNone [] { :fg oxocarbon.none :bg oxocarbon.none})
+(custom-set-face! :TSNumber [] { :fg oxocarbon.base15 :bg oxocarbon.base00})    ;; For all numbers
+(custom-set-face! :TSOperator [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For any operator: `+`, but also `->` and `*` in C.
+(custom-set-face! :TSParameter [] { :fg oxocarbon.base09 :bg oxocarbon.base00}) ;; For parameters of a function.
+(custom-set-face! :TSParameterReference [] { :fg oxocarbon.base09 :bg oxocarbon.base00})    ;; For references to parameters of a function.
+(custom-set-face! :TSProperty [] { :fg oxocarbon.base09 :bg oxocarbon.base00}) ;; Same as `TSField`.
+(custom-set-face! :TSPunctDelimiter [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For delimiters ie: .
+(custom-set-face! :TSPunctBracket [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For brackets and parens.
+(custom-set-face! :TSPunctSpecial [] { :fg oxocarbon.base08 :bg oxocarbon.base00}) ;; For special punctutation that does not fall in the catagories before.
+(custom-set-face! :TSString [] { :fg oxocarbon.base07 :bg oxocarbon.base00})    ;; For strings.
+(custom-set-face! :TSStringRegex [] { :fg oxocarbon.base11 :bg oxocarbon.base00}) ;; For regexes.
+(custom-set-face! :TSStringEscape [] { :fg oxocarbon.none :bg oxocarbon.base00}) ;; For escape characters within a string.
+(custom-set-face! :TSSymbol [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; For identifiers referring to symbols or atoms.
+(custom-set-face! :TSType [] { :fg oxocarbon.base14 :bg oxocarbon.base00})    ;; For types.
+(custom-set-face! :TSTypeBuiltin [] { :fg oxocarbon.base14 :bg oxocarbon.base00})    ;; For builtin types.
+(custom-set-face! :TSTag [] { :fg oxocarbon.base10 :bg oxocarbon.base00})    ;; Tags like html tag names.
+(custom-set-face! :TSTagDelimiter [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Tag delimiter like < > /
+(custom-set-face! :TSText [] { :fg oxocarbon.base04 :bg oxocarbon.base01})    ;; For strings consideoxocarbon.base10 text in a markup language.
+(custom-set-face! :TSTextReference [] { :fg oxocarbon.base05 :bg oxocarbon.base00}) ;; FIXME
+(custom-set-face! :TSEmphasis [:bold] { :fg oxocarbon.none :bg oxocarbon.none})    ;; For text to be represented with emphasis.
+(custom-set-face! :TSUnderline [:underline] { :fg oxocarbon.none :bg oxocarbon.none})    ;; For text to be represented with an underline.
+(custom-set-face! :TSStrike [:strikethrough] { :bg oxocarbon.none})   ;; For strikethrough text.
+(custom-set-face! :TSTitle [:bold] { :fg oxocarbon.base09 :bg oxocarbon.none})    ;; Text that is part of a title.
+(custom-set-face! :TSLiteral [] { :fg oxocarbon.base05 :bg oxocarbon.base00})    ;; Literal text.
+(custom-set-face! :TSURI [:underline] { :fg oxocarbon.base08 :bg oxocarbon.base00})    ;; Any URI like a link or email.
+
+;; misc
+(custom-set-face! "@error" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+;; string special (changed here)
+(custom-set-face! "@string.special" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+;; character special (added here...?)
+
+(custom-set-face! "@character" [] {:link "Character"})
+
+;; types
+
+(custom-set-face! "@field" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+
+;; search
+(custom-set-face! :CurSearch [] {:link "Search"})
 { : oxocarbon }
