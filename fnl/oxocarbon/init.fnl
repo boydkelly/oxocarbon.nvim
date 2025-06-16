@@ -712,9 +712,9 @@
 ;; whichkey
 
 ; (custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
-;
-; (custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+
 ; (custom-set-face! :WhichKey [] {:link Pmenu })
+; (custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 ; (custom-set-face! :WhichKeySeperator [] {:link Comment })
 ; (custom-set-face! :WhichKeyGroup [] {:fg oxocarbon.base11 :bg oxocarbon.base01})
 ; (custom-set-face! :WhichKeyDesc [] {:fg oxocarbon.base14 :bg oxocarbon.base01})
