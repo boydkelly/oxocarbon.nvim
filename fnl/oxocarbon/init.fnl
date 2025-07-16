@@ -673,4 +673,14 @@
 (custom-set-face! :VimwikiLink [] {:link "markdownUrl"})
 (custom-set-face! :VimwikiCode [] {:link "markdownCode"})
 
+(custom-set-face! :FidgetTitle [] {:link :Title})
+(custom-set-face! :FidgetTask [] {:link :Comment})
+(custom-set-face! :FidgetNotificationTitle [] {:link :Title})
+(custom-set-face! :FidgetNotification [] {:link :Normal})
+(custom-set-face! :FidgetNotificationError [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :FidgetNotificationWarn  [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :FidgetNotificationInfo  [] {:fg oxocarbon.base05 :bg oxocarbon.none})
+(custom-set-face! :FidgetNotificationDebug [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :FidgetNotificationTrace [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+
 { : oxocarbon }
