@@ -891,10 +891,10 @@
 (custom-set-face! :MiniStatusLineModeCommand [] {:link "StatusCommand"})
 (custom-set-face! :MiniStatusLineModeNormal [] {:link "StatusNormal"})
 
-(custom-set-face! :MiniTablineVisible [] {:link "StatusLine"})
-(custom-set-face! :MiniTablineHidden [] {:link "StatusLine"})
-(custom-set-face! :MiniTablineCurrent [] {:link "StatusLineNC"})
-(custom-set-face! :MiniTablineModifiedCurrent [] {:link "StatusLineNC"})
+(custom-set-face! :MiniTablineVisible [] {:link "TabLine"})
+(custom-set-face! :MiniTablineHidden [] {:link "TabLine"})
+(custom-set-face! :MiniTablineCurrent [] {:link "TabLineSel"})
+(custom-set-face! :MiniTabLineModifiedCurrent [] {:fg oxocarbon.base04 :bg oxocarbon.base02})
 
 (custom-set-face! :MiniPickBorder [] {:link "TelescopeBorder"})
 (custom-set-face! :MiniPickBorderBusy [] {:link "TelescopeBorder"})
