@@ -1,6 +1,6 @@
 -- carbonizer.lua
 local input_path = "./lua/oxocarbon/init.lua"
-local output_path = os.getenv("HOME") .. "/.config/nvim/colors/carbonize.lua"
+local output_path = os.getenv("HOME") .. "/.config/nvim/colors/oxocarbon_dev.lua"
 
 -- Read original file
 local infile = assert(io.open(input_path, "r"))
