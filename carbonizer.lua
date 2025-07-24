@@ -27,7 +27,7 @@ if vim.g.colors_name then
   vim.cmd("hi clear")
 end
 
-vim.g.colors_name = "carbonize"
+vim.g.colors_name = "oxocarbon_dev"
 vim.o.termguicolors = true
 
 -- Custom static base colors (you can edit these freely)
