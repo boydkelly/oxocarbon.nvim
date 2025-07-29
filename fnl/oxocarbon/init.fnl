@@ -268,13 +268,17 @@
 
 ;; diff
 
-(custom-set-face! :DiffAdded [] {:fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! :DiffChanged [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :DiffRemoved [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! :DiffAdd [] {:bg "#122f2f" :fg oxocarbon.none})
-(custom-set-face! :DiffChange [] {:bg "#222a39" :fg oxocarbon.none})
+(custom-set-face! :Added [] {:fg oxocarbon.base07 :bg oxocarbon.none})
+(custom-set-face! :Changed [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! :Removed [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :DiffAdded [] {:link "Added"})
+(custom-set-face! :DiffChanged [] {:link "Changed"})
+(custom-set-face! :DiffRemoved [] {:link "Removed"})
+(custom-set-face! :DiffAdd [] {:link "Added"})
+(custom-set-face! :DiffChange [] {:link "Changed"})
+(custom-set-face! :DiffRemove [] {:link "Removed"})
 (custom-set-face! :DiffText [] {:bg "#2f3f5c" :fg oxocarbon.none})
-(custom-set-face! :DiffDelete [] {:bg "#361c28" :fg oxocarbon.none})
+(custom-set-face! :DiffDelete [] {:link "Removed"})
 
 ;; search
 
@@ -562,6 +566,12 @@
 ;; @scope
 
 (custom-set-face! "@reference" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+
+;; diff
+
+(custom-set-face! "@diff.plus" [] {:link "Added"})
+(custom-set-face! "@diff.delta" [] {:link "Changed"})
+(custom-set-face! "@diff.minus" [] {:link "Removed"})
 
 ;; neovim
 
