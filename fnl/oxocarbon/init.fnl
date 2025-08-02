@@ -745,4 +745,14 @@
 (custom-set-face! :RainbowDelimitersViolet [] {:link "csvCol5"})
 (custom-set-face! :RainbowDelimitersCyan [] {:link "csvCol6"})
 
-{ : oxocarbon}
+(custom-set-face! :FidgetTitle [] {:link "Title"})
+(custom-set-face! :FidgetTask [] {:link "Comment"})
+(custom-set-face! :FidgetNotificationTitle [] {:link "Title"})
+(custom-set-face! :FidgetNotification [] {:link "DiagnosticOk"})
+(custom-set-face! :FidgetNotificationError [] {:link "DiagnosticError"})
+(custom-set-face! :FidgetNotificationWarn  [] {:link "DiagnosticWarn"})
+(custom-set-face! :FidgetNotificationInfo  [] {:link "DiagnosticInfo"})
+(custom-set-face! :FidgetNotificationDebug [] {:link "DiagnosticHint"})
+(custom-set-face! :FidgetNotificationTrace [] {:link "DiagnosticHint"}
+
+ { : oxocarbon})
