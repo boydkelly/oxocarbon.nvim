@@ -1,4 +1,4 @@
-.PHONY: all lua 
+.PHONY: all lua
 
 all: lua
 
