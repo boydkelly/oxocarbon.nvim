@@ -122,20 +122,22 @@
 (custom-set-face! :QuickFixLine [] {:fg oxocarbon.none :bg oxocarbon.base01})
 (custom-set-face! :Error [] {:fg oxocarbon.base10 :bg oxocarbon.base01})
 (custom-set-face! :LineNr [] {:fg oxocarbon.base03 :bg oxocarbon.base00})
-(custom-set-face! :NonText [] {:fg oxocarbon.base02 :bg oxocarbon.none})
+(custom-set-face! :NonText [] {:fg oxocarbon.base03 :bg oxocarbon.none})
 (custom-set-face! :Normal [] {:fg oxocarbon.base04 :bg oxocarbon.base00})
 (custom-set-face! :Pmenu [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
 (custom-set-face! :PmenuSbar [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
-(custom-set-face! :PmenuSel [] {:fg oxocarbon.base08 :bg oxocarbon.base02})
-(custom-set-face! :PmenuThumb [] {:fg oxocarbon.base08 :bg oxocarbon.base02})
+(custom-set-face! :PmenuSel [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+(custom-set-face! :PmenuThumb [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 (custom-set-face! :SpecialKey [] {:fg oxocarbon.base03 :bg oxocarbon.none})
 (custom-set-face! :Visual [] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :VisualNOS [] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :TooLong [] {:fg oxocarbon.none :bg oxocarbon.base02})
 (custom-set-face! :Debug [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :Macro [] {:fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! :MatchParen [:underline]
-                  {:fg oxocarbon.none :bg oxocarbon.base02})
+
+(custom-set-face! :Macro [] {:fg oxocarbon.base07 :bg oxocarbon.none}
+                  (custom-set-face! :MatchParen [:underline]
+                                    {:fg oxocarbon.none :bg oxocarbon.base02}))
+
 (custom-set-face! :Bold [:bold] {:fg oxocarbon.none :bg oxocarbon.none})
 (custom-set-face! :Italic [:italic] {:fg oxocarbon.none :bg oxocarbon.none})
 (custom-set-face! :Underlined [:underline]
@@ -143,16 +145,20 @@
 
 ;; diagnostics
 
-(custom-set-face! :DiagnosticWarn [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :DiagnosticWarn [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticError [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticInfo [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticHint [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :DiagnosticUnderlineWarn [:undercurl]
+                  {:fg oxocarbon.base14 :bg oxocarbon.none}
                   {:fg oxocarbon.base14 :bg oxocarbon.none})
+
 (custom-set-face! :DiagnosticUnderlineError [:undercurl]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
+
 (custom-set-face! :DiagnosticUnderlineInfo [:undercurl]
                   {:fg oxocarbon.base04 :bg oxocarbon.none})
+
 (custom-set-face! :DiagnosticUnderlineHint [:undercurl]
                   {:fg oxocarbon.base04 :bg oxocarbon.none})
 
@@ -163,34 +169,50 @@
 
 ;; ledger
 
-(custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@text.literal.commodity" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! "@comment" [] {:link :Comment})
+(custom-set-face! "@text.literal.commodity" []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
 (custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@number.date.effective" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! "@number.interval" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! "@number.interval" []
+                  {:fg oxocarbon.base09 :bg oxocarbon.none})
+
 (custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
-(custom-set-face! "@number.quantity.negative" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" []
+                  {:fg oxocarbon.base11 :bg oxocarbon.none})
+
+(custom-set-face! "@number.quantity.negative" []
+                  {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; lsp
 
 (custom-set-face! :LspCodeLens [] {:fg oxocarbon.none :bg oxocarbon.base03})
-(custom-set-face! :LspReferenceText [] {:fg oxocarbon.none :bg oxocarbon.base03})
-(custom-set-face! :LspReferenceread [] {:fg oxocarbon.none :bg oxocarbon.base03})
-(custom-set-face! :LspReferenceWrite [] {:fg oxocarbon.none :bg oxocarbon.base03})
-(custom-set-face! :LspSignatureActiveParameter [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :LspReferenceText []
+                  {:fg oxocarbon.none :bg oxocarbon.base03})
+
+(custom-set-face! :LspReferenceread []
+                  {:fg oxocarbon.none :bg oxocarbon.base03})
+
+(custom-set-face! :LspReferenceWrite []
+                  {:fg oxocarbon.none :bg oxocarbon.base03})
+
+(custom-set-face! :LspSignatureActiveParameter []
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ;; lps-semantic-tokens
-(custom-set-face! "@lsp.type.class" [] {:link "Structure"})
-(custom-set-face! "@lsp.type.decorator" [] {:link "Decorator"})
-(custom-set-face! "@lsp.type.decorator.markdown" [] {:link "Structure"})
+(custom-set-face! "@lsp.type.class" [] {:link :Structure})
+(custom-set-face! "@lsp.type.decorator" [] {:link :Decorator})
+(custom-set-face! "@lsp.type.decorator.markdown" [] {:link :Structure})
 (custom-set-face! "@lsp.type.function" [] {:link "@function"})
-(custom-set-face! "@lsp.type.macro" [] {:link "Macro"})
+(custom-set-face! "@lsp.type.macro" [] {:link :Macro})
 (custom-set-face! "@lsp.type.method" [] {:link "@function"})
-(custom-set-face! "@lsp.type.struct" [] {:link "Structure"})
-(custom-set-face! "@lsp.type.type" [] {:link "Type"})
-(custom-set-face! "@lsp.type.typeParameter" [] {:link "Typedef"})
+(custom-set-face! "@lsp.type.struct" [] {:link :Structure})
+(custom-set-face! "@lsp.type.type" [] {:link :Type})
+(custom-set-face! "@lsp.type.typeParameter" [] {:link :Typedef})
 (custom-set-face! "@lsp.type.selfParameter" [] {:link "@variable.builtin"})
 (custom-set-face! "@lsp.type.builtinConstant" [] {:link "@constant.builtin"})
 (custom-set-face! "@lsp.type.magicFunction" [] {:link "@function.builtin"})
@@ -211,36 +233,59 @@
 (custom-set-face! "@lsp.type.selfKeyword" [] {:link "@variable.builtin"})
 (custom-set-face! "@lsp.type.string.rust" [] {:link "@string"})
 (custom-set-face! "@lsp.type.typeAlias" [] {:link "@type.definition"})
-(custom-set-face! "@lsp.type.unresolvedReference" [] {:link "Error"})
+(custom-set-face! "@lsp.type.unresolvedReference" [] {:link :Error})
 (custom-set-face! "@lsp.type.variable" [] {:link "@variable"})
 (custom-set-face! "@lsp.mod.readonly" [] {:link "@constant"})
-(custom-set-face! "@lsp.mod.typeHint" [] {:link "Type"})
-(custom-set-face! "@lsp.mod.builtin" [] {:link "Special"})
-(custom-set-face! "@lsp.typemod.class.defaultLibrary" [] {:link "@type.builtin"})
+(custom-set-face! "@lsp.mod.typeHint" [] {:link :Type})
+(custom-set-face! "@lsp.mod.builtin" [] {:link :Special})
+(custom-set-face! "@lsp.typemod.class.defaultLibrary" []
+                  {:link "@type.builtin"})
+
 (custom-set-face! "@lsp.typemod.enum.defaultLibrary" [] {:link "@type.builtin"})
-(custom-set-face! "@lsp.typemod.enumMember.defaultLibrary" [] {:link "@constant.builtin"})
-(custom-set-face! "@lsp.typemod.function.defaultLibrary" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.enumMember.defaultLibrary" []
+                  {:link "@constant.builtin"})
+
+(custom-set-face! "@lsp.typemod.function.defaultLibrary" []
+                  {:link "@function.builtin"})
+
 (custom-set-face! "@lsp.typemod.keyword.async" [] {:link "@keyword.coroutine"})
-(custom-set-face! "@lsp.typemod.macro.defaultLibrary" [] {:link "@function.builtin"})
-(custom-set-face! "@lsp.typemod.method.defaultLibrary" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.macro.defaultLibrary" []
+                  {:link "@function.builtin"})
+
+(custom-set-face! "@lsp.typemod.method.defaultLibrary" []
+                  {:link "@function.builtin"})
+
 (custom-set-face! "@lsp.typemod.operator.injected" [] {:link "@operator"})
 (custom-set-face! "@lsp.typemod.string.injected" [] {:link "@string"})
 (custom-set-face! "@lsp.typemod.operator.controlFlow" [] {:link "@exception"})
-(custom-set-face! "@lsp.typemod.keyword.documentation" [] {:link "Special"})
+(custom-set-face! "@lsp.typemod.keyword.documentation" [] {:link :Special})
 (custom-set-face! "@lsp.typemod.variable.global" [] {:link "@constant"})
 (custom-set-face! "@lsp.typemod.variable.static" [] {:link "@constant"})
-(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link "Special"})
-(custom-set-face! "@lsp.typemod.function.builtin" [] {:link "@function.builtin"})
+(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link :Special})
+(custom-set-face! "@lsp.typemod.function.builtin" []
+                  {:link "@function.builtin"})
+
 (custom-set-face! "@lsp.typemod.function.readonly" [] {:link "@method"})
 ;;(custom-set-face! "@lsp.typemod.type.defaultLibrary" [] {})
-(custom-set-face! "@lsp.typemod.variable.defaultLibrary" [] {:link "@variable.builtin"})
+(custom-set-face! "@lsp.typemod.variable.defaultLibrary" []
+                  {:link "@variable.builtin"})
+
 (custom-set-face! "@lsp.typemod.variable.injected" [] {:link "@variable"})
 
 ;; gutter
 
 (custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
-(custom-set-face! :FoldColumn [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
-(custom-set-face! :SignColumn [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+(custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
+(custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
+
+;; gutter custom
+(custom-set-face! :Folded [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+(custom-set-face! :FoldColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+(custom-set-face! :SignColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+(custom-set-face! :GitSignsAdd [] {:fg oxocarbon.base7 :bg oxocarbon.base00})
+(custom-set-face! :GitSignsChange [] {:fg oxocarbon.base9 :bg oxocarbon.base00})
+(custom-set-face! :GitSignsDelete []
+                  {:fg oxocarbon.base10 :bg oxocarbon.base00})
 
 ;; navigation
 
@@ -254,7 +299,7 @@
 (custom-set-face! :MoreMsg [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :Question [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :Substitute [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :WarningMsg [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :WarningMsg [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :WildMenu [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
 
 ;; vimhelp
@@ -284,23 +329,23 @@
 
 ;; tabs
 
-(custom-set-face! :TabLine [] {:link "StatusLineNC"})
-(custom-set-face! :TabLineFill [] {:link "TabLine"})
-(custom-set-face! :TabLineSel [] {:link "StatusLine"})
+(custom-set-face! :TabLine [] {:link :StatusLineNC})
+(custom-set-face! :TabLineFill [] {:link :TabLine})
+(custom-set-face! :TabLineSel [] {:link :StatusLine})
 
 ;; window
 
 (custom-set-face! :Title [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 ;; VertSplit has been replaced by `WinSpeperator` in nvim 0.10
 (custom-set-face! :VertSplit [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
-(custom-set-face! :WinSeparator [] {:fg oxocarbon.base01 :bg oxocarbon.base00})
+(custom-set-face! :WinSeparator [] {:fg oxocarbon.base03 :bg oxocarbon.base00})
 
 ;; regular syntax
 
 (custom-set-face! :Boolean [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :Character [] {:fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :Comment [:italic]
-                  {:fg oxocarbon.base03 :bg oxocarbon.none})
+(custom-set-face! :Comment [:italic] {:fg oxocarbon.base03 :bg oxocarbon.none})
+
 (custom-set-face! :Conceal [] {:fg oxocarbon.none :bg oxocarbon.none})
 (custom-set-face! :Conditional [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :Constant [] {:fg oxocarbon.base04 :bg oxocarbon.none})
@@ -308,7 +353,7 @@
 (custom-set-face! :Define [] {:fg oxocarbon.base09 :bg oxocarbon.none})
 (custom-set-face! :Delimeter [] {:fg oxocarbon.base06 :bg oxocarbon.none})
 (custom-set-face! :Exception [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :Float [] {:link "Number"})
+(custom-set-face! :Float [] {:link :Number})
 (custom-set-face! :Function [] {:fg oxocarbon.base08 :bg oxocarbon.none})
 (custom-set-face! :Identifier [] {:fg oxocarbon.base04 :bg oxocarbon.none})
 (custom-set-face! :Include [] {:fg oxocarbon.base09 :bg oxocarbon.none})
@@ -334,129 +379,211 @@
 
 (custom-set-face! :markdownBlockquote []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :markdownBold [] {:link "Bold"})
-(custom-set-face! :markdownItalic [] {:link "Italic"})
+
+(custom-set-face! :markdownBold [] {:link :Bold})
+(custom-set-face! :markdownItalic [] {:link :Italic})
 (custom-set-face! :markdownBoldItalic [:bold :italic]
                   {:fg oxocarbon.none :bg oxocarbon.none})
-(custom-set-face! :markdownRule [] {:link "Comment"})
+
+(custom-set-face! :markdownRule [] {:link :Comment})
 (custom-set-face! :markdownH1 [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! :markdownH2 [] {:link "markdownH1"})
-(custom-set-face! :markdownH3 [] {:link "markdownH1"})
-(custom-set-face! :markdownH4 [] {:link "markdownH1"})
-(custom-set-face! :markdownH5 [] {:link "markdownH1"})
-(custom-set-face! :markdownH6 [] {:link "markdownH1"})
-(custom-set-face! :markdownHeadingDelimiter [] {:link "markdownH1"})
-(custom-set-face! :markdownHeadingRule [] {:link "markdownH1"})
+(custom-set-face! :markdownH2 [] {:link :markdownH1})
+(custom-set-face! :markdownH3 [] {:link :markdownH1})
+(custom-set-face! :markdownH4 [] {:link :markdownH1})
+(custom-set-face! :markdownH5 [] {:link :markdownH1})
+(custom-set-face! :markdownH6 [] {:link :markdownH1})
+(custom-set-face! :markdownHeadingDelimiter [] {:link :markdownH1})
+(custom-set-face! :markdownHeadingRule [] {:link :markdownH1})
 (custom-set-face! :markdownUrl [:underline]
                   {:fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :markdownCode [] {:link "String"})
-(custom-set-face! :markdownCodeBlock [] {:link "markdownCode"})
-(custom-set-face! :markdownCodeDelimiter [] {:link "markdownCode"})
-(custom-set-face! :markdownUrl [] {:link "String"})
+
+(custom-set-face! :markdownCode [] {:link :String})
+(custom-set-face! :markdownCodeBlock [] {:link :markdownCode})
+(custom-set-face! :markdownCodeDelimiter [] {:link :markdownCode})
+(custom-set-face! :markdownUrl [] {:link :String})
 (custom-set-face! :markdownListMarker []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :markdownOrderedListMarker []
+
+(custom-set-face! :markdownOrdebase10ListMarker []
                   {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ; markdown treesitter
 (custom-set-face! "@markup" [] {:link "@none"})
-(custom-set-face! "@markup.environment" [] {:link "Macro"})
-(custom-set-face! "@markup.environment.name" [] {:link "Type"})
+(custom-set-face! "@markup.environment" [] {:link :Macro})
+(custom-set-face! "@markup.environment.name" [] {:link :Type})
 (custom-set-face! "@markup.emphasis" [] {:italic true})
 (custom-set-face! "@markup.italic" [] {:italic true})
 (custom-set-face! "@markup.strikethrough" [] {:strikethrough true})
 (custom-set-face! "@markup.strong" [] {:bold true})
 (custom-set-face! "@markup.underline" [] {:underline true})
 
-(custom-set-face! "@markup.heading" [] {:link "Title"})
+(custom-set-face! "@markup.heading" [] {:link :Title})
 (custom-set-face! "@markup.heading.marker" [] {:link :markdownHeadingDelimiter})
-(custom-set-face! "@markup.heading.1.markdown" [] {:link "markdownH1"})
-(custom-set-face! "@markup.heading.2.markdown" [] {:link "markdownH1"})
-(custom-set-face! "@markup.heading.3.markdown" [] {:link "markdownH1"})
-(custom-set-face! "@markup.heading.4.markdown" [] {:link "markdownH1"})
-(custom-set-face! "@markup.heading.5.markdown" [] {:link "markdownH1"})
-(custom-set-face! "@markup.heading.6.markdown" [] {:link "markdownH1"})
-(custom-set-face! "@markup.heading.7.markdown" [] {:link "markdownH1"})
-(custom-set-face! "@markup.heading.8.markdown" [] {:link "markdownH1"})
+(custom-set-face! "@markup.heading.1.markdown" [] {:link :markdownH1})
+(custom-set-face! "@markup.heading.2.markdown" [] {:link :markdownH1})
+(custom-set-face! "@markup.heading.3.markdown" [] {:link :markdownH1})
+(custom-set-face! "@markup.heading.4.markdown" [] {:link :markdownH1})
+(custom-set-face! "@markup.heading.5.markdown" [] {:link :markdownH1})
+(custom-set-face! "@markup.heading.6.markdown" [] {:link :markdownH1})
+(custom-set-face! "@markup.heading.7.markdown" [] {:link :markdownH1})
+(custom-set-face! "@markup.heading.8.markdown" [] {:link :markdownH1})
 
-(custom-set-face! "@markup.link" [] {:link "markdownUrl"})
+(custom-set-face! "@markup.link" [] {:link :markdownUrl})
 (custom-set-face! "@markup.link.label" [] {:underline true})
-(custom-set-face! "@markup.link.label.symbol" [] {:link "markdownItalic"})
-(custom-set-face! "@markup.link.label.markdown_inline" [] {:link "markdownItalic"})
-(custom-set-face! "@markup.link.title" [] {:link "Title"})
-(custom-set-face! "@markup.link.url" [] {:link "markdownUrl"})
-(custom-set-face! "@markup.link.destination" [] {:link "markdownUrl"})
-(custom-set-face! "@markup.link.description" [] {:fg oxocarbon.blend :underline true :italic true})
+(custom-set-face! "@markup.link.label.symbol" [] {:link :markdownItalic})
+(custom-set-face! "@markup.link.label.markdown_inline" []
+                  {:link :markdownItalic})
 
-(custom-set-face! "@markup.list" [] {:link "markdownListMarker"})
-(custom-set-face! "@markup.list.bullet" [] {:link "markdownListMarker"})
-(custom-set-face! "@markup.list.checked" [] {:link "markdownListMarker"})
-(custom-set-face! "@markup.list.markdown" [] {:link "markdownListMarker"})
-(custom-set-face! "@markup.list.ordered" [] {:link "markdownOrderedListMarker"})
-(custom-set-face! "@markup.list.unchecked" [] {:link "markdownListMarker"})
+(custom-set-face! "@markup.link.title" [] {:link :Title})
+(custom-set-face! "@markup.link.url" [] {:link :markdownUrl})
+(custom-set-face! "@markup.link.destination" [] {:link :markdownUrl})
+(custom-set-face! "@markup.link.description" []
+                  {:fg oxocarbon.blend :underline true :italic true})
 
-(custom-set-face! "@markup.math" [] {:link "Special"})
-(custom-set-face! "@markup.raw" [] {:link "String"})
-(custom-set-face! "@markup.raw.markdown_inline" [] {:link "String"})
-(custom-set-face! "@markup.quote" [] {:link "markdownBlockquote"})
+(custom-set-face! "@markup.list" [] {:link :markdownListMarker})
+(custom-set-face! "@markup.list.bullet" [] {:link :markdownListMarker})
+(custom-set-face! "@markup.list.checked" [] {:link :markdownListMarker})
+(custom-set-face! "@markup.list.markdown" [] {:link :markdownListMarker})
+(custom-set-face! "@markup.list.ordered" [] {:link :markdownOrderedListMarker})
+(custom-set-face! "@markup.list.unchecked" [] {:link :markdownListMarker})
 
-(custom-set-face! "@markup.literal" [] {:link "markdownCode"})
-(custom-set-face! "@markup.code.block" [] {:link "markdownCodeBlock"})
-(custom-set-face! "@markup.rule" [] {:link "Comment"})
+(custom-set-face! "@markup.math" [] {:link :Special})
+(custom-set-face! "@markup.raw" [] {:link :String})
+(custom-set-face! "@markup.raw.markdown_inline" [] {:link :String})
+(custom-set-face! "@markup.quote" [] {:link :markdownBlockquote})
+
+(custom-set-face! "@markup.literal" [] {:link :markdownCode})
+(custom-set-face! "@markup.code.block" [] {:link :markdownCodeBlock})
+(custom-set-face! "@markup.rule" [] {:link :Comment})
 
 ;; asciidoc
 
-(custom-set-face! :asciidocAttributeEntry [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! :asciidocAttributeList [] {:link "asciidocAttributeEntry"})
-(custom-set-face! :asciidocAttributeRef [] {:link "asciidocAttributeEntry"})
-(custom-set-face! :asciidocHLabel [] {:link "markdownH1"})
-(custom-set-face! :asciidocOneLineTitle [] {:link "markdownH1"})
-(custom-set-face! :asciidocQuotedMonospaced [] {:link "markdownBlockquote"})
-(custom-set-face! :asciidocURL [] {:link "markdownUrl"})
+(custom-set-face! :asciidocAttributeEntry []
+                  {:fg oxocarbon.base15 :bg oxocarbon.none})
+
+(custom-set-face! :asciidocAttributeList [] {:link :asciidocAttributeEntry})
+(custom-set-face! :asciidocAttributeRef [] {:link :asciidocAttributeEntry})
+(custom-set-face! :asciidocHLabel [] {:link :markdownH1})
+(custom-set-face! :asciidocOneLineTitle [] {:link :markdownH1})
+(custom-set-face! :asciidocQuotedMonospaced [] {:link :markdownBlockquote})
+(custom-set-face! :asciidocURL [] {:link :markdownUrl})
 
 ;; treesitter
+
+(custom-set-face! "@comment" [] {:link :Comment})
+(custom-set-face! "@constructor" [] {:fg oxocarbon.base12})
+(custom-set-face! "@constructor.tsx" [] {:fg oxocarbon.base09})
+(custom-set-face! "@field" [] {:fg oxocarbon.base07})
+(custom-set-face! "@keyword" [:bold] {:fg oxocarbon.base14})
+(custom-set-face! "@keyword.function" [:italic] {:fg oxocarbon.base12})
+(custom-set-face! "@label" [] {:fg oxocarbon.base09})
+(custom-set-face! "@lsp.type.comment" [] {:link "@comment"})
+(custom-set-face! "@lsp.type.enum" [] {:link "@type"})
+(custom-set-face! "@lsp.type.enumMember" [] {:link "@constant"})
+(custom-set-face! "@lsp.type.interface" [] {:fg oxocarbon.base09})
+(custom-set-face! "@lsp.type.keyword" [] {:link "@keyword"})
+(custom-set-face! "@lsp.type.namespace" [] {:link "@namespace"})
+(custom-set-face! "@lsp.type.parameter" [] {:link "@parameter"})
+(custom-set-face! "@lsp.type.property" [] {:link "@property"})
+(custom-set-face! "@lsp.type.variable" []
+                  {:fg oxocarbon.none :bg oxocarbon.none})
+
+(custom-set-face! "@lsp.typemod.function.defaultLibrary" []
+                  {:link "@function.builtin"})
+
+(custom-set-face! "@lsp.typemod.macro.defaultLibrary" []
+                  {:link "@function.builtin"})
+
+(custom-set-face! "@lsp.typemod.method.defaultLibrary" []
+                  {:link "@function.builtin"})
+
+(custom-set-face! "@lsp.typemod.operator.injected" [] {:link "@operator"})
+(custom-set-face! "@lsp.typemod.string.injected" [] {:link "@string"})
+(custom-set-face! "@lsp.typemod.type.defaultLibrary" [] {:fg oxocarbon.base09})
+(custom-set-face! "@lsp.typemod.variable.defaultLibrary" []
+                  {:link "@variable.builtin"})
+
+(custom-set-face! "@lsp.typemod.variable.injected" [] {:link "@variable"})
+(custom-set-face! "@namespace" [] {:link :Include})
+(custom-set-face! "@operator" [] {:fg oxocarbon.base11})
+(custom-set-face! "@parameter" [] {:fg oxocarbon.#ffab91})
+(custom-set-face! "@property" [] {:fg oxocarbon.base07})
+(custom-set-face! "@punctuation.bracket" [] {:fg oxocarbon.base02})
+(custom-set-face! "@punctuation.delimiter" [] {:fg oxocarbon.base11})
+(custom-set-face! "@punctuation.special" [] {:fg oxocarbon.base11})
+(custom-set-face! "@punctuation.special.markdown" []
+                  {:bold true :fg oxocarbon.#ff6f00})
+
+(custom-set-face! "@string.documentation" [] {:fg oxocarbon.#ffab91})
+(custom-set-face! "@string.escape" [] {:fg oxocarbon.base12})
+(custom-set-face! "@string.regex" [] {:fg oxocarbon.base15})
+(custom-set-face! "@tag.delimiter.tsx" [] {:fg oxocarbon.base09})
+(custom-set-face! "@tag.tsx" [] {:fg oxocarbon.base10})
+(custom-set-face! "@text.danger" [] {:bg oxocarbon.base10 :fg oxocarbon.none})
+(custom-set-face! "@text.diff.add" [] {:link :DiffAdd})
+(custom-set-face! "@text.diff.delete" [] {:link :DiffDelete})
+(custom-set-face! "@text.literal.markdown_inline" []
+                  {:fg oxocarbon.base09 :bg oxocarbon.none})
+
+(custom-set-face! "@text.reference" [] {:fg oxocarbon.base07})
+(custom-set-face! "@text.todo.checked" [] {:fg oxocarbon.base07})
+(custom-set-face! "@text.todo.unchecked" [] {:fg oxocarbon.base09})
+(custom-set-face! "@text.warning" [] {:fg oxocarbon.#ff6f00 :bg oxocarbon.none})
+(custom-set-face! "@type.builtin" [] {:fg oxocarbon.base09})
+(custom-set-face! "@variable" [:bold] {:fg oxocarbon.base02})
+(custom-set-face! "@variable.builtin" [] {:fg oxocarbon.base10})
+
 ;;; misc
 
-(custom-set-face! "@comment" [] {:link "Comment"})
-(custom-set-face! "@error" [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! "@comment" [] {:link :Comment})
+(custom-set-face! "@error" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; @none
 ;; @preproc
 ;; @define
 
-(custom-set-face! "@operator" [] {:link "Operator"})
+(custom-set-face! "@operator" [] {:link :Operator})
 
 ;;; punctuation
 
-(custom-set-face! "@punctuation.delimiter" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@punctuation.bracket" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@punctuation.special" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@punctuation.delimiter" []
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+(custom-set-face! "@punctuation.bracket" []
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+(custom-set-face! "@punctuation.special" []
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ;;; literals
 
-(custom-set-face! "@string" [] {:link "String"})
+(custom-set-face! "@string" [] {:link :String})
 (custom-set-face! "@string.regex" [] {:fg oxocarbon.base07 :bg oxocarbon.none})
 (custom-set-face! "@string.escape" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
 
 ;; @string.special
-
-(custom-set-face! "@character" [] {:link "Character"})
+(custom-set-face! "@string.special" []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
 
 ;; @character.special
+(custom-set-face! "@character" [] {:link :Character})
 
-(custom-set-face! "@boolean" [] {:link "Boolean"})
-(custom-set-face! "@number" [] {:link "Number"})
-(custom-set-face! "@float" [] {:link "Float"})
+(custom-set-face! "@boolean" [] {:link :Boolean})
+(custom-set-face! "@number" [] {:link :Number})
+(custom-set-face! "@float" [] {:link :Float})
 
 ;;; functions
 
-(custom-set-face! "@function" [:bold]
+(custom-set-face! "@function" [:bold] {:fg oxocarbon.base12 :bg oxocarbon.none})
+
+(custom-set-face! "@function.builtin" []
                   {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! "@function.builtin" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
 
 ;; @function.call
 
-(custom-set-face! "@function.macro" [] {:fg oxocarbon.base07 :bg oxocarbon.none})
+(custom-set-face! "@function.macro" []
+                  {:fg oxocarbon.base07 :bg oxocarbon.none})
+
 (custom-set-face! "@method" [] {:fg oxocarbon.base07 :bg oxocarbon.none})
 
 ;; @method.call
@@ -467,8 +594,11 @@
 ;;; keywords
 
 (custom-set-face! "@keyword" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! "@keyword.function" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! "@keyword.operator" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@keyword.function" []
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+(custom-set-face! "@keyword.operator" []
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
 
 ;; @keyword.return
 
@@ -483,8 +613,8 @@
 
 ;;; types
 
-(custom-set-face! "@type" [] {:link "Type"})
-(custom-set-face! "@type.builtin" [] {:link "Type"})
+(custom-set-face! "@type" [] {:link :Type})
+(custom-set-face! "@type.builtin" [] {:link :Type})
 
 ;; @type.defintion
 ;; @type.qualifier
@@ -492,19 +622,24 @@
 ;; @storageclass.lifetime
 
 (custom-set-face! "@attribute" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! "@field" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! "@field" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
 (custom-set-face! "@property" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;;; identifiers
 
 (custom-set-face! "@variable" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
-(custom-set-face! "@variable.builtin" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! "@variable.builtin" []
+                  {:fg oxocarbon.base04 :bg oxocarbon.none})
+
 (custom-set-face! "@constant" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! "@constant.builtin" [] {:fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! "@constant.macro" [] {:fg oxocarbon.base07 :bg oxocarbon.none})
+(custom-set-face! "@constant.builtin" []
+                  {:fg oxocarbon.base07 :bg oxocarbon.none})
+
+(custom-set-face! "@constant.macro" []
+                  {:fg oxocarbon.base07 :bg oxocarbon.none})
+
 (custom-set-face! "@namespace" [] {:fg oxocarbon.base07 :bg oxocarbon.none})
-(custom-set-face! "@symbol" [:bold]
-                  {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! "@symbol" [:bold] {:fg oxocarbon.base15 :bg oxocarbon.none})
 
 ;;; text
 
@@ -512,12 +647,15 @@
 (custom-set-face! "@text.strong" [] {:fg oxocarbon.none :bg oxocarbon.none})
 (custom-set-face! "@text.emphasis" [:bold]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
+
 (custom-set-face! "@text.underline" [:underline]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
+
 (custom-set-face! "@text.strike" [:strikethrough]
                   {:fg oxocarbon.base10 :bg oxocarbon.none})
+
 (custom-set-face! "@text.title" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
-(custom-set-face! "@text.literal" [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! "@text.literal" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! "@text.uri" [:underline]
                   {:fg oxocarbon.base14 :bg oxocarbon.none})
 
@@ -565,10 +703,13 @@
 
 ;; neovim
 
-(custom-set-face! :NvimInternalError [] {:fg oxocarbon.base00 :bg oxocarbon.base08})
+(custom-set-face! :NvimInternalError []
+                  {:fg oxocarbon.base10 :bg oxocarbon.none})
+
 (custom-set-face! :NormalFloat [] {:fg oxocarbon.base05 :bg oxocarbon.blend})
 (custom-set-face! :FloatBorder [] {:fg oxocarbon.blend :bg oxocarbon.blend})
-(custom-set-face! :NormalNC [] {:fg oxocarbon.base04 :bg oxocarbon.base00})
+
+(custom-set-face! :NormalNC [] {:fg oxocarbon.base05 :bg oxocarbon.base01})
 (custom-set-face! :TermCursor [] {:fg oxocarbon.base00 :bg oxocarbon.base04})
 (custom-set-face! :TermCursorNC [] {:fg oxocarbon.base00 :bg oxocarbon.base04})
 
@@ -579,152 +720,352 @@
 (custom-set-face! :StatusReplace [] {:fg oxocarbon.base00 :bg oxocarbon.base08})
 (custom-set-face! :StatusInsert [] {:fg oxocarbon.base00 :bg oxocarbon.base12})
 (custom-set-face! :StatusVisual [] {:fg oxocarbon.base00 :bg oxocarbon.base14})
-(custom-set-face! :StatusTerminal [] {:fg oxocarbon.base00 :bg oxocarbon.base11})
+(custom-set-face! :StatusTerminal []
+                  {:fg oxocarbon.base00 :bg oxocarbon.base11})
+
 (custom-set-face! :StatusNormal [] {:fg oxocarbon.base00 :bg oxocarbon.base15})
 (custom-set-face! :StatusCommand [] {:fg oxocarbon.base00 :bg oxocarbon.base13})
 (custom-set-face! :StatusLineDiagnosticWarn [:bold]
-                  {:fg oxocarbon.base14 :bg oxocarbon.base00})
+                  {:fg oxocarbon.base14 :bg oxocarbon.none})
+
+;;                  {:fg oxocarbon.base12 :bg oxocarbon.base00})
 (custom-set-face! :StatusLineDiagnosticError [:bold]
-                  {:fg oxocarbon.base10 :bg oxocarbon.base00})
+                  {:fg oxocarbon.base08 :bg oxocarbon.base00})
 
 ;; telescope
 
 (custom-set-face! :TelescopeBorder [] {:fg oxocarbon.blend :bg oxocarbon.blend})
-(custom-set-face! :TelescopePromptBorder [] {:fg oxocarbon.base02 :bg oxocarbon.base02})
-(custom-set-face! :TelescopePromptNormal [] {:fg oxocarbon.base05 :bg oxocarbon.base02})
-(custom-set-face! :TelescopePromptPrefix [] {:fg oxocarbon.base08 :bg oxocarbon.base02})
+(custom-set-face! :TelescopePromptBorder []
+                  {:fg oxocarbon.base02 :bg oxocarbon.base02})
+
+(custom-set-face! :TelescopePromptNormal []
+                  {:fg oxocarbon.base05 :bg oxocarbon.base02})
+
+(custom-set-face! :TelescopePromptPrefix []
+                  {:fg oxocarbon.base08 :bg oxocarbon.base02})
+
 (custom-set-face! :TelescopeNormal [] {:fg oxocarbon.none :bg oxocarbon.blend})
-(custom-set-face! :TelescopePreviewTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base12})
-(custom-set-face! :TelescopePromptTitle [] {:fg oxocarbon.base02 :bg oxocarbon.base11})
-(custom-set-face! :TelescopeResultsTitle [] {:fg oxocarbon.blend :bg oxocarbon.blend})
-(custom-set-face! :TelescopeSelection [] {:fg oxocarbon.none :bg oxocarbon.base02})
-(custom-set-face! :TelescopePreviewLine [] {:fg oxocarbon.none :bg oxocarbon.base01})
-(custom-set-face! :TelescopeMatching [:bold :italic] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :TelescopePreviewTitle []
+                  {:fg oxocarbon.base02 :bg oxocarbon.base12})
+
+(custom-set-face! :TelescopePromptTitle []
+                  {:fg oxocarbon.base02 :bg oxocarbon.base11})
+
+(custom-set-face! :TelescopeResultsTitle []
+                  {:fg oxocarbon.blend :bg oxocarbon.blend})
+
+(custom-set-face! :TelescopeSelection []
+                  {:fg oxocarbon.none :bg oxocarbon.base02})
+
+(custom-set-face! :TelescopePreviewLine []
+                  {:fg oxocarbon.none :bg oxocarbon.base02})
+
+(custom-set-face! :TelescopeMatching [:bold :italic]
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+(custom-set-face! :TelescopeSelectionCaret []
+                  {:fg oxocarbon.base10 :bg oxocarbon.none})
 
 ;; notify
 
-(custom-set-face! :NotifyERRORBorder [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :NotifyWARNBorder [] {:fg oxocarbon.base14 :bg oxocarbon.none})
-(custom-set-face! :NotifyINFOBorder [] {:fg oxocarbon.base05 :bg oxocarbon.none})
-(custom-set-face! :NotifyDEBUGBorder [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :NotifyTRACEBorder [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :NotifyERRORBorder []
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+(custom-set-face! :NotifyWARNBorder []
+                  {:fg oxocarbon.base15 :bg oxocarbon.none})
+
+(custom-set-face! :NotifyINFOBorder []
+                  {:fg oxocarbon.base05 :bg oxocarbon.none})
+
+(custom-set-face! :NotifyDEBUGBorder []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! :NotifyTRACEBorder []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
 (custom-set-face! :NotifyERRORIcon [] {:fg oxocarbon.base08 :bg oxocarbon.none})
-(custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :NotifyWARNIcon [] {:fg oxocarbon.base15 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOIcon [] {:fg oxocarbon.base05 :bg oxocarbon.none})
 (custom-set-face! :NotifyDEBUGIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
 (custom-set-face! :NotifyTRACEIcon [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :NotifyERRORTitle [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! :NotifyERRORTitle []
+                  {:fg oxocarbon.base08 :bg oxocarbon.none})
+
 (custom-set-face! :NotifyWARNTitle [] {:fg oxocarbon.base14 :bg oxocarbon.none})
 (custom-set-face! :NotifyINFOTitle [] {:fg oxocarbon.base05 :bg oxocarbon.none})
-(custom-set-face! :NotifyDEBUGTitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
-(custom-set-face! :NotifyTRACETitle [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :NotifyDEBUGTitle []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! :NotifyTRACETitle []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
 
 ;; cmp
 
 (custom-set-face! :CmpItemAbbr [] {:fg "#adadad" :bg oxocarbon.none})
 (custom-set-face! :CmpItemAbbrMatch [:bold]
                   {:fg oxocarbon.base05 :bg oxocarbon.none})
+
 (custom-set-face! :CmpItemAbbrMatchFuzzy [:bold]
                   {:fg oxocarbon.base04 :bg oxocarbon.none})
+
 (custom-set-face! :CmpItemMenu [:italic]
                   {:fg oxocarbon.base04 :bg oxocarbon.none})
-(custom-set-face! :CmpItemKindInterface [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :CmpItemKindColor [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :CmpItemKindTypeParameter [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :CmpItemKindText [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
-(custom-set-face! :CmpItemKindEnum [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
-(custom-set-face! :CmpItemKindKeyword [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
-(custom-set-face! :CmpItemKindConstant [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
-(custom-set-face! :CmpItemKindConstructor [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
-(custom-set-face! :CmpItemKindReference [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
-(custom-set-face! :CmpItemKindFunction [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :CmpItemKindStruct [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :CmpItemKindClass [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :CmpItemKindModule [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :CmpItemKindOperator [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :CmpItemKindField [] {:fg oxocarbon.base01 :bg oxocarbon.base12})
-(custom-set-face! :CmpItemKindProperty [] {:fg oxocarbon.base01 :bg oxocarbon.base12})
-(custom-set-face! :CmpItemKindEvent [] {:fg oxocarbon.base01 :bg oxocarbon.base12})
-(custom-set-face! :CmpItemKindUnit [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
-(custom-set-face! :CmpItemKindSnippet [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
-(custom-set-face! :CmpItemKindFolder [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
-(custom-set-face! :CmpItemKindVariable [] {:fg oxocarbon.base01 :bg oxocarbon.base14})
-(custom-set-face! :CmpItemKindFile [] {:fg oxocarbon.base01 :bg oxocarbon.base14})
-(custom-set-face! :CmpItemKindMethod [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
-(custom-set-face! :CmpItemKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
-(custom-set-face! :CmpItemKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
+
+(custom-set-face! :CmpItemKindInterface []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base08})
+
+(custom-set-face! :CmpItemKindColor []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base08})
+
+(custom-set-face! :CmpItemKindTypeParameter []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base08})
+
+(custom-set-face! :CmpItemKindText []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base09})
+
+(custom-set-face! :CmpItemKindEnum []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base09})
+
+(custom-set-face! :CmpItemKindKeyword []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base09})
+
+(custom-set-face! :CmpItemKindConstant []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base10})
+
+(custom-set-face! :CmpItemKindConstructor []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base10})
+
+(custom-set-face! :CmpItemKindReference []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base10})
+
+(custom-set-face! :CmpItemKindFunction []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :CmpItemKindStruct []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :CmpItemKindClass []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :CmpItemKindModule []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :CmpItemKindOperator []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :CmpItemKindField []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base12})
+
+(custom-set-face! :CmpItemKindProperty []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base12})
+
+(custom-set-face! :CmpItemKindEvent []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base12})
+
+(custom-set-face! :CmpItemKindUnit []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base13})
+
+(custom-set-face! :CmpItemKindSnippet []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base13})
+
+(custom-set-face! :CmpItemKindFolder []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base13})
+
+(custom-set-face! :CmpItemKindVariable []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base14})
+
+(custom-set-face! :CmpItemKindFile []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base14})
+
+(custom-set-face! :CmpItemKindMethod []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base15})
+
+(custom-set-face! :CmpItemKindValue []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base15})
+
+(custom-set-face! :CmpItemKindEnumMember []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
 ;; blink.cmp
 
 (custom-set-face! :BlinkCmpMenu [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
-(custom-set-face! :BlinkCmpMenuBorder [] {:fg oxocarbon.base03 :bg oxocarbon.base01})
+(custom-set-face! :BlinkCmpMenuBorder []
+                  {:fg oxocarbon.base03 :bg oxocarbon.base01})
+
 (custom-set-face! :BlinkCmpMenuSelection [:default]
-                  {:fg oxocarbon.none :bg oxocarbon.none })
-(custom-set-face! :BlinkCmpScrollBarThumb [] {:fg oxocarbon.none :bg oxocarbon.base03})
-(custom-set-face! :BlinkCmpScrollBarGutter [] {:fg oxocarbon.none :bg oxocarbon.base02})
+                  {:fg oxocarbon.none :bg oxocarbon.none})
+
+(custom-set-face! :BlinkCmpScrollBarThumb []
+                  {:fg oxocarbon.none :bg oxocarbon.base03})
+
+(custom-set-face! :BlinkCmpScrollBarGutter []
+                  {:fg oxocarbon.none :bg oxocarbon.base02})
+
 (custom-set-face! :BlinkCmpLabel [] {:fg "#adadad" :bg oxocarbon.none})
-(custom-set-face! :BlinkCmpLabelDeprecated [] {:fg oxocarbon.base03 :bg oxocarbon.none :italic true})
-(custom-set-face! :BlinkCmpLabelMatch [] {:fg oxocarbon.base05 :bg oxocarbon.none :bold true})
-(custom-set-face! :BlinkCmpLabelDetail [] {:fg oxocarbon.base04 :bg oxocarbon.none :italic true})
-(custom-set-face! :BlinkCmpLabelDescription [] {:fg oxocarbon.base04 :bg oxocarbon.none})
-(custom-set-face! :BlinkCmpSource [] {:fg oxocarbon.base04 :bg oxocarbon.none :italic true})
-(custom-set-face! :BlinkCmpGhostText [] {:fg oxocarbon.base03 :bg oxocarbon.none})
+(custom-set-face! :BlinkCmpLabelDeprecated []
+                  {:fg oxocarbon.base03 :bg oxocarbon.none :italic true})
+
+(custom-set-face! :BlinkCmpLabelMatch []
+                  {:fg oxocarbon.base05 :bg oxocarbon.none :bold true})
+
+(custom-set-face! :BlinkCmpLabelDetail []
+                  {:fg oxocarbon.base04 :bg oxocarbon.none :italic true})
+
+(custom-set-face! :BlinkCmpLabelDescription []
+                  {:fg oxocarbon.base04 :bg oxocarbon.none})
+
+(custom-set-face! :BlinkCmpSource []
+                  {:fg oxocarbon.base04 :bg oxocarbon.none :italic true})
+
+(custom-set-face! :BlinkCmpGhostText []
+                  {:fg oxocarbon.base03 :bg oxocarbon.none})
+
 (custom-set-face! :BlinkCmpDoc [] {:fg oxocarbon.base05 :bg oxocarbon.base01})
-(custom-set-face! :BlinkCmpDocBorder [] {:fg oxocarbon.base03 :bg oxocarbon.base01})
-(custom-set-face! :BlinkCmpDocSeparator [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
-(custom-set-face! :BlinkCmpDocCursorLine [] {:fg oxocarbon.none :bg oxocarbon.base02})
-(custom-set-face! :BlinkCmpSignatureHelp [] {:fg oxocarbon.base05 :bg oxocarbon.base01})
-(custom-set-face! :BlinkCmpSignatureHelpBorder [] {:fg oxocarbon.base03 :bg oxocarbon.base01})
+(custom-set-face! :BlinkCmpDocBorder []
+                  {:fg oxocarbon.base03 :bg oxocarbon.base01})
+
+(custom-set-face! :BlinkCmpDocSeparator []
+                  {:fg oxocarbon.base02 :bg oxocarbon.base01})
+
+(custom-set-face! :BlinkCmpDocCursorLine []
+                  {:fg oxocarbon.none :bg oxocarbon.base02})
+
+(custom-set-face! :BlinkCmpSignatureHelp []
+                  {:fg oxocarbon.base05 :bg oxocarbon.base01})
+
+(custom-set-face! :BlinkCmpSignatureHelpBorder []
+                  {:fg oxocarbon.base03 :bg oxocarbon.base01})
+
 (custom-set-face! :BlinkCmpSignatureHelpActiveParameter [:bold]
                   {:fg oxocarbon.base08 :bg oxocarbon.base02})
-(custom-set-face! :BlinkCmpKind [] {:fg oxocarbon.base04 :bg oxocarbon.none})
-(custom-set-face! :BlinkCmpKindInterface [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :BlinkCmpKindColor [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :BlinkCmpKindTypeParameter [] {:fg oxocarbon.base01 :bg oxocarbon.base08})
-(custom-set-face! :BlinkCmpKindText [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
-(custom-set-face! :BlinkCmpKindEnum [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
-(custom-set-face! :BlinkCmpKindKeyword [] {:fg oxocarbon.base01 :bg oxocarbon.base09})
-(custom-set-face! :BlinkCmpKindConstant [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
-(custom-set-face! :BlinkCmpKindConstructor [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
-(custom-set-face! :BlinkCmpKindReference [] {:fg oxocarbon.base01 :bg oxocarbon.base10})
-(custom-set-face! :BlinkCmpKindFunction [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :BlinkCmpKindStruct [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :BlinkCmpKindClass [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :BlinkCmpKindModule [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :BlinkCmpKindOperator [] {:fg oxocarbon.base01 :bg oxocarbon.base11})
-(custom-set-face! :BlinkCmpKindField [] {:fg oxocarbon.base01 :bg oxocarbon.base12})
-(custom-set-face! :BlinkCmpKindProperty [] {:fg oxocarbon.base01 :bg oxocarbon.base12})
-(custom-set-face! :BlinkCmpKindEvent [] {:fg oxocarbon.base01 :bg oxocarbon.base12})
-(custom-set-face! :BlinkCmpKindUnit [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
-(custom-set-face! :BlinkCmpKindSnippet [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
-(custom-set-face! :BlinkCmpKindFolder [] {:fg oxocarbon.base01 :bg oxocarbon.base13})
-(custom-set-face! :BlinkCmpKindVariable [] {:fg oxocarbon.base01 :bg oxocarbon.base14})
-(custom-set-face! :BlinkCmpKindFile [] {:fg oxocarbon.base01 :bg oxocarbon.base14})
-(custom-set-face! :BlinkCmpKindMethod [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
-(custom-set-face! :BlinkCmpKindValue [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
-(custom-set-face! :BlinkCmpKindEnumMember [] {:fg oxocarbon.base01 :bg oxocarbon.base15})
 
+(custom-set-face! :BlinkCmpKind [] {:fg oxocarbon.base04 :bg oxocarbon.none})
+(custom-set-face! :BlinkCmpKindInterface []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base08})
+
+(custom-set-face! :BlinkCmpKindColor []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base08})
+
+(custom-set-face! :BlinkCmpKindTypeParameter []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base08})
+
+(custom-set-face! :BlinkCmpKindText []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base09})
+
+(custom-set-face! :BlinkCmpKindEnum []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base09})
+
+(custom-set-face! :BlinkCmpKindKeyword []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base09})
+
+(custom-set-face! :BlinkCmpKindConstant []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base10})
+
+(custom-set-face! :BlinkCmpKindConstructor []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base10})
+
+(custom-set-face! :BlinkCmpKindReference []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base10})
+
+(custom-set-face! :BlinkCmpKindFunction []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :BlinkCmpKindStruct []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :BlinkCmpKindClass []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :BlinkCmpKindModule []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :BlinkCmpKindOperator []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base11})
+
+(custom-set-face! :BlinkCmpKindField []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base12})
+
+(custom-set-face! :BlinkCmpKindProperty []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base12})
+
+(custom-set-face! :BlinkCmpKindEvent []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base12})
+
+(custom-set-face! :BlinkCmpKindUnit []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base13})
+
+(custom-set-face! :BlinkCmpKindSnippet []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base13})
+
+(custom-set-face! :BlinkCmpKindFolder []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base13})
+
+(custom-set-face! :BlinkCmpKindVariable []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base14})
+
+(custom-set-face! :BlinkCmpKindFile []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base14})
+
+(custom-set-face! :BlinkCmpKindMethod []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base15})
+
+(custom-set-face! :BlinkCmpKindValue []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base15})
+
+(custom-set-face! :BlinkCmpKindEnumMember []
+                  {:fg oxocarbon.base01 :bg oxocarbon.base15})
+
+;; ledger
+(custom-set-face! :LedgerNegativeNumber []
+                  {:fg oxocarbon.base09 :bg oxocarbon.none})
+
+(custom-set-face! :LedgerTransactionDate []
+                  {:fg oxocarbon.base12 :bg oxocarbon.none})
+
+(custom-set-face! :LedgerTransactionExpression []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! :LedgerPosting [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :LedgerComment [] {:fg oxocarbon.base15 :bg oxocarbon.none})
 
 ;; nvimtree
 
-(custom-set-face! :NvimTreeImageFile [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! :NvimTreeFolderIcon [] {:fg oxocarbon.base12 :bg oxocarbon.none})
-(custom-set-face! :NvimTreeWinSeparator [] {:fg oxocarbon.base00 :bg oxocarbon.base00})
-(custom-set-face! :NvimTreeFolderName [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :NvimTreeIndentMarker [] {:fg oxocarbon.base02 :bg oxocarbon.none})
-(custom-set-face! :NvimTreeEmptyFolderName [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! :NvimTreeOpenedFolderName [] {:fg oxocarbon.base15 :bg oxocarbon.none})
-(custom-set-face! :NvimTreeNormal [] {:fg oxocarbon.base04 :bg oxocarbon.base00})
+(custom-set-face! :NvimTreeImageFile []
+                  {:fg oxocarbon.base12 :bg oxocarbon.none})
+
+(custom-set-face! :NvimTreeFolderIcon []
+                  {:fg oxocarbon.base12 :bg oxocarbon.none})
+
+(custom-set-face! :NvimTreeWinSeparator []
+                  {:fg oxocarbon.base00 :bg oxocarbon.base00})
+
+(custom-set-face! :NvimTreeFolderName []
+                  {:fg oxocarbon.base09 :bg oxocarbon.none})
+
+(custom-set-face! :NvimTreeIndentMarker []
+                  {:fg oxocarbon.base02 :bg oxocarbon.none})
+
+(custom-set-face! :NvimTreeEmptyFolderName []
+                  {:fg oxocarbon.base15 :bg oxocarbon.none})
+
+(custom-set-face! :NvimTreeOpenedFolderName []
+                  {:fg oxocarbon.base15 :bg oxocarbon.none})
+
+(custom-set-face! :NvimTreeNormal []
+                  {:fg oxocarbon.base04 :bg oxocarbon.base00})
 
 ;; neogit
 
 (custom-set-face! :NeogitBranch [] {:fg oxocarbon.base10 :bg oxocarbon.none})
 (custom-set-face! :NeogitRemote [] {:fg oxocarbon.base09 :bg oxocarbon.none})
-(custom-set-face! :NeogitHunkHeader [] {:fg oxocarbon.base04 :bg oxocarbon.base02})
-(custom-set-face! :NeogitHunkHeaderHighlight [] {:fg oxocarbon.base04 :bg oxocarbon.base03})
+(custom-set-face! :NeogitHunkHeader []
+                  {:fg oxocarbon.base04 :bg oxocarbon.base02})
+
+(custom-set-face! :NeogitHunkHeaderHighlight []
+                  {:fg oxocarbon.base04 :bg oxocarbon.base03})
 
 ;; gitsigns
-(custom-set-face! :GitSignsCurrentLineBlame [] {:link "Comment"})
+(custom-set-face! :GitSignsCurrentLineBlame [] {:link :Comment})
 
 ;; hydra
 
@@ -754,46 +1095,260 @@
 
 ;; preservim/vim-markdown
 
-(custom-set-face! :htmlH1 [] {:link "markdownH1"})
-(custom-set-face! :mkdRule [] {:link "markdownRule"})
-(custom-set-face! :mkdListItem [] {:link "markdownListMarker"})
-(custom-set-face! :mkdListItemCheckbox [] {:link "markdownListMarker"})
+(custom-set-face! :htmlH1 [] {:link :markdownH1})
+(custom-set-face! :mkdRule [] {:link :markdownRule})
+(custom-set-face! :mkdListItem [] {:link :markdownListMarker})
+(custom-set-face! :mkdListItemCheckbox [] {:link :markdownListMarker})
 
 ;; vimwiki/vimwiki
 
-(custom-set-face! :VimwikiHeader1 [] {:link "markdownH1"})
-(custom-set-face! :VimwikiHeader2 [] {:link "markdownH1"})
-(custom-set-face! :VimwikiHeader3 [] {:link "markdownH1"})
-(custom-set-face! :VimwikiHeader4 [] {:link "markdownH1"})
-(custom-set-face! :VimwikiHeader5 [] {:link "markdownH1"})
-(custom-set-face! :VimwikiHeader6 [] {:link "markdownH1"})
-(custom-set-face! :VimwikiHeaderChar [] {:link "markdownH1"})
-(custom-set-face! :VimwikiList [] {:link "markdownListMarker"})
-(custom-set-face! :VimwikiLink [] {:link "markdownUrl"})
-(custom-set-face! :VimwikiCode [] {:link "markdownCode"})
+(custom-set-face! :VimwikiHeader1 [] {:link :markdownH1})
+(custom-set-face! :VimwikiHeader2 [] {:link :markdownH1})
+(custom-set-face! :VimwikiHeader3 [] {:link :markdownH1})
+(custom-set-face! :VimwikiHeader4 [] {:link :markdownH1})
+(custom-set-face! :VimwikiHeader5 [] {:link :markdownH1})
+(custom-set-face! :VimwikiHeader6 [] {:link :markdownH1})
+(custom-set-face! :VimwikiHeaderChar [] {:link :markdownH1})
+(custom-set-face! :VimwikiList [] {:link :markdownListMarker})
+(custom-set-face! :VimwikiLink [] {:link :markdownUrl})
+(custom-set-face! :VimwikiCode [] {:link :markdownCode})
 
 ;; flash
 
-(custom-set-face! :FlashLabel [:bold] {:fg oxocarbon.base05 :bg oxocarbon.base00})
+(custom-set-face! :FlashLabel [:bold]
+                  {:fg oxocarbon.base05 :bg oxocarbon.base00})
 
 ;; csv/tsv support
 
-(custom-set-face! :csvCol0 [] { :fg "#878d96" :bg :NONE})
-(custom-set-face! :csvCol1 [] { :fg "#a8a8a8" :bg :NONE})
-(custom-set-face! :csvCol2 [] { :fg "#8d8d8d" :bg :NONE})
-(custom-set-face! :csvCol3 [] { :fg "#a2a9b0" :bg :NONE})
-(custom-set-face! :csvCol4 [] { :fg "#8f8b8b" :bg :NONE})
-(custom-set-face! :csvCol5 [] { :fg "#ada8a8" :bg :NONE})
-(custom-set-face! :csvCol6 [] { :fg "#878d96" :bg :NONE})
-(custom-set-face! :csvCol7 [] { :fg "#a8a8a8" :bg :NONE})
-(custom-set-face! :csvCol8 [] { :fg "#8d8d8d" :bg :NONE})
+(custom-set-face! :csvCol0 [] {:fg "#878d96" :bg :NONE})
+(custom-set-face! :csvCol1 [] {:fg "#a8a8a8" :bg :NONE})
+(custom-set-face! :csvCol2 [] {:fg "#8d8d8d" :bg :NONE})
+(custom-set-face! :csvCol3 [] {:fg "#a2a9b0" :bg :NONE})
+(custom-set-face! :csvCol4 [] {:fg "#8f8b8b" :bg :NONE})
+(custom-set-face! :csvCol5 [] {:fg "#ada8a8" :bg :NONE})
+(custom-set-face! :csvCol6 [] {:fg "#878d96" :bg :NONE})
+(custom-set-face! :csvCol7 [] {:fg "#a8a8a8" :bg :NONE})
+(custom-set-face! :csvCol8 [] {:fg "#8d8d8d" :bg :NONE})
 
-(custom-set-face! :RainbowDelimitersRed [] {:link "csvCol0"})
-(custom-set-face! :RainbowDelimitersYellow [] {:link "csvCol1"})
-(custom-set-face! :RainbowDelimitersBlue [] {:link "csvCol2"})
-(custom-set-face! :RainbowDelimitersOrange [] {:link "csvCol3"})
-(custom-set-face! :RainbowDelimitersGreen [] {:link "csvCol4"})
-(custom-set-face! :RainbowDelimitersViolet [] {:link "csvCol5"})
-(custom-set-face! :RainbowDelimitersCyan [] {:link "csvCol6"})
+(custom-set-face! :RainbowDelimitersRed [] {:link :csvCol0})
+(custom-set-face! :RainbowDelimitersYellow [] {:link :csvCol1})
+(custom-set-face! :RainbowDelimitersBlue [] {:link :csvCol2})
+(custom-set-face! :RainbowDelimitersOrange [] {:link :csvCol3})
+(custom-set-face! :RainbowDelimitersGreen [] {:link :csvCol4})
+(custom-set-face! :RainbowDelimitersViolet [] {:link :csvCol5})
+(custom-set-face! :RainbowDelimitersCyan [] {:link :csvCol6})
 
-{ : oxocarbon}
+;; org
+
+(custom-set-face! "@OrgTSHeadlinelevel1" [] {:link :markdownH1})
+(custom-set-face! "@OrgTSHeadlinelevel2" [] {:link :markdownH1})
+(custom-set-face! "@OrgTSHeadlinelevel3" [] {:link :markdownH1})
+(custom-set-face! "@OrgTSHeadlinelevel4" [] {:link :markdownH1})
+(custom-set-face! "@OrgTSHeadlinelevel5" [] {:link :markdownH1})
+(custom-set-face! "@OrgTSHeadlinelevel6" [] {:link :markdownH1})
+(custom-set-face! :OrgTODO [] {:link "@string"})
+(custom-set-face! :OrgDONE [] {:link "@namespace"})
+
+;; norg
+
+;; whichkey
+
+(custom-set-face! :WhichKeyFloat [] {:fg oxocarbon.base09 :bg oxocarbon.base01})
+
+; (custom-set-face! :WhichKey [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+
+; ; (custom-set-face! :WhichKey [] {:link Pmenu })
+; (custom-set-face! :WhichKeySeperator [] {:link Comment })
+; (custom-set-face! :WhichKeyGroup [] {:fg oxocarbon.base11 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyDesc [] {:fg oxocarbon.base14 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyValue [] {:fg oxocarbon.base04 :bg oxocarbon.base01})
+; (custom-set-face! :WhichKeyBorder [] {:link FloatBorder})
+
+;; mini.nvim
+(custom-set-face! :MiniStatuslineDevinfo [] {:link :StatusLine})
+(custom-set-face! :MiniStatuslineFilename [] {:link :StatusLine})
+(custom-set-face! :MiniStatuslineFileinfo [] {:link :StatusLine})
+(custom-set-face! :MiniStatusLineInactive [] {:link :StatusLineNC})
+(custom-set-face! :MiniStatusLineModeReplace [] {:link :StatusReplace})
+(custom-set-face! :MiniStatusLineModeInsert [] {:link :StatusInsert})
+(custom-set-face! :MiniStatusLineModeVisual [] {:link :StatusVisual})
+(custom-set-face! :MiniStatusLineModeOther [] {:link :StatusTerminal})
+(custom-set-face! :MiniStatusLineModeCommand [] {:link :StatusCommand})
+(custom-set-face! :MiniStatusLineModeNormal [] {:link :StatusNormal})
+
+(custom-set-face! :MiniTablineVisible [] {:link :StatusLine})
+(custom-set-face! :MiniTablineHidden [] {:link :StatusLine})
+(custom-set-face! :MiniTablineCurrent [] {:link :StatusLineNC})
+(custom-set-face! :MiniTablineModifiedCurrent [] {:link :StatusLineNC})
+
+(custom-set-face! :MiniPickBorder [] {:link :TelescopeBorder})
+(custom-set-face! :MiniPickBorderBusy [] {:link :TelescopeBorder})
+(custom-set-face! :MiniPickBorderText [] {:link :TelescopePromptTitle})
+(custom-set-face! :MiniPickCursor [] {:link :Cursor})
+(custom-set-face! :MiniPickIconDirectory [] {:link :Directory})
+(custom-set-face! :MiniPickIconFile [] {:link :Normal})
+(custom-set-face! :MiniPickHeader [] {:link :TelescopePromptNormal})
+(custom-set-face! :MiniPickMatchCurrent [] {:link :TelescopeMatching})
+(custom-set-face! :MiniPickMatchMarked [] {:link :TelescopeMatching})
+(custom-set-face! :MiniPickMatchRanges [] {:link :TelescopeMatching})
+(custom-set-face! :MiniPickNormal [] {:link :TelescopeNormal})
+(custom-set-face! :MiniPickPreviewLine [] {:link :TelescopePreviewLine})
+(custom-set-face! :MiniPickPreviewRegion [] {:link :TelescopeNormal})
+(custom-set-face! :MiniPickPrompt [] {:link :TelescopeNormal})
+(custom-set-face! :MiniPickPromptCaret [] {:link :TelescopeNormal})
+(custom-set-face! :MiniPickPromptPrefix [] {:link :TelescopePromptNormal})
+
+(custom-set-face! :MiniFilesNormal [] {:link :Normal})
+(custom-set-face! :MiniFilesTitle [] {:link :TelescopePromptTitle})
+(custom-set-face! :MiniFilesBorder [] {:link :TelescopeBorder})
+(custom-set-face! :MiniIconsRed [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+(custom-set-face! :MiniIconsAzure [] {:fg oxocarbon.base11 :bg oxocarbon.none})
+(custom-set-face! :MiniIconsBlue [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+(custom-set-face! :MiniIconsGreen [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+(custom-set-face! :MiniIconsPurple [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :MiniIconsOrange [] {:fg "#FFAB91" :bg oxocarbon.none})
+(custom-set-face! :MiniIconsGrey [] {:fg oxocarbon.base05 :bg oxocarbon.none})
+(custom-set-face! :MiniIconsCyan [] {:fg oxocarbon.base07 :bg oxocarbon.none})
+(custom-set-face! :MiniIconsYellow [] {:fg "#FAFAFA" :bg oxocarbon.none})
+
+(custom-set-face! :MiniClueNextKey [:bold :italic]
+                  {:fg oxocarbon.base08 :bg oxocarbon.blend})
+
+(custom-set-face! :MiniClueDescGroup [:bold :italic]
+                  {:fg oxocarbon.base15 :bg oxocarbon.blend})
+
+(custom-set-face! :MiniClueSeparator [] {:link :WinSeparator})
+
+(custom-set-face! :MiniStarterCurrent [:bold :italic]
+                  {:fg oxocarbon.none :bg oxocarbon.blend})
+
+(custom-set-face! :MiniDepsTitleError [] {:link :Error})
+(custom-set-face! :MiniDepsTitleSame [] {:link :MiniFilesTitle})
+(custom-set-face! :MiniNotifyNormal [] {:link :Comment})
+
+;; is this all thats needed?
+(custom-set-face! :MiniStatuslineModeNormal [] {:link :StatusNormal})
+(custom-set-face! :MiniStatuslineModeInsert [] {:link :StatusInsert})
+(custom-set-face! :MiniStatuslineModeVisual [] {:link :StatusVisual})
+(custom-set-face! :MiniStatuslineModeReplace [] {:link :StatusReplace})
+(custom-set-face! :MiniStatuslineModeCommand [] {:link :StatusCommand})
+(custom-set-face! :MiniStatuslineModeOther [] {:link :StatusTerminal})
+(custom-set-face! :MiniStatuslineDevinfo [] {:link :Normal})
+(custom-set-face! :MiniStatuslineFilename [] {:link :Normal})
+(custom-set-face! :MiniStatuslineFileinfo [] {:link :Normal})
+(custom-set-face! :MiniStatuslineInactive [] {:link :StatusLineNC})
+
+;; pmenu
+(custom-set-face! :PmenuSel [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+(custom-set-face! :PmenuThumb [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+
+;; gutter
+
+; (custom-set-face! :Folded [] {:fg oxocarbon.base08 :bg oxocarbon.base01})
+; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+; (custom-set-face! :SignColumn [] {:fg oxocarbon.base02 :bg oxocarbon.base00})
+
+; (custom-set-face! :Folded [] {:fg oxocarbon.base02 :bg oxocarbon.base01})
+; (custom-set-face! :FoldColumn [] {:fg oxocarbon.base08 :bg oxocarbon.base00})
+; (custom-set-face! :SignColumn [] {:fg oxocarbon.base09 :bg oxocarbon.base00})
+
+;; lazy
+
+(custom-set-face! :LazyProgressDone [:bold]
+                  {:fg oxocarbon.base10 :bg oxocarbon.base00})
+
+(custom-set-face! :LazyProgressTodo [:bold]
+                  {:fg oxocarbon.base01 :bg oxocarbon.base00})
+
+;; ledger ?? these seem to be more general; lets just comment out for now
+; (custom-set-face! "@error" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+; (custom-set-face! "@string.special" [] {:fg oxocarbon.base13 :bg oxocarbon.none})
+; (custom-set-face! "@field" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+; (custom-set-face! "@text.literal" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+;; ledger2
+;;current main (probably old style)
+(custom-set-face! "@comment" [] {:link :Comment})
+(custom-set-face! "@text.literal.commodity" []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! "@number.interval" []
+                  {:fg oxocarbon.base09 :bg oxocarbon.none})
+
+(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" []
+                  {:fg oxocarbon.base11 :bg oxocarbon.none})
+
+(custom-set-face! "@number.quantity.negative" []
+                  {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+;; ledger 3
+
+;; plugin syntax
+(custom-set-face! :LedgerComment [] {:link :Comment})
+(custom-set-face! :LedgerTarget [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! :LedgerCleared [] {:link :Normal})
+(custom-set-face! :LedgerPending [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! :LedgerPosting [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! :LedgerInproperPerc []
+                  {:fg oxocarbon.base09 :bg oxocarbon.none})
+
+(custom-set-face! :LedgerNumber [] {:link :Constant})
+(custom-set-face! :LedgerNegativeNumber [] {:link :ErrorMsg})
+(custom-set-face! :LedgerTransactionDate []
+                  {:fg oxocarbon.base12 :bg oxocarbon.none})
+
+(custom-set-face! :LedgerTransactionExpression []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+;; treesitter syntax
+(custom-set-face! "@comment" [] {:link :Comment})
+(custom-set-face! "@date" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+(custom-set-face! "@date.effective" []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! "@text.literal.commodity" []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! "@number" [] {:fg oxocarbon.base09 :bg oxocarbon.none})
+(custom-set-face! "@number.date" [] {:fg oxocarbon.base14 :bg oxocarbon.none})
+(custom-set-face! "@number.date.effective" []
+                  {:fg oxocarbon.base13 :bg oxocarbon.none})
+
+(custom-set-face! "@number.interval" []
+                  {:fg oxocarbon.base09 :bg oxocarbon.none})
+
+(custom-set-face! "@number.negative" []
+                  {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+(custom-set-face! "@number.status" [] {:fg oxocarbon.base12 :bg oxocarbon.none})
+(custom-set-face! "@number.quantity" []
+                  {:fg oxocarbon.base09 :bg oxocarbon.none})
+
+(custom-set-face! "@number.quantity.negative" []
+                  {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+;; telescope
+(custom-set-face! :TelescopePreviewLine []
+                  {:fg oxocarbon.none :bg oxocarbon.base02})
+
+(custom-set-face! :TelescopeSelectionCaret []
+                  {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+;; misc
+;; seems to be the one exception (mistake??)
+(custom-set-face! "@error" [] {:fg oxocarbon.base10 :bg oxocarbon.none})
+
+;; string special (changed here) was this needed for ledger?
+; (custom-set-face! "@string.special" [] {:fg oxocarbon.base08 :bg oxocarbon.none})
+
+;; types
+
+;; (custom-set-face! "@field" [] {:fg oxocarbon.base15 :bg oxocarbon.none})
+
+{: oxocarbon}
