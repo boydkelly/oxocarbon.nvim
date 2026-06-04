@@ -1,4 +1,5 @@
-(let [{: build} (require :hotpot.api.make)
-      (oks errs) (build :./fnl {:force? true :atomic? true}
-                        [[:**/*.fnl (fn [path] (string.gsub path :fnl :lua))]])]
-  (values nil))
+(let [compile (require :hotpot.api.compile)]
+  ;; Force a direct compilation mapping on these explicit paths
+  (compile.directory "./fnl" {:force true
+                              :atomic true
+                              :target "./lua"}))

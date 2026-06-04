@@ -3,4 +3,4 @@
 all: lua
 
 lua:
-	nvim --headless +"Fnlfile make.fnl" +qa
+	nvim --headless -c "fennel make.fnl" +qa
