@@ -44,7 +44,7 @@
  ;; Files matching `.lua` patterns are never considered orphans and never removed.
  ;; Files matching `.fnl` patterns are never compiled.
  ;; Files matching `.fnlm` patterns are never considered when performing stale checks.
- :ignore [:colors/*.lua :carbon*.lua]
+ :ignore [:colors/*.lua :*.lua :*.fnl]
 
  ;; Optional, table
  ;; Fennel compiler options, passed directly to `fennel.compile-string`.
